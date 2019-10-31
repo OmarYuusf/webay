@@ -8,19 +8,27 @@ import { Container, Row, Col } from 'react-bootstrap';
 const Banner = styled.div`
     margin-top:150px;
 
+    @media (max-width: 600px){ 
+        margin-top:80px;
+    }
+
+    .container-fluid{
+    }
+
     .row{
-        
         > div{
-            
+            margin-top:15px;
             img{
                 width:100%;
-
+            }
+            @media (max-width: 600px){ 
+                margin-top:15px;
             }
         }
     }
 
     .row:last-of-type{
-        margin-top:20px;
+        
     }
 `
 

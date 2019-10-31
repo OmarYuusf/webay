@@ -19,7 +19,6 @@ const High = styled.div`
 
                 h5{
                     font-weight:800;
-
                 }
 
                 p{
@@ -31,13 +30,19 @@ const High = styled.div`
         .cata-High{
             margin-top:30px;
 
-            .div{
-                background:transparent;
-            }
+            @media (max-width: 768px){ 
+                margin-top:0px;
+            }   
 
             img{
                 width:100% !important;
                 height:100% !important;
+            }
+
+            > div{
+                @media (max-width: 768px){ 
+                    margin:15px 0px;
+                }   
             }
         }
 `
@@ -54,13 +59,30 @@ class HighCata extends React.Component {
                         </Col>
                     </Row>
                     <Row className="cata-High">
-                        <Col md={4}>
+                        <Col md={3} xs={6} sm={6}>
                             <img src="https://k.nooncdn.com/cms/pages/20190603/f0c8d487fcccd0503b335b826a99d9a0/ar_mb-cat-module-02.jpg" />
                         </Col>
-                        <Col md={4}>
+                        <Col md={3} xs={6} sm={6}>
                             <img src="https://k.nooncdn.com/cms/pages/20190603/f0c8d487fcccd0503b335b826a99d9a0/ar_mb-cat-module-01.jpg" />
                         </Col>
-                        <Col md={4}>
+                        <Col md={3} xs={6} sm={6}>
+                            <img src="https://k.nooncdn.com/cms/pages/20190603/f0c8d487fcccd0503b335b826a99d9a0/ar_mb-cat-module-03.jpg" />
+                        </Col>
+                        <Col md={3} xs={6} sm={6}>
+                            <img src="https://k.nooncdn.com/cms/pages/20190603/f0c8d487fcccd0503b335b826a99d9a0/ar_mb-cat-module-03.jpg" />
+                        </Col>
+                    </Row>
+                    <Row className="cata-High">
+                        <Col md={3} xs={6} sm={6}>
+                            <img src="https://k.nooncdn.com/cms/pages/20190603/f0c8d487fcccd0503b335b826a99d9a0/ar_mb-cat-module-02.jpg" />
+                        </Col>
+                        <Col md={3} xs={6} sm={6}>
+                            <img src="https://k.nooncdn.com/cms/pages/20190603/f0c8d487fcccd0503b335b826a99d9a0/ar_mb-cat-module-01.jpg" />
+                        </Col>
+                        <Col md={3} xs={6} sm={6}>
+                            <img src="https://k.nooncdn.com/cms/pages/20190603/f0c8d487fcccd0503b335b826a99d9a0/ar_mb-cat-module-03.jpg" />
+                        </Col>
+                        <Col md={3} xs={6} sm={6}>
                             <img src="https://k.nooncdn.com/cms/pages/20190603/f0c8d487fcccd0503b335b826a99d9a0/ar_mb-cat-module-03.jpg" />
                         </Col>
                     </Row>

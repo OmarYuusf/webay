@@ -18,7 +18,7 @@ const Slide = styled.div`
     display:flex;
     background:rgb(3, 169, 244);
     justify-content:space-between;
-    padding:8px 15px;
+    padding:18px 15px;
     position:relative;
 
     > div {

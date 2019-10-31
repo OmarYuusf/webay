@@ -3,7 +3,6 @@ import React from 'react';
 // react-slick Import
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
-
 import "slick-carousel/slick/slick-theme.css";
 
 // Styled-Component
@@ -12,17 +11,9 @@ import styled from 'styled-components';
 import { Container, Row, Col } from 'react-bootstrap';
 
 const SecSlider = styled.div`
-
-    
-
-
     .slick-slider{
             margin-top:60px;
-
-        @media (max-width: 600px){ 
-            margin-top:10px;
-        }
-
+2
             .slick-arrow{
                 background:#FFF;
                 opacity:1;
@@ -170,10 +161,10 @@ const SecSlider = styled.div`
                     }
                 }
             }
-        }    
+        }  
 `
 
-class MobilesSlider extends React.Component {
+class BestProductsSlider extends React.Component {
     render() {
         var settings = {
             dots: true,
@@ -182,6 +173,7 @@ class MobilesSlider extends React.Component {
             slidesToShow: 6,
             slidesToScroll: 1,
             initialSlide: 0,
+
             responsive: [
               {
                 breakpoint: 1024,
@@ -411,7 +403,7 @@ class MobilesSlider extends React.Component {
                                     </div>
                                 </div>
                             </div>
-                            <div>
+                                                        <div>
                                 <div className="header">
                                     <img src="https://k.nooncdn.com/t_desktop-thumbnail-v2/v1541138794/N18810846A_1.jpg"/>
                                 </div>
@@ -467,118 +459,6 @@ class MobilesSlider extends React.Component {
                                     </div>
                                 </div>
                             </div>
-                            <div>
-                                <div className="header">
-                                    <img src="https://k.nooncdn.com/t_desktop-thumbnail-v2/v1541138794/N18810846A_1.jpg"/>
-                                </div>
-                                <div className="information" style={{direction:'rtl',textAlign:'right'}}>
-                                    <div className="head">
-                                        <p>أبل</p>
-                                        <p>ايفون 11 برو ماكس</p>
-                                        <p> بخاصية فيس تايم لون فضي سعة 512 جيجابايت يدعم تقنية 4G LTE - بالمواصفات الدولية</p>
-                                    </div>
-                                    <div className="center">
-                                        <span className="All-price">
-                                            <span className="real-price">
-                                                20.000 جنيه
-                                            </span>
-                                            <span className="fake-price">
-                                                23.000 جنيه
-                                            </span>
-                                        </span>
-                                    </div>
-                                    <div className="footer">
-                                        <span className="discount">
-                                            خصم %15
-                                        </span>
-                                        <button>View Product</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div>
-                                <div className="header">
-                                    <img src="https://k.nooncdn.com/t_desktop-thumbnail-v2/v1541138794/N18810846A_1.jpg"/>
-                                </div>
-                                <div className="information" style={{direction:'rtl',textAlign:'right'}}>
-                                    <div className="head">
-                                        <p>أبل</p>
-                                        <p>ايفون 11 برو ماكس</p>
-                                        <p> بخاصية فيس تايم لون فضي سعة 512 جيجابايت يدعم تقنية 4G LTE - بالمواصفات الدولية</p>
-                                    </div>
-                                    <div className="center">
-                                        <span className="All-price">
-                                            <span className="real-price">
-                                                20.000 جنيه
-                                            </span>
-                                            <span className="fake-price">
-                                                23.000 جنيه
-                                            </span>
-                                        </span>
-                                    </div>
-                                    <div className="footer">
-                                        <span className="discount">
-                                            خصم %15
-                                        </span>
-                                        <button>View Product</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div>
-                                <div className="header">
-                                    <img src="https://k.nooncdn.com/t_desktop-thumbnail-v2/v1541138794/N18810846A_1.jpg"/>
-                                </div>
-                                <div className="information" style={{direction:'rtl',textAlign:'right'}}>
-                                    <div className="head">
-                                        <p>أبل</p>
-                                        <p>ايفون 11 برو ماكس</p>
-                                        <p> بخاصية فيس تايم لون فضي سعة 512 جيجابايت يدعم تقنية 4G LTE - بالمواصفات الدولية</p>
-                                    </div>
-                                    <div className="center">
-                                        <span className="All-price">
-                                            <span className="real-price">
-                                                20.000 جنيه
-                                            </span>
-                                            <span className="fake-price">
-                                                23.000 جنيه
-                                            </span>
-                                        </span>
-                                    </div>
-                                    <div className="footer">
-                                        <span className="discount">
-                                            خصم %15
-                                        </span>
-                                        <button>View Product</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div>
-                                <div className="header">
-                                    <img src="https://k.nooncdn.com/t_desktop-thumbnail-v2/v1541138794/N18810846A_1.jpg"/>
-                                </div>
-                                <div className="information" style={{direction:'rtl',textAlign:'right'}}>
-                                    <div className="head">
-                                        <p>أبل</p>
-                                        <p>ايفون 11 برو ماكس</p>
-                                        <p> بخاصية فيس تايم لون فضي سعة 512 جيجابايت يدعم تقنية 4G LTE - بالمواصفات الدولية</p>
-                                    </div>
-                                    <div className="center">
-                                        <span className="All-price">
-                                            <span className="real-price">
-                                                20.000 جنيه
-                                            </span>
-                                            <span className="fake-price">
-                                                23.000 جنيه
-                                            </span>
-                                        </span>
-                                    </div>
-                                    <div className="footer">
-                                        <span className="discount">
-                                            خصم %15
-                                        </span>
-                                        <button>View Product</button>
-                                    </div>
-                                </div>
-                            </div> 
                             </Slider>
                         </Col>
                     </Row>
@@ -588,4 +468,4 @@ class MobilesSlider extends React.Component {
     }
 }
 
-export default MobilesSlider;
+export default BestProductsSlider;

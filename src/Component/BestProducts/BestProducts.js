@@ -1,11 +1,5 @@
 import React from 'react';
-import BestSellerSlider from './BestSellerSlider/BestSellerSlider'
-
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-
-// react-slick Import
-import Slider from "react-slick";
-
+import BestProductsSlider from './BestProductsSlider/BestProductsSlider'
 
 // Styled-Component
 import styled from 'styled-components'
@@ -32,7 +26,7 @@ const Seller = styled.div`
 
 `
 
-class BestSeller extends React.Component {
+class BestProducts extends React.Component {
 
     render(){
 
@@ -44,11 +38,11 @@ class BestSeller extends React.Component {
                             <h2>احدث المنتجات</h2>
                         </Col>
                     </Row>
-                    <BestSellerSlider />
+                    <BestProductsSlider />
                 </Container>
             </Seller>
         )
     }
 }
 
-export default BestSeller;
+export default BestProducts;

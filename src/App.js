@@ -12,8 +12,14 @@ import MobileNavbar from './Component/Mobile-Navbar/Mobile-Navbar'
 // HeaderSlider Component Import 
 import Slider from './Component/Slider/Slider'
 
+// PrimaryBanner Component Import 
+import PrimaryBanner from "./Component/PrimaryBanner/PrimaryBanner";
+
 // HighCatagorie Component Import 
 import HighCata from "./Component/HighCata/HighCata";
+
+// BestSeller Component Import 
+import BestProducts from "./Component/BestProducts/BestProducts";
 
 // BestSeller Component Import 
 import BestSeller from "./Component/BestSeller/BestSeller";
@@ -22,10 +28,16 @@ import BestSeller from "./Component/BestSeller/BestSeller";
 import Banners from "./Component/Banners/Banners";
 
 // Banners Component Import 
+import Ban from "./Component/Banner/Banner";
+
+// Banners Component Import 
 import Electronics from "./Component/Electronics/Electronics";
 
 // Banners Component Import 
 import Mobiles from "./Component/Mobiles/Mobiles";
+
+// Footer Component Import 
+import Footer from "./Component/Footer/Footer";
 
 class App extends Component{
   constructor(props){
@@ -62,23 +74,35 @@ class App extends Component{
             <Navbar language={this.state.language} changeLanguage={(e) => this.changeLanguage(e)}/>
           </div>}
       </div>
-      <div className="header-center">
-        <Slider />
+      <div className="Slider">
+        <Slider language={this.state.language}/>
+      </div>
+      <div className="Primary-banner">
+          <PrimaryBanner language={this.state.language}/>
       </div>
       <div className="HighCata">
-        <HighCata />
+        <HighCata language={this.state.language}/>
       </div>
-      <div className="BestSeller">
-          <BestSeller />
+      <div className="BestProducts">
+          <BestProducts language={this.state.language}/>
       </div>
       <div className="Banners">
           <Banners />
       </div>
+      <div className="BestSeller">
+          <BestSeller language={this.state.language}/>
+      </div>
+      <div className="Banner">
+          <Ban />
+      </div>
       <div className="Electronics">
-          <Electronics />
+          <Electronics language={this.state.language}/>
       </div>
       <div className="Mobiles">
-          <Mobiles />
+          <Mobiles language={this.state.language}/>
+      </div>
+      <div className="Footer">
+          <Footer language={this.state.language} />
       </div>
     </div>
     )

@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // react-slick Import
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
+
 import "slick-carousel/slick/slick-theme.css";
 
 // Styled-Component
@@ -14,29 +15,20 @@ import styled from 'styled-components'
 import { Container, Row, Col } from 'react-bootstrap'
 
 const Seller = styled.div`
-        margin-top:100px;
+        margin-top:40px;
+
         
         .header{
             div{
-                display:flex;
-                justify-content:space-between;
+                text-align:right;
                 background:#FFF;
                 margin:0px 15px;
                 padding:0px 8px;
                 border-radius:4px;
 
-                p,h5{
+                h2{
+                    font-weight:900;
                     margin:25px 0px;
-                }
-
-                h5{
-                    font-weight:800;
-
-                }
-
-                p{
-                    color:#555;
-                    font-size:14px;
                 }
             }
         }
@@ -52,8 +44,8 @@ class Mobiles extends React.Component {
                 <Container fluid={true}>
                     <Row className="header">
                         <Col>
-                            <p>جميع الفئات</p>
-                            <h5>الهواتف</h5>
+
+                            <h2>الهواتف</h2>
                         </Col>
                     </Row>
                     <MobilesSlider />

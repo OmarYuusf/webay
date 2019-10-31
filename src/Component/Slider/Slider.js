@@ -1,59 +1,67 @@
-import React from 'react';
+import React, { Component } from "react";
 
 // Styled-Component
 import styled from 'styled-components'
 
-// Slider Import
-import AwesomeSlider from 'react-awesome-slider';
-import AwesomeSliderStyles from 'react-awesome-slider/src/styles';
+import { Container } from 'react-bootstrap';
+
+import Slider from "react-slick";
 
 const Slide = styled.div`
-  margin :50px 15px;
+      margin:15px 0px;
 
-  .awssld__wrapper{
-    height:65vh ;
-    .awssld__content{
-      img{
-          object-fit:cover !important;
-
+      @media (max-width: 600px){ 
+          margin:0px 0px !important;
       }
-    }
-  }
 
-  .awssld__bullets button{
-    border-radius:0px !important;
-    height:3px !important;
-    background:#CCC;
-  }
+      .slick-arrow{
+        
+        &::before{
+          color:#000;
+        }
 
-  .awssld__bullets--active{
-    background:#03A9F4 !important;
-    border:0px !important;
-  }
+        @media (max-width: 600px){ 
+            display:none !important;
+        }
+      }
+
+      img{
+        width:100%;
+      }
 `
 
-
-
-const slider = (
-  <AwesomeSlider cssModule={AwesomeSliderStyles}>
-    <div data-src="https://images.pexels.com/photos/669996/pexels-photo-669996.jpeg?cs=srgb&dl=contemporary-dark-data-669996.jpg&fm=jpg"/>
-    <div data-src="https://images.pexels.com/photos/1901388/pexels-photo-1901388.jpeg?cs=srgb&dl=blur-communication-connection-1901388.jpg&fm=jpg"/>
-    <div data-src="https://images.pexels.com/photos/1128240/pexels-photo-1128240.jpeg?cs=srgb&dl=access-blur-connection-1128240.jpg&fm=jpg"/>
-    <div data-src="https://images.pexels.com/photos/1128240/pexels-photo-1128240.jpeg?cs=srgb&dl=access-blur-connection-1128240.jpg&fm=jpg"/>
-  </AwesomeSlider>
-);
-
-
-
-class Slider extends React.Component {
-
+export default class AdaptiveHeight extends Component {
   render() {
-    return(
+    var settings = {
+      className: "",
+      dots: true,
+      infinite: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      adaptiveHeight: true,
+      autoplay: true,
+      speed: 500,
+      autoplaySpeed: 5000
+    };
+    return (
       <Slide>
-         {slider}
+        <Container>
+          <Slider {...settings} className="Hello">
+            <div>
+              <img src="https://k.nooncdn.com/cms/pages/20191025/ec000906164415019cbcf0fb54f96b4a/en_hp-banner-03.gif"/>
+            </div>
+            <div>
+              <img src="https://k.nooncdn.com/cms/pages/20191027/f973cc63b56090f3c915c86759648522/en_banner-01.gif"/>
+            </div>
+            <div>
+              <img src="https://k.nooncdn.com/cms/pages/20191025/ec000906164415019cbcf0fb54f96b4a/en_hp-banner-03.gif"/>
+            </div>
+            <div>
+              <img src="https://k.nooncdn.com/cms/pages/20191027/f973cc63b56090f3c915c86759648522/en_banner-01.gif"/>
+            </div>
+          </Slider>
+        </Container>
       </Slide>
-    )
+    );
   }
 }
-
-export default Slider;
