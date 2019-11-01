@@ -1,10 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
 
-// Styled-Component
-import styled from 'styled-components'
-
-
 // Navbar Component import 
 import Navbar from './Component/Navbar/Navbar';
 import MobileNavbar from './Component/Mobile-Navbar/Mobile-Navbar'
@@ -34,7 +30,7 @@ import Ban from "./Component/Banner/Banner";
 import Electronics from "./Component/Electronics/Electronics";
 
 // Banners Component Import 
-import Mobiles from "./Component/Mobiles/Mobiles";
+import LeastProducts from "./Component/LeastProducts/LeastProducts";
 
 // Footer Component Import 
 import Footer from "./Component/Footer/Footer";
@@ -98,8 +94,8 @@ class App extends Component{
       <div className="Electronics">
           <Electronics language={this.state.language}/>
       </div>
-      <div className="Mobiles">
-          <Mobiles language={this.state.language}/>
+      <div className="LeastProducts">
+          <LeastProducts language={this.state.language}/>
       </div>
       <div className="Footer">
           <Footer language={this.state.language} />

@@ -1,13 +1,9 @@
 import React from 'react';
 import ElectronicsSlider from './ElectronicsSlider/ElectronicsSlider'
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-// react-slick Import
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
 
-import "slick-carousel/slick/slick-theme.css";
+
 
 // Styled-Component
 import styled from 'styled-components'
@@ -39,15 +35,16 @@ class Electronics extends React.Component {
     render(){
 
         return(
-            <Seller>
+            <Seller style={{direction:this.props.language === 'en' ? 'ltr' : 'rtl',
+            textAlign : this.props.language === "en" ? 'left' : "right"}}>
                 <Container fluid={true}>
                     <Row className="header">
                         <Col>
 
-                            <h2>الألكترونيات</h2>
+                            <h2>منتجات اقل من ٤٩٩ ريال</h2>
                         </Col>
                     </Row>
-                    <ElectronicsSlider />
+                    <ElectronicsSlider  language={this.props.language}/>
                 </Container>
             </Seller>
         )

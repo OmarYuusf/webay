@@ -31,14 +31,15 @@ class BestProducts extends React.Component {
     render(){
 
         return(
-            <Seller>
+            <Seller style={{direction:this.props.language === 'en' ? 'ltr' : 'rtl',
+            textAlign : this.props.language === "en" ? 'left' : "right"}}>
                 <Container fluid={true}>
                     <Row className="header">
                         <Col>
                             <h2>احدث المنتجات</h2>
                         </Col>
                     </Row>
-                    <BestProductsSlider />
+                    <BestProductsSlider language={this.props.language}/>
                 </Container>
             </Seller>
         )

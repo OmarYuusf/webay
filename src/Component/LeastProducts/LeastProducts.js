@@ -1,13 +1,6 @@
 import React from 'react';
-import MobilesSlider from './MobilesSlider/MobilesSlider'
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-
-// react-slick Import
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-
-import "slick-carousel/slick/slick-theme.css";
+import LeastProductsSlider from './LeastProductsSlider/LeastProductsSlider'
 
 // Styled-Component
 import styled from 'styled-components'
@@ -40,15 +33,15 @@ class Mobiles extends React.Component {
     render(){
 
         return(
-            <Seller>
+            <Seller style={{direction:this.props.language === 'en' ? 'ltr' : 'rtl',
+            textAlign : this.props.language === "en" ? 'left' : "right"}}>
                 <Container fluid={true}>
                     <Row className="header">
                         <Col>
-
-                            <h2>الهواتف</h2>
+                            <h2>منتجات اقل من ٩٩٩ ريال</h2>
                         </Col>
                     </Row>
-                    <MobilesSlider />
+                    <LeastProductsSlider  language={this.props.language}/>
                 </Container>
             </Seller>
         )

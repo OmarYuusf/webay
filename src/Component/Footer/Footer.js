@@ -140,7 +140,7 @@ class Footer extends React.Component {
             <Foot style={{direction:this.props.language === 'en' ? 'ltr' : 'rtl',
             textAlign : this.props.language === "en" ? 'left' : "right"}}>
                 <Container>
-                    <Row class="header">
+                    <Row className="header">
                         <Col xs={12} md={6}>
                             <h4>احنا دايما موجودين في خدمتك</h4>
                         </Col>

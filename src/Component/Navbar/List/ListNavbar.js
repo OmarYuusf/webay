@@ -298,7 +298,7 @@ class ListNavbar extends React.Component {
                         en: "Cat 2"
                         
                       },
-                    _id: "ewee32432",
+                    _id: "ewee32111432",
                     subStra:{
                         ar:['قس12312م 2', 'قسم 3123', 'قس123123م123 4', 'قسم 512312', 'قسم 6123'],
                         en: ['english 1 1', 'english 1 2', 'english 1 3', 'english 1 4', 'english 1 5', 'english 1 6', 'english 1 7', ]
@@ -309,7 +309,7 @@ class ListNavbar extends React.Component {
                         ar: "2قسم جديد",
                         en: "Cat 3"
                       },
-                    _id: "ewee32432",
+                    _id: "ewee32443232",
                     subStra:{
                         ar:['قسم 2', 'قسم342645 3123', 'قسم123 124324', 'قسم 512312', 'ق543سم 6123'],
                         en: ['english 2 1', 'english 2 2', 'english 2 3', 'english 12 4', 'english 2 5', 'english 2 6', 'english 2 7', ]
@@ -320,7 +320,7 @@ class ListNavbar extends React.Component {
                         ar: "3قسم جديد",
                         en: "Cat 4"
                       },
-                    _id: "ewee32432",
+                    _id: "ewee3772432",
                     subStra:{
                         ar:['قسم 2adsf', 'قسم asdf3123', 'قسم123asdf 4', 'قسم 51sadf2312', 'قسم 612adsf3'],
                         en: ['english 3 1', 'english 3 2', 'english 3 3', 'english 3 4', 'english 3 5', 'english 3 6', 'english 3 7', ]
@@ -331,7 +331,7 @@ class ListNavbar extends React.Component {
                         ar: "4قسم جديد",
                         en: "Cat 5"
                       },
-                    _id: "ewee32432",
+                    _id: "ewee3432432",
                     subStra:{
                         ar:['قسم 2', 'قسم 312asdf3', 'قسم12asdf3 4', 'قسم 51sdaf2312', 'قسadsfم 6123'],
                         en: ['english 4 1', 'english 4 2', 'english 4 3', 'english 4 4', 'english 4 5', 'english 4 6', 'english 4 7', ]
@@ -342,7 +342,7 @@ class ListNavbar extends React.Component {
                         ar: "5قسم جديد",
                         en: "Cat 6"
                       },
-                    _id: "ewee32432",
+                    _id: "ewee3214124432",
                     subStra:{
                         ar:['قسم 2', 'قسم 3123', 'قسم123 4', 'قسم 512312', 'قسم 6123'],
                         en: ['english 5 1', 'english 5 2', 'english 5 3', 'english 5 4', 'english 5 5', 'english 5 6', 'english 5 7', ]
@@ -352,7 +352,7 @@ class ListNavbar extends React.Component {
                         ar: "6قسم جديد",
                         en: "Cat 7"
                       },
-                    _id: "ewee32432",
+                    _id: "ewee32123432",
                     subStra:{
                         ar:['قسم 2', 'قسم 3123', 'asdfasdfas 4', 'قسم 51asdf2312', 'قسم 6123'],
                         en: ['english 1 1', 'english 1 2', 'english 1 3', 'english 1 4', 'english 1 5', 'english 1 6', 'english 1 7', ]
@@ -362,7 +362,7 @@ class ListNavbar extends React.Component {
                         ar: "7قسم جديد",
                         en: "Cat 8"
                       },
-                    _id: "ewee32432",
+                    _id: "ewe123e32432",
                     subStra:{
                         ar:['قسم 2', 'قسم 3123', 'قسم123 4asdf', 'قسم 512312', 'قسم 61234weqr3'],
                         en: ['english 1 1', 'english 1 2', 'english 1 3', 'english 1 4', 'english 1 5', 'english 1 6', 'english 1 7', ]
@@ -446,7 +446,7 @@ class ListNavbar extends React.Component {
                                         <ul>
                                             {this.state.categories.map(cata => {
                                                 return(
-                                                    <li>
+                                                    <li key={cata._id}>
                                                         <a href="#" onMouseEnter={(e) => this.changerText(e)}>{this.props.language === 'en' ? (cata.name.en) : (cata.name.ar) }</a>
                                                     </li>
                                                 )
@@ -457,7 +457,7 @@ class ListNavbar extends React.Component {
                                         <ul>
                                         {this.state.dropRecives.map(sub => {
                                             return(
-                                                <li>
+                                                <li key={Math.random()}>
                                                     <a href="#">{sub}</a>
                                                 </li>
                                             )
@@ -469,7 +469,7 @@ class ListNavbar extends React.Component {
                         </li>
                         {this.state.categories.map(cata => {
                             return(
-                                <li>
+                                <li key={cata._id}>
                                     <a href="#" onMouseEnter={ (e) => this.searchSub(e) } onMouseLeave={this.showSubListHover} >{this.props.language === 'en' ? (cata.name.en) : (cata.name.ar) }</a>  
                                 </li>
                             )
@@ -487,7 +487,7 @@ class ListNavbar extends React.Component {
 
                             {this.state.cateRecives.map(sub => {
                                 return(
-                                    <li>
+                                    <li key={Math.random()}>
                                         <a href="#">{sub}</a>
                                     </li>
                                 )

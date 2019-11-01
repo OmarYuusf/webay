@@ -11,9 +11,18 @@ import styled from 'styled-components';
 import { Container, Row, Col } from 'react-bootstrap';
 
 const SecSlider = styled.div`
+
+    .container-fluid{
+        padding:0px !important ;
+    }
+
     .slick-slider{
             margin-top:60px;
-2
+
+            @media (max-width: 425px){ 
+                margin-top:10px;
+            }
+            
             .slick-arrow{
                 background:#FFF;
                 opacity:1;
@@ -40,15 +49,6 @@ const SecSlider = styled.div`
                 flex-wrap:nowrap !important;
                 justify-content:center;
             }
-/*             
-            .slick-arrow:first-of-type{
-                display:none;
-            }
-
-            .slick-arrow:last-of-type{
-
-            }
-             */
 
             .slick-slide{
                 
@@ -74,10 +74,8 @@ const SecSlider = styled.div`
                 }
 
                 .information{
-                    margin:10px 8px;
                     border-top:1px solid rgba(0,0,0,.1);
                     padding:8px 5px;
-
 
                     .head{
 
@@ -150,7 +148,7 @@ const SecSlider = styled.div`
                             background:#03A9F4;
                             color:#FFF;
                             font-size:12px;
-                            padding:5px 12px;
+                            padding:5px 15px;
                             transition:all .2s ;
                             box-shadow:1px 1px 3px rgba(0,0,0,0.15);
 
@@ -178,7 +176,7 @@ class BestSellerSlider extends React.Component {
               {
                 breakpoint: 1024,
                 settings: {
-                  slidesToShow: 2,
+                  slidesToShow: 3,
                   slidesToScroll: 2,
                   infinite: true,
                   dots: true
@@ -205,13 +203,14 @@ class BestSellerSlider extends React.Component {
             <SecSlider>
                 <Container fluid={true}>
                     <Row className="cata">
-                        <Col>
+                        <Col style={{direction:this.props.language === 'en' ? 'ltr !important' : 'rtl !important',
+            textAlign : this.props.language === "en" ? 'left !important' : "right !important"}}>
                             <Slider {...settings}>
                             <div>
                                 <div className="header">
-                                    <img src="https://k.nooncdn.com/t_desktop-thumbnail-v2/v1541138794/N18810846A_1.jpg"/>
+                                    <img src="https://k.nooncdn.com/t_desktop-thumbnail-v2/v1541138794/N18810846A_1.jpg" alt='product'/>
                                 </div>
-                                <div className="information" style={{direction:'rtl',textAlign:'right'}}>
+                                <div className="information">
                                     <div className="head">
                                         <p>أبل</p>
                                         <p>ايفون 11 برو ماكس</p>
@@ -231,15 +230,15 @@ class BestSellerSlider extends React.Component {
                                         <span className="discount">
                                             خصم %15
                                         </span>
-                                        <button>View Product</button>
+                                        <button>عروض</button>
                                     </div>
                                 </div>
                             </div>
                             <div>
                                 <div className="header">
-                                    <img src="https://k.nooncdn.com/t_desktop-thumbnail-v2/v1541138794/N18810846A_1.jpg"/>
+                                    <img src="https://k.nooncdn.com/t_desktop-thumbnail-v2/v1541138794/N18810846A_1.jpg" alt='product'/>
                                 </div>
-                                <div className="information" style={{direction:'rtl',textAlign:'right'}}>
+                                <div className="information">
                                     <div className="head">
                                         <p>أبل</p>
                                         <p>ايفون 11 برو ماكس</p>
@@ -259,15 +258,15 @@ class BestSellerSlider extends React.Component {
                                         <span className="discount">
                                             خصم %15
                                         </span>
-                                        <button>View Product</button>
+                                        <button>عروض</button>
                                     </div>
                                 </div>
                             </div>
                             <div>
                                 <div className="header">
-                                    <img src="https://k.nooncdn.com/t_desktop-thumbnail-v2/v1541138794/N18810846A_1.jpg"/>
+                                    <img src="https://k.nooncdn.com/t_desktop-thumbnail-v2/v1541138794/N18810846A_1.jpg" alt='product'/>
                                 </div>
-                                <div className="information" style={{direction:'rtl',textAlign:'right'}}>
+                                <div className="information">
                                     <div className="head">
                                         <p>أبل</p>
                                         <p>ايفون 11 برو ماكس</p>
@@ -287,15 +286,15 @@ class BestSellerSlider extends React.Component {
                                         <span className="discount">
                                             خصم %15
                                         </span>
-                                        <button>View Product</button>
+                                        <button>عروض</button>
                                     </div>
                                 </div>
                             </div>
                             <div>
                                 <div className="header">
-                                    <img src="https://k.nooncdn.com/t_desktop-thumbnail-v2/v1541138794/N18810846A_1.jpg"/>
+                                    <img src="https://k.nooncdn.com/t_desktop-thumbnail-v2/v1541138794/N18810846A_1.jpg" alt='product'/>
                                 </div>
-                                <div className="information" style={{direction:'rtl',textAlign:'right'}}>
+                                <div className="information">
                                     <div className="head">
                                         <p>أبل</p>
                                         <p>ايفون 11 برو ماكس</p>
@@ -315,15 +314,15 @@ class BestSellerSlider extends React.Component {
                                         <span className="discount">
                                             خصم %15
                                         </span>
-                                        <button>View Product</button>
+                                        <button>عروض</button>
                                     </div>
                                 </div>
                             </div>
                             <div>
                                 <div className="header">
-                                    <img src="https://k.nooncdn.com/t_desktop-thumbnail-v2/v1541138794/N18810846A_1.jpg"/>
+                                    <img src="https://k.nooncdn.com/t_desktop-thumbnail-v2/v1541138794/N18810846A_1.jpg" alt='product'/>
                                 </div>
-                                <div className="information" style={{direction:'rtl',textAlign:'right'}}>
+                                <div className="information">
                                     <div className="head">
                                         <p>أبل</p>
                                         <p>ايفون 11 برو ماكس</p>
@@ -343,15 +342,15 @@ class BestSellerSlider extends React.Component {
                                         <span className="discount">
                                             خصم %15
                                         </span>
-                                        <button>View Product</button>
+                                        <button>عروض</button>
                                     </div>
                                 </div>
                             </div>
                             <div>
                                 <div className="header">
-                                    <img src="https://k.nooncdn.com/t_desktop-thumbnail-v2/v1541138794/N18810846A_1.jpg"/>
+                                    <img src="https://k.nooncdn.com/t_desktop-thumbnail-v2/v1541138794/N18810846A_1.jpg" alt='product'/>
                                 </div>
-                                <div className="information" style={{direction:'rtl',textAlign:'right'}}>
+                                <div className="information">
                                     <div className="head">
                                         <p>أبل</p>
                                         <p>ايفون 11 برو ماكس</p>
@@ -371,15 +370,15 @@ class BestSellerSlider extends React.Component {
                                         <span className="discount">
                                             خصم %15
                                         </span>
-                                        <button>View Product</button>
+                                        <button>عروض</button>
                                     </div>
                                 </div>
                             </div>
                             <div>
                                 <div className="header">
-                                    <img src="https://k.nooncdn.com/t_desktop-thumbnail-v2/v1541138794/N18810846A_1.jpg"/>
+                                    <img src="https://k.nooncdn.com/t_desktop-thumbnail-v2/v1541138794/N18810846A_1.jpg" alt='product'/>
                                 </div>
-                                <div className="information" style={{direction:'rtl',textAlign:'right'}}>
+                                <div className="information">
                                     <div className="head">
                                         <p>أبل</p>
                                         <p>ايفون 11 برو ماكس</p>
@@ -399,43 +398,15 @@ class BestSellerSlider extends React.Component {
                                         <span className="discount">
                                             خصم %15
                                         </span>
-                                        <button>View Product</button>
-                                    </div>
-                                </div>
-                            </div>
-                                                        <div>
-                                <div className="header">
-                                    <img src="https://k.nooncdn.com/t_desktop-thumbnail-v2/v1541138794/N18810846A_1.jpg"/>
-                                </div>
-                                <div className="information" style={{direction:'rtl',textAlign:'right'}}>
-                                    <div className="head">
-                                        <p>أبل</p>
-                                        <p>ايفون 11 برو ماكس</p>
-                                        <p> بخاصية فيس تايم لون فضي سعة 512 جيجابايت يدعم تقنية 4G LTE - بالمواصفات الدولية</p>
-                                    </div>
-                                    <div className="center">
-                                        <span className="All-price">
-                                            <span className="real-price">
-                                                20.000 جنيه
-                                            </span>
-                                            <span className="fake-price">
-                                                23.000 جنيه
-                                            </span>
-                                        </span>
-                                    </div>
-                                    <div className="footer">
-                                        <span className="discount">
-                                            خصم %15
-                                        </span>
-                                        <button>View Product</button>
+                                        <button>عروض</button>
                                     </div>
                                 </div>
                             </div>
                             <div>
                                 <div className="header">
-                                    <img src="https://k.nooncdn.com/t_desktop-thumbnail-v2/v1541138794/N18810846A_1.jpg"/>
+                                    <img src="https://k.nooncdn.com/t_desktop-thumbnail-v2/v1541138794/N18810846A_1.jpg" alt='product'/>
                                 </div>
-                                <div className="information" style={{direction:'rtl',textAlign:'right'}}>
+                                <div className="information">
                                     <div className="head">
                                         <p>أبل</p>
                                         <p>ايفون 11 برو ماكس</p>
@@ -455,7 +426,7 @@ class BestSellerSlider extends React.Component {
                                         <span className="discount">
                                             خصم %15
                                         </span>
-                                        <button>View Product</button>
+                                        <button>عروض</button>
                                     </div>
                                 </div>
                             </div>
