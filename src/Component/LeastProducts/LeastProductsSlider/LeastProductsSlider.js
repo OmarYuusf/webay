@@ -12,7 +12,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 
 const SecSlider = styled.div`
 
-    .container-fluid{
+.container-fluid{
         padding:0px !important ;
     }
 
@@ -159,7 +159,7 @@ const SecSlider = styled.div`
                     }
                 }
             }
-        }  
+        } 
 `
 
 class LeastProducts extends React.Component {

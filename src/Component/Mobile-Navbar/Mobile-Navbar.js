@@ -13,7 +13,7 @@ class MobileNavbar extends React.Component {
         this.handler = this.handler.bind(this);
 
         this.state = {
-            slide: true
+            slide: false
         }
     }
 
@@ -21,7 +21,6 @@ class MobileNavbar extends React.Component {
         this.setState({
             slide: !this.state.slide
         })
-        console.log(this.state.slide)
     }
 
     render (){

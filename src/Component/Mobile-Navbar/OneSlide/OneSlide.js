@@ -52,7 +52,8 @@ const Slide = styled.div`
         left:0px;
         z-index:-1;
         transition:all .2s;
-
+        z-index:99999999;
+        
         span{
             display:block;
             position:relative;

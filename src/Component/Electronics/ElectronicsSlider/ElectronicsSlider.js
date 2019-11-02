@@ -11,9 +11,18 @@ import styled from 'styled-components';
 import { Container, Row, Col } from 'react-bootstrap';
 
 const SecSlider = styled.div`
-    .slick-slider{
-            margin-top:60px; 
 
+.container-fluid{
+        padding:0px !important ;
+    }
+
+    .slick-slider{
+            margin-top:60px;
+
+            @media (max-width: 425px){ 
+                margin-top:10px;
+            }
+            
             .slick-arrow{
                 background:#FFF;
                 opacity:1;
@@ -67,7 +76,6 @@ const SecSlider = styled.div`
                 .information{
                     border-top:1px solid rgba(0,0,0,.1);
                     padding:8px 5px;
-
 
                     .head{
 
@@ -140,7 +148,7 @@ const SecSlider = styled.div`
                             background:#03A9F4;
                             color:#FFF;
                             font-size:12px;
-                            padding:5px 12px;
+                            padding:5px 15px;
                             transition:all .2s ;
                             box-shadow:1px 1px 3px rgba(0,0,0,0.15);
 
@@ -151,7 +159,7 @@ const SecSlider = styled.div`
                     }
                 }
             }
-        }  
+        } 
 `
 
 class ElectronicsSlider extends React.Component {

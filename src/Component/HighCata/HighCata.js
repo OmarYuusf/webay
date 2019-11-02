@@ -7,6 +7,14 @@ import { Container, Row, Col } from 'react-bootstrap'
 
 const High = styled.div`
         margin-top:100px;
+        
+        @media (max-width: 600px){ 
+            margin-top:80px;
+        }
+
+        @media (max-width: 425px){ 
+            margin-top:30px;
+        }
 
         .header-High{
 

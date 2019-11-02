@@ -28,7 +28,7 @@ const Slide = styled.div`
         left:0% ;
         transition:all .25s ; 
         overflow:scroll;
-    
+        z-index:999999999;
 
         .header-slide{
             border:1px solid rgba(0,0,0,.1);
@@ -325,6 +325,7 @@ class Aside extends React.Component {
     render (){
         return(
             <Slide style={{direction:this.props.language === 'en' ? "ltr" : "rtl",
+                            textAlign:this.props.language === 'en' ? "left" : "right",
                             left:this.props.statue === false ? '100%' : '0%'}}>
                 <div className="header-slide">
                     <div className="nav-slide">

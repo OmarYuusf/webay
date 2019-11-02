@@ -24,6 +24,10 @@ const Seller = styled.div`
                 h2{
                     font-weight:900;
                     margin:25px 0px;
+
+                    @media (max-width: 425px){ 
+                        font-size:15px;
+                    }
                 }
             }
         }

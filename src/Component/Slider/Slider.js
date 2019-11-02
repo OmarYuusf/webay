@@ -45,7 +45,7 @@ export default class AdaptiveHeight extends Component {
     };
     return (
       <Slide>
-        <Container>
+        <Container fluid={true}>
           <Slider {...settings} className="Hello">
             <div>
               <img src="https://k.nooncdn.com/cms/pages/20191025/ec000906164415019cbcf0fb54f96b4a/en_hp-banner-03.gif" alt="slider"/>
