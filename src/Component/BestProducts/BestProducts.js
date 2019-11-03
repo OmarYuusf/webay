@@ -21,6 +21,7 @@ const Seller = styled.div`
                     font-weight:900;
                     margin:25px 0px;
 
+
                     @media (max-width: 425px){ 
                         font-size:15px;
                     }
@@ -39,7 +40,8 @@ class BestProducts extends React.Component {
             textAlign : this.props.language === "en" ? 'left' : "right"}}>
                 <Container fluid={true}>
                     <Row className="header">
-                        <Col>
+                        <Col style={{direction:this.props.language === 'en' ? 'ltr' : 'rtl',
+                            textAlign : this.props.language === "en" ? 'left' : "right"}}>
                             <h2>احدث المنتجات</h2>
                         </Col>
                     </Row>

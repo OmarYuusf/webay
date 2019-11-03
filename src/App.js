@@ -35,6 +35,10 @@ import LeastProducts from "./Component/LeastProducts/LeastProducts";
 // Footer Component Import 
 import Footer from "./Component/Footer/Footer";
 
+
+// ProductPage Component Import 
+import ProductPage from "./Component/ProductPage/ProductPage";
+
 class App extends Component{
   constructor(props){
     super(props);
@@ -60,7 +64,7 @@ class App extends Component{
     return(
     <div className="App" >
       <div className="Navbar-container">  
-        {this.state.width <= 425 ? 
+        {this.state.width <= 600 ? 
           (
           <div className="navbar-mob">
             <MobileNavbar language={this.state.language} changeLanguage={(e) => this.changeLanguage(e)}/>
@@ -70,36 +74,20 @@ class App extends Component{
             <Navbar language={this.state.language} changeLanguage={(e) => this.changeLanguage(e)}/>
           </div>}
       </div>
-      <div className="Slider">
-        <Slider language={this.state.language}/>
-      </div>
-      <div className="Primary-banner">
-          <PrimaryBanner language={this.state.language}/>
-      </div>
-      <div className="HighCata">
-        <HighCata language={this.state.language}/>
-      </div>
-      <div className="BestProducts">
-          <BestProducts language={this.state.language}/>
-      </div>
-      <div className="Banners">
-          <Banners />
-      </div>
-      <div className="BestSeller">
-          <BestSeller language={this.state.language}/>
-      </div>
-      <div className="Banner">
-          <Ban />
-      </div>
-      <div className="Electronics">
-          <Electronics language={this.state.language}/>
-      </div>
-      <div className="LeastProducts">
-          <LeastProducts language={this.state.language}/>
-      </div>
-      <div className="Footer">
-          <Footer language={this.state.language} />
-      </div>
+
+      <Slider language={this.state.language}/>
+      <PrimaryBanner language={this.state.language}/>
+      <HighCata language={this.state.language}/>
+      <BestProducts language={this.state.language}/>
+      <Banners />
+      <BestSeller language={this.state.language}/>
+      <Ban />
+      <Electronics language={this.state.language}/>
+      <LeastProducts language={this.state.language}/>
+      <Footer language={this.state.language} />
+
+      <ProductPage language={this.state.language} changeLanguage={(e) => this.changeLanguage(e)} width={this.state.width}/>
+
     </div>
     )
   }

@@ -45,19 +45,19 @@ export default class AdaptiveHeight extends Component {
     };
     return (
       <Slide>
-        <Container fluid={true}>
+        <Container fluid={false}>
           <Slider {...settings} className="Hello">
             <div>
-              <img src="https://k.nooncdn.com/cms/pages/20191025/ec000906164415019cbcf0fb54f96b4a/en_hp-banner-03.gif" alt="slider"/>
+              <img src="https://k.nooncdn.com/cms/pages/20191030/2f4feb7fa928506673870a787265349b/ar_HP-01.png" alt="slider"/>
             </div>
             <div>
-              <img src="https://k.nooncdn.com/cms/pages/20191027/f973cc63b56090f3c915c86759648522/en_banner-01.gif" alt="slider"/>
+              <img src="https://k.nooncdn.com/cms/pages/20191031/1352b6cf2473d278b38f0787bb37d77e/ar_slider-03.gif" alt="slider"/>
             </div>
             <div>
-              <img src="https://k.nooncdn.com/cms/pages/20191025/ec000906164415019cbcf0fb54f96b4a/en_hp-banner-03.gif" alt="slider"/>
+              <img src="https://k.nooncdn.com/cms/pages/20191031/1352b6cf2473d278b38f0787bb37d77e/ar_slider-06.gif" alt="slider"/>
             </div>
             <div>
-              <img src="https://k.nooncdn.com/cms/pages/20191027/f973cc63b56090f3c915c86759648522/en_banner-01.gif" alt="slider"/>
+              <img src="https://k.nooncdn.com/cms/pages/20191101/ce4a911959bdb67d1ac41cbb013a7401/ar_slider-03.gif" alt="slider"/>
             </div>
           </Slider>
         </Container>

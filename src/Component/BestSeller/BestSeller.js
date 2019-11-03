@@ -39,7 +39,8 @@ class BestSeller extends React.Component {
             textAlign : this.props.language === "en" ? 'left' : "right"}}>
                 <Container fluid={true}>
                     <Row className="header">
-                        <Col>
+                        <Col style={{direction:this.props.language === 'en' ? 'ltr' : 'rtl',
+                            textAlign : this.props.language === "en" ? 'left' : "right"}}>
                             <h2>الأفضل مبيعا</h2>
                         </Col>
                     </Row>

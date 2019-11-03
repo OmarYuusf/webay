@@ -10,8 +10,9 @@ const BannerInCenter = styled.div`
 
             img{
                 width:100%;
+                padding:0px 15px;
             }
-
+            
     .row:last-of-type{
         
     }
