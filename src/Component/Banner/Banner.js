@@ -7,7 +7,6 @@ import { Container, Row, Col } from 'react-bootstrap';
 
 const BannerInCenter = styled.div`
     margin-top:80px;
-
             img{
                 width:100%;
                 padding:0px 15px;
@@ -22,13 +21,7 @@ class Ban extends React.Component {
     render(){
         return(
             <BannerInCenter>
-                <Container fluid={true}>
-                    <Row>
-                        <Col>
-                            <img src="https://k.nooncdn.com/cms/pages/20191025/ec000906164415019cbcf0fb54f96b4a/en_hp-banner-03.gif"/>
-                        </Col>
-                    </Row>
-                </Container>
+                <img src="https://k.nooncdn.com/cms/pages/20191104/7f8f2fca1bd43529bc2d3ab36078a7cb/ar_hero-03.png"/>
             </BannerInCenter>
         )
     }

@@ -10,8 +10,8 @@ import styled from 'styled-components';
 
 import { Container, Row, Col } from 'react-bootstrap';
 
-const SecSlider = styled.div`
 
+const SecSlider = styled.div`
 .container-fluid{
         padding:0px !important ;
     }
@@ -58,6 +58,10 @@ const SecSlider = styled.div`
                     border-radius:2px;
                     box-shadow:1px 1px 5px rgb(0,0,0,.15);
 
+                    @media (max-width: 425px){ 
+                        margin:5px;
+                    }
+
                     div{
                         margin:0px;
                     }
@@ -77,45 +81,67 @@ const SecSlider = styled.div`
                     border-top:1px solid rgba(0,0,0,.1);
                     padding:8px 5px;
 
+                    @media (max-width: 425px){ 
+                        padding:8px 3px;
+                    }
+
                     .head{
 
                         p{
-                        margin:0px;
+                            margin:0px;
                         }
 
                         p:first-of-type{
                             font-size:12px;
-                            color:#555
+                            color:#555;
+
+                            @media (max-width: 425px){ 
+                                font-size:10px
+                            }
                         }
 
                         p:nth-child(2){
                             font-weight:800;
-                            font-size:14px
+                            font-size:14px;
+
+                            @media (max-width: 425px){ 
+                                font-size:12px
+                            }
                         }
 
                         p:last-of-type{
                             font-size:12px;
                             margin-top:10px;
-                            color:#555
+                            color:#555;
+
+                            @media (max-width: 425px){ 
+                                font-size:10px
+                            }
                         }
                     }
 
                     .center{
                         display:flex;
-                        justify-content:space-between;
                         margin:15px 0px;
                         align-items:center;
+                        direction:inherit;
 
-                        > span{
-                            display:flex;
-                            flex-direction:row;
-                            font-size:13px;
-                            align-items:center;
+                        @media (max-width: 425px){ 
+                            font-size:12px;
+                            flex-direction:column;
+                        }
+
+                        p{
+                            margin:0px;
                         }
 
                         .real-price{
                             font-weight:600;
+                            color:#03A9F4;
 
+                            @media (max-width: 425px){ 
+                               font-size:12px;
+                            }
                         }
 
                         .fake-price{
@@ -123,6 +149,10 @@ const SecSlider = styled.div`
                             color:#555;
                             text-decoration:line-through;
                             margin-inline-start:10px;
+
+                            @media (max-width: 425px){ 
+                               font-size:10px;
+                            }
                         }
 
                     }
@@ -140,6 +170,10 @@ const SecSlider = styled.div`
                             justify-content:space-around;
                             align-items:center;
                             box-shadow:1px 1px 3px rgba(0,0,0,0.15);
+
+                            @media (max-width: 425px){ 
+                                font-size:10px
+                            }
                         }
 
                         button{
@@ -155,12 +189,16 @@ const SecSlider = styled.div`
                             &:hover{
                                 box-shadow:2px 2px 6px rgba(0,0,0,0.15);
                             }
+
+                             @media (max-width: 425px){ 
+                                font-size:10px
+                            }
                         }
                     }
                 }
             }
-        } 
-`
+        }  
+`  
 
 class LeastProducts extends React.Component {
     render() {
@@ -193,8 +231,8 @@ class LeastProducts extends React.Component {
               {
                 breakpoint: 480,
                 settings: {
-                  slidesToShow: 1,
-                  slidesToScroll: 1
+                  slidesToShow: 2,
+                  slidesToScroll: 2
                 }
               }
             ]
@@ -217,14 +255,12 @@ class LeastProducts extends React.Component {
                                         <p> بخاصية فيس تايم لون فضي سعة 512 جيجابايت يدعم تقنية 4G LTE - بالمواصفات الدولية</p>
                                     </div>
                                     <div className="center">
-                                        <span className="All-price">
-                                            <span className="real-price">
-                                                20.000 جنيه
-                                            </span>
-                                            <span className="fake-price">
-                                                23.000 جنيه
-                                            </span>
-                                        </span>
+                                        <p className="real-price">
+                                            20.000 جنيه
+                                        </p>
+                                        <p className="fake-price">
+                                            23.000 جنيه
+                                        </p>
                                     </div>
                                     <div className="footer">
                                         <span className="discount">
@@ -245,14 +281,12 @@ class LeastProducts extends React.Component {
                                         <p> بخاصية فيس تايم لون فضي سعة 512 جيجابايت يدعم تقنية 4G LTE - بالمواصفات الدولية</p>
                                     </div>
                                     <div className="center">
-                                        <span className="All-price">
-                                            <span className="real-price">
-                                                20.000 جنيه
-                                            </span>
-                                            <span className="fake-price">
-                                                23.000 جنيه
-                                            </span>
-                                        </span>
+                                        <p className="real-price">
+                                            20.000 جنيه
+                                        </p>
+                                        <p className="fake-price">
+                                            23.000 جنيه
+                                        </p>
                                     </div>
                                     <div className="footer">
                                         <span className="discount">
@@ -273,14 +307,12 @@ class LeastProducts extends React.Component {
                                         <p> بخاصية فيس تايم لون فضي سعة 512 جيجابايت يدعم تقنية 4G LTE - بالمواصفات الدولية</p>
                                     </div>
                                     <div className="center">
-                                        <span className="All-price">
-                                            <span className="real-price">
-                                                20.000 جنيه
-                                            </span>
-                                            <span className="fake-price">
-                                                23.000 جنيه
-                                            </span>
-                                        </span>
+                                        <p className="real-price">
+                                            20.000 جنيه
+                                        </p>
+                                        <p className="fake-price">
+                                            23.000 جنيه
+                                        </p>
                                     </div>
                                     <div className="footer">
                                         <span className="discount">
@@ -301,14 +333,12 @@ class LeastProducts extends React.Component {
                                         <p> بخاصية فيس تايم لون فضي سعة 512 جيجابايت يدعم تقنية 4G LTE - بالمواصفات الدولية</p>
                                     </div>
                                     <div className="center">
-                                        <span className="All-price">
-                                            <span className="real-price">
-                                                20.000 جنيه
-                                            </span>
-                                            <span className="fake-price">
-                                                23.000 جنيه
-                                            </span>
-                                        </span>
+                                        <p className="real-price">
+                                            20.000 جنيه
+                                        </p>
+                                        <p className="fake-price">
+                                            23.000 جنيه
+                                        </p>
                                     </div>
                                     <div className="footer">
                                         <span className="discount">
@@ -329,14 +359,12 @@ class LeastProducts extends React.Component {
                                         <p> بخاصية فيس تايم لون فضي سعة 512 جيجابايت يدعم تقنية 4G LTE - بالمواصفات الدولية</p>
                                     </div>
                                     <div className="center">
-                                        <span className="All-price">
-                                            <span className="real-price">
-                                                20.000 جنيه
-                                            </span>
-                                            <span className="fake-price">
-                                                23.000 جنيه
-                                            </span>
-                                        </span>
+                                        <p className="real-price">
+                                            20.000 جنيه
+                                        </p>
+                                        <p className="fake-price">
+                                            23.000 جنيه
+                                        </p>
                                     </div>
                                     <div className="footer">
                                         <span className="discount">
@@ -357,14 +385,12 @@ class LeastProducts extends React.Component {
                                         <p> بخاصية فيس تايم لون فضي سعة 512 جيجابايت يدعم تقنية 4G LTE - بالمواصفات الدولية</p>
                                     </div>
                                     <div className="center">
-                                        <span className="All-price">
-                                            <span className="real-price">
-                                                20.000 جنيه
-                                            </span>
-                                            <span className="fake-price">
-                                                23.000 جنيه
-                                            </span>
-                                        </span>
+                                        <p className="real-price">
+                                            20.000 جنيه
+                                        </p>
+                                        <p className="fake-price">
+                                            23.000 جنيه
+                                        </p>
                                     </div>
                                     <div className="footer">
                                         <span className="discount">
@@ -385,14 +411,12 @@ class LeastProducts extends React.Component {
                                         <p> بخاصية فيس تايم لون فضي سعة 512 جيجابايت يدعم تقنية 4G LTE - بالمواصفات الدولية</p>
                                     </div>
                                     <div className="center">
-                                        <span className="All-price">
-                                            <span className="real-price">
-                                                20.000 جنيه
-                                            </span>
-                                            <span className="fake-price">
-                                                23.000 جنيه
-                                            </span>
-                                        </span>
+                                        <p className="real-price">
+                                            20.000 جنيه
+                                        </p>
+                                        <p className="fake-price">
+                                            23.000 جنيه
+                                        </p>
                                     </div>
                                     <div className="footer">
                                         <span className="discount">
@@ -413,14 +437,38 @@ class LeastProducts extends React.Component {
                                         <p> بخاصية فيس تايم لون فضي سعة 512 جيجابايت يدعم تقنية 4G LTE - بالمواصفات الدولية</p>
                                     </div>
                                     <div className="center">
-                                        <span className="All-price">
-                                            <span className="real-price">
-                                                20.000 جنيه
-                                            </span>
-                                            <span className="fake-price">
-                                                23.000 جنيه
-                                            </span>
+                                        <p className="real-price">
+                                            20.000 جنيه
+                                        </p>
+                                        <p className="fake-price">
+                                            23.000 جنيه
+                                        </p>
+                                    </div>
+                                    <div className="footer">
+                                        <span className="discount">
+                                            خصم %15
                                         </span>
+                                        <button>عروض</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div className="header">
+                                    <img src="https://k.nooncdn.com/t_desktop-thumbnail-v2/v1541138794/N18810846A_1.jpg" alt='product'/>
+                                </div>
+                                <div className="information">
+                                    <div className="head">
+                                        <p>أبل</p>
+                                        <p>ايفون 11 برو ماكس</p>
+                                        <p> بخاصية فيس تايم لون فضي سعة 512 جيجابايت يدعم تقنية 4G LTE - بالمواصفات الدولية</p>
+                                    </div>
+                                    <div className="center">
+                                        <p className="real-price">
+                                            20.000 جنيه
+                                        </p>
+                                        <p className="fake-price">
+                                            23.000 جنيه
+                                        </p>
                                     </div>
                                     <div className="footer">
                                         <span className="discount">

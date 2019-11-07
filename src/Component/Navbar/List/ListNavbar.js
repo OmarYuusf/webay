@@ -75,9 +75,11 @@ const ContainerList = styled.div`
                     position: relative;
 
                     &:hover{
+
                         .dropdown{
                             display:block
                         }
+                        
                     }
                     
                     a{
@@ -134,7 +136,11 @@ const ContainerList = styled.div`
                             > span:last-of-type{
                                 border-bottom: 1px solid rgba(0,0,0,.1);
                                 padding:10px 0px;
-                                font-weight:800
+                                font-weight:800;
+
+                                &:hover{
+                                    color:rgb(3, 169, 244)
+                                }   
                             }
 
                             > span:first-of-type{
@@ -192,7 +198,7 @@ const ContainerList = styled.div`
         }
 
         .list-show{
-            width:75%;
+            width:80%;
             position: absolute;
             left:50%;
             top:100%;
@@ -207,6 +213,10 @@ const ContainerList = styled.div`
                 width:95%;
             }
 
+            @media (max-width: 600px){ 
+                width:100%;
+            }
+
             > div{
                 margin:0px 5px;
 
@@ -214,6 +224,11 @@ const ContainerList = styled.div`
                     margin:0px;
                     border-bottom:1px solid rgba(0,0,0,.1);
                     padding-bottom:10px;
+                    font-size:14px;
+
+                    @media (max-width: 768px){ 
+                        font-size:13px;
+                    }
                 }
             }
 
@@ -237,6 +252,10 @@ const ContainerList = styled.div`
 
                             &:hover{
                                 color:rgb(3, 169, 244)
+                            }
+
+                            @media (max-width: 768px){
+                                font-size:9px;
                             }
                         }
                     }
@@ -271,12 +290,12 @@ const ContainerList = styled.div`
 
             > div:last-of-type{
                 flex:2;
-                object-fit:contain;
+
                 
                 img{
                     width:100%;
                     height:100%;
-
+                    object-fit:contain;
                 }
             }
         }
@@ -288,8 +307,9 @@ class ListNavbar extends React.Component {
 
         this.state = {
             cateRecives : [],
+            subRecives : [],
             dropRecives : [],
-            hover: false,
+            hover:false,
             nameChange : '',
             categories : [
                 {
@@ -372,7 +392,7 @@ class ListNavbar extends React.Component {
         }
     }
 
-    changerText = (e) => {
+    textChanger = (e) => {
         this.setState({
             nameChange:e.target.innerHTML
         })
@@ -391,36 +411,37 @@ class ListNavbar extends React.Component {
                 }) : this.setState({
             dropRecives : this.state.categories[dropDownShowSubList].subStra.ar,
         })
+
+
     }
-
-
-    searchSub = (e) => {
-        this.setState({
-            hover:!this.state.hover
-        })
-
-        const sameList = this.state.categories.findIndex(cata => {
-            if(cata.name.ar  == e.target.innerHTML){
-                return cata._id 
-            }else if(cata.name.en == e.target.innerHTML){
-                return cata._id
+    
+    subCheck = (e) => {
+        const subList = this.state.categories.findIndex(cart => {
+            if(e.target.textContent == cart.name.ar  ){
+                return cart._id 
+            }else if(e.target.textContent == cart.name.en ){
+                return cart._id
             }
         })
 
-    this.props.language === 'en' ? 
         this.setState({
-            cateRecives : this.state.categories[sameList].subStra.en
-                }) : this.setState({
-            cateRecives : this.state.categories[sameList].subStra.ar,
-                })
-}
-
-    showSubListHover = () => {
-        this.setState({
-            hover:!this.state.hover
+            subRecives: this.props.language === "en" ? this.state.categories[subList].subStra.en : this.state.categories[subList].subStra.ar,
         })
 
     }
+
+    isOpen = () => {
+        this.setState({
+            hover:true
+        })
+    }
+
+    isClosed = () => {
+        this.setState({
+            hover:false
+        })
+    }
+
 
     render() {
         return(
@@ -447,7 +468,7 @@ class ListNavbar extends React.Component {
                                             {this.state.categories.map(cata => {
                                                 return(
                                                     <li key={cata._id}>
-                                                        <a href="#" onMouseEnter={(e) => this.changerText(e)}>{this.props.language === 'en' ? (cata.name.en) : (cata.name.ar) }</a>
+                                                        <a href="#" onMouseEnter={(e) => this.textChanger(e)}>{this.props.language === 'en' ? (cata.name.en) : (cata.name.ar) }</a>
                                                     </li>
                                                 )
                                             })}
@@ -469,23 +490,26 @@ class ListNavbar extends React.Component {
                         </li>
                         {this.state.categories.map(cata => {
                             return(
-                                <li key={cata._id}>
-                                    <a href="#" onMouseEnter={ (e) => this.searchSub(e) } onMouseLeave={this.showSubListHover} >{this.props.language === 'en' ? (cata.name.en) : (cata.name.ar) }</a>  
+                                <li key={cata._id} onMouseMove={this.isOpen} onMouseLeave={this.isClosed} onMouseEnter={(e) => this.subCheck(e)}>
+                                    <a href="#">{this.props.language === 'en' ? (cata.name.en) : (cata.name.ar) }</a>  
                                 </li>
+                                
                             )
                         })}
+                        
                     </ul>
                 </div>
-                <div className="list-show" style={{direction:this.props.language === 'en' ? 'ltr' : 'rtl',
-                                                   textAlign : this.props.language === "en" ? 'left' : "right",
-                                                   display:this.state.hover === false ? 'none' : 'flex',
-                                                }}
+                <div className="list-show" onMouseEnter={this.isOpen} onMouseLeave={this.isClosed}
+                    style={{direction:this.props.language === 'en' ? 'ltr' : 'rtl',
+                        textAlign : this.props.language === "en" ? 'left' : "right",
+                        display:this.state.hover === false ? 'none' : 'flex',
+                    }}
                     >
                     <div>
                         <h5>{this.props.language === 'en' ? "CATEGORIES" : 'فئات المنتجات'}</h5>
                         <ul>
 
-                            {this.state.cateRecives.map(sub => {
+                            {this.state.subRecives.map(sub => {
                                 return(
                                     <li key={Math.random()}>
                                         <a href="#">{sub}</a>

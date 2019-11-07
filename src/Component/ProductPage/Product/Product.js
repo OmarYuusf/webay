@@ -2,9 +2,14 @@ import React from 'react';
 
 // FontAwsome 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons'
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons'
+import { faStar } from '@fortawesome/free-solid-svg-icons'
+import { faUndo } from '@fortawesome/free-solid-svg-icons'
+import { faStoreAlt } from '@fortawesome/free-solid-svg-icons'
+import { faTruckMoving } from '@fortawesome/free-solid-svg-icons'
+import { faUserShield } from '@fortawesome/free-solid-svg-icons'
+import { faTimes } from '@fortawesome/free-solid-svg-icons'
 
 // Styled-Component
 import styled from 'styled-components'
@@ -36,9 +41,21 @@ const Product = styled.div`
         margin-top:35px;
         display:flex;
 
+        @media (max-width: 1024px){ 
+            flex-wrap:wrap;
+        }
+
         .information{
-            flex:2;
-            padding-left:10px;  
+            padding-left:10px;
+            width:40%;
+
+            @media (max-width: 1024px){ 
+                width:50% !important
+            }
+
+            @media (max-width: 768px){ 
+                width:100% !important
+            }
 
             > div:not(:last-of-type) {
                 border-bottom:1px solid rgba(0,0,0,.1);
@@ -165,11 +182,17 @@ const Product = styled.div`
         }
 
         .imgs{
-            flex:2;
+            width:30%;
+            @media (max-width: 1024px){ 
+                width:50% !important
+            }
 
+            @media (max-width: 768px){ 
+                width:100% !important
+            }
                         
             div:first-of-type{
-                height:300px;
+                height:400px;
 
                 img{
                     width:100%;
@@ -179,7 +202,8 @@ const Product = styled.div`
             }
             div:last-of-type{
                 display:flex;
-                justify-content:space-around;
+                justify-content:center;;
+
                 img{
                     width:60px;
                     height:60px;
@@ -190,7 +214,69 @@ const Product = styled.div`
             }
         }
         .ship{
-            flex:1;
+            width:30%;
+
+            @media (max-width: 1024px){ 
+            }
+
+            @media (max-width: 768px){ 
+                width:100% !important;
+                margin-top:30px;
+            }
+
+            > div {
+                margin:0px 10px;
+
+                > div{
+                    display:flex;
+                    align-items:center;
+                    margin:16px 0px;
+
+                    svg{
+                        margin-inline-end:10px;
+                        color:#03A9F4;
+                    }
+
+                    p{
+                        margin:0px;
+                        font-size:11px;
+                        color:#777
+                    }
+                }
+            }
+
+            > div:first-of-type{
+                border-bottom:1px solid rgba(0,0,0,.1)
+            }
+        }
+    }
+
+    aside{
+        position: fixed;
+        width:100%;
+        height:100%;
+        background:rgba(0,0,0,.8);
+        top:0px;
+        left:0px;
+        display:none;
+        visibility: hidden;
+        justify-content:center;
+        align-items:center;
+        transition:all .4s ;
+        z-index:90000000;
+
+        svg{
+            color:#FFF;
+            position: absolute;
+            top:15px;
+            right:30px;
+        }
+
+        img{
+            max-width:80%;
+            max-height:80%;
+            object-fit:contain;
+            z-index:90000001;
         }
     }
 `
@@ -199,9 +285,9 @@ class ProductItems extends React.Component {
         super(props);
 
         this.state = {
-            imgSrc : "https://k.nooncdn.com/t_desktop-pdp-v1/v1554958476/N22690810A_1.jpg",
+            imgSrc : "https://k.nooncdn.com/t_desktop-thumbnail-v2/v1541138794/N18810846A_1.jpg",
             img : [
-                {src: "https://k.nooncdn.com/t_desktop-pdp-v1/v1554958476/N22690810A_1.jpg", alt:"product"},
+                {src: "https://k.nooncdn.com/t_desktop-thumbnail-v2/v1541138794/N18810846A_1.jpg", alt:"product"},
                 {src: "https://k.nooncdn.com/t_desktop-pdp-v1/v1554958477/N22690810A_2.jpg", alt:"product"},
                 {src: "https://k.nooncdn.com/t_desktop-pdp-v1/v1554958476/N22690810A_3.jpg", alt:"product"},
                 {src: "https://k.nooncdn.com/t_desktop-pdp-v1/v1554958477/N22690810A_4.jpg", alt:"product"},
@@ -216,10 +302,29 @@ class ProductItems extends React.Component {
         })
     }
 
+    stopZomming = (e) => {
+        if(e.target.tagName.toLowerCase() === 'aside'){
+            e.target.style.display = 'none'
+            e.target.style.visibility = 'hidden'
+        }
+    }
+
+    exitZomming = () => {
+        const aside = document.getElementById('imgViewer');
+        aside.style.display = 'none'
+        aside.style.visibility = 'hidden'
+    }
+
+    startZomming = () => {
+        const aside = document.getElementById('imgViewer');
+        aside.style.display = 'flex'
+        aside.style.visibility = 'visible'
+    }
+
     render() {
         return(
             <Product>
-                <Container>
+                <Container fluid={true}>
                     <Row>
                         <Col xs={12} className="header">
                             <a href='#'>الرئيسية</a> 
@@ -232,86 +337,105 @@ class ProductItems extends React.Component {
                         </Col>
 
                         <Col xs={12} className="product">
-                            <div className="information">
-                                <div>
-                                    <p className="owner">اسم الشركه</p>
-                                    <h5 className="products-name">DataTraveler 104 Flash Drive أسود 16 غيغابايت</h5>
-                                    <p className="model-number">اسم الموديل</p>
-                                    <div className="old-price">
-                                        <p>  السعر القديم:</p>
-                                        <p>  223 جنيه</p>
+                                <div className="information">
+                                    <div>
+                                        <p className="owner">اسم الشركه</p>
+                                        <h5 className="products-name">DataTraveler 104 Flash Drive أسود 16 غيغابايت</h5>
+                                        <p className="model-number">اسم الموديل</p>
+                                        <div className="old-price">
+                                            <p>  السعر القديم:</p>
+                                            <p>  223 جنيه</p>
+                                        </div>
+                                        <div className="new-price">
+                                            <span>
+                                                <p>  السعر الجديد: </p>
+                                                <p>   223 جنيه</p>
+                                            </span>
+                                            <p className="discount">خصم 15%</p>
+                                        </div>
+                                        
                                     </div>
-                                    <div className="new-price">
+                                    <div>
+                                        <h6>مميزات المنتج</h6>
+                                        <ul>
+                                            <li>Pocket sized for easy transportability.</li>
+                                            <li>Features a stylish black casing with a sliding cap design.</li>
+                                            <li>It is supported by a wide array of devices thanks to the USB 2.0 interface</li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <h6>المواصفات</h6>
                                         <span>
-                                            <p>  السعر الجديد: </p>
-                                            <p>   223 جنيه</p>
+                                            <p>الحجم</p>
+                                            <p>84 جرام</p>
                                         </span>
-                                        <p className="discount">خصم 15%</p>
+                                        <span>
+                                            <p>الطول</p>
+                                            <p>120</p>
+                                        </span>
+                                        <span>
+                                            <p>اللون</p>
+                                            <p>اسود</p>
+                                        </span>
                                     </div>
-                                    
                                 </div>
-                                <div>
-                                    <h6>مميزات المنتج</h6>
-                                    <ul>
-                                        <li>Pocket sized for easy transportability.</li>
-                                        <li>Features a stylish black casing with a sliding cap design.</li>
-                                        <li>It is supported by a wide array of devices thanks to the USB 2.0 interface</li>
-                                    </ul>
-                                </div>
-                                <div>
-                                    <h6>المواصفات</h6>
-                                    <span>
-                                        <p>الحجم</p>
-                                        <p>84 جرام</p>
-                                    </span>
-                                    <span>
-                                        <p>الطول</p>
-                                        <p>120</p>
-                                    </span>
-                                    <span>
-                                        <p>اللون</p>
-                                        <p>اسود</p>
-                                    </span>
-                                </div>
-                            </div>
-                            <div className="imgs">
-                                <div>
-                                    <img src={this.state.imgSrc}/>
-                                </div>
-                                <div>
-                                    {this.state.img.map(imgs => {
-                                        return(
-                                            <img key={Math.random()} src={imgs.src} alt="product" onClick={(e) => this.handleChangeImg(e)}/>
-                                        )
-                                    })}
-                                </div>
-                            </div>
-                            <div className="ship">
-                                {/* <div>
-                                    <div>    
-                                        <svg height="15px" viewBox="0 0 512 512" width="15px" xmlns="http://www.w3.org/2000/svg"><path d="m256 0c-141.164062 0-256 114.835938-256 256s114.835938 256 256 256 256-114.835938 256-256-114.835938-256-256-256zm0 0" fill="#2196f3"/><path d="m385.75 201.75-138.667969 138.664062c-4.160156 4.160157-9.621093 6.253907-15.082031 6.253907s-10.921875-2.09375-15.082031-6.253907l-69.332031-69.332031c-8.34375-8.339843-8.34375-21.824219 0-30.164062 8.339843-8.34375 21.820312-8.34375 30.164062 0l54.25 54.25 123.585938-123.582031c8.339843-8.34375 21.820312-8.34375 30.164062 0 8.339844 8.339843 8.339844 21.820312 0 30.164062zm0 0" fill="#fafafa"/></svg>
-                                        <p>ضمان لمدة عامين</p>
+                                <div className="imgs">
+                                    <div>
+                                        <img src={this.state.imgSrc} onClick={this.startZomming}/>
                                     </div>
                                     <div>
-                                        <svg height="15px" viewBox="0 0 512 512" width="15px" xmlns="http://www.w3.org/2000/svg"><path d="m256 0c-141.164062 0-256 114.835938-256 256s114.835938 256 256 256 256-114.835938 256-256-114.835938-256-256-256zm0 0" fill="#2196f3"/><path d="m385.75 201.75-138.667969 138.664062c-4.160156 4.160157-9.621093 6.253907-15.082031 6.253907s-10.921875-2.09375-15.082031-6.253907l-69.332031-69.332031c-8.34375-8.339843-8.34375-21.824219 0-30.164062 8.339843-8.34375 21.820312-8.34375 30.164062 0l54.25 54.25 123.585938-123.582031c8.339843-8.34375 21.820312-8.34375 30.164062 0 8.339844 8.339843 8.339844 21.820312 0 30.164062zm0 0" fill="#fafafa"/></svg>
-                                        <p>تقدر دلوقتي ترجّع المنتجات بسهولة في العرض ده.</p>
-                                    </div>
-                                    <div>
-                                        <svg height="15px" viewBox="0 0 512 512" width="15px" xmlns="http://www.w3.org/2000/svg"><path d="m256 0c-141.164062 0-256 114.835938-256 256s114.835938 256 256 256 256-114.835938 256-256-114.835938-256-256-256zm0 0" fill="#2196f3"/><path d="m385.75 201.75-138.667969 138.664062c-4.160156 4.160157-9.621093 6.253907-15.082031 6.253907s-10.921875-2.09375-15.082031-6.253907l-69.332031-69.332031c-8.34375-8.339843-8.34375-21.824219 0-30.164062 8.339843-8.34375 21.820312-8.34375 30.164062 0l54.25 54.25 123.585938-123.582031c8.339843-8.34375 21.820312-8.34375 30.164062 0 8.339844 8.339843 8.339844 21.820312 0 30.164062zm0 0" fill="#fafafa"/></svg>
-                                        <p>البائع ECS Distribution</p>
+                                        {this.state.img.map(imgs => {
+                                            return(
+                                                <img key={Math.random()}
+                                                     src={imgs.src}
+                                                     alt="product" 
+                                                     onClick={(e) => this.handleChangeImg(e)} 
+                                                     />
+                                            )
+                                        })}
                                     </div>
                                 </div>
-                                <div>
-
-                                </div> */}
-                                a
-                            </div>
+                                <div className="ship">
+                                    <div>
+                                        <div>
+                                            <FontAwesomeIcon icon={faStar} size='xs'></FontAwesomeIcon>
+                                            <p>ضمان لمدة عامين</p>
+                                        </div>
+                                        <div>
+                                            <FontAwesomeIcon icon={faUndo} size='xs'></FontAwesomeIcon>
+                                            <p>تقدر دلوقتي ترجّع المنتجات بسهولة في العرض ده.</p>
+                                        </div>
+                                        <div>
+                                            <FontAwesomeIcon icon={faStoreAlt} size='xs'></FontAwesomeIcon>
+                                            <p>  البائع ECS Distribution</p>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div>
+                                            <FontAwesomeIcon icon={faTruckMoving} size='xs'></FontAwesomeIcon>
+                                            <p>الشحن المجاني لما تشتري بـ 250ج.م أو أكتر</p>
+                                        </div>
+                                        <div>
+                                            <FontAwesomeIcon icon={faUndo} size='xs'></FontAwesomeIcon>
+                                            <p>إرجاع مجاني وبسهولة للمنتجات اللي ينفع ترجع</p>
+                                        </div>
+                                        <div>
+                                            <FontAwesomeIcon icon={faUserShield} size='xs'></FontAwesomeIcon>
+                                            <p>متقلقش على بياناتك دايماً في أمان</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            
                         </Col>
+                    
+                        <aside id="imgViewer" onClick={(e) => this.stopZomming(e)} >
+                            <FontAwesomeIcon icon={faTimes} size='1x' onClick={this.exitZomming}></FontAwesomeIcon>
+                            <img src={this.state.imgSrc}/>
+                        </aside>
                     </Row>
                 </Container>
             </Product>
         )
     }
 }
-
 export default ProductItems;

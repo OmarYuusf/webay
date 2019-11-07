@@ -26,9 +26,10 @@ const Slide = styled.div`
         z-index:9999;
         top:0px;
         left:0% ;
-        transition:all .25s ; 
+        transition:all .4s ; 
         overflow:scroll;
         z-index:999999999;
+        padding-bottom:45px;
 
         .header-slide{
             border:1px solid rgba(0,0,0,.1);
@@ -84,7 +85,9 @@ const Slide = styled.div`
             padding:5px 12px;
             padding-bottom:0px;
 
+
             .center-primary{
+                position: relative;
 
                 > p{
                     font-size:11px;
@@ -97,27 +100,20 @@ const Slide = styled.div`
                     margin:0px;
 
                     li {
-                        padding:11px 0px;
                         border-bottom:1px solid rgba(0,0,0,.1);
-
                         a{
-                            display:block;
                             display:flex;
                             justify-content:space-between;
                             align-items:center;
                             color:#212121;
                             text-decoration:none;
+                            height:50px;
+                            font-size:13px;
 
                             .fa-chevron-left{
                                 color:#555;
                             }
-                            
-                            p{
-                                margin:0px;
-                                font-size:14px;
-                                font-weight:400;
-
-                            };
+                        
                         }
                     }
                 }
@@ -168,16 +164,24 @@ const Slide = styled.div`
         }
 
         .center-footer{
-            margin-top:18px;
             display:flex;
-            margin:0px -12px;
+            height:45px;
+            position: fixed;
+            bottom:0px;
+            right:0px;
+            width:100%;
+            transition:all .4s;
+
 
             > div{
+                display:flex;
                 flex:1;
-                padding:16px 12px;
                 background:#f1f1f1;
                 border:1px solid rgba(0,0,0,.1);
-                a{
+                padding:0px 10px;
+
+                a{  
+                    width:100%;
                     display:flex;
                     justify-content:space-between;
                     align-items:center;
@@ -213,7 +217,7 @@ class Aside extends React.Component {
                         ar: "2قسم جديد",
                         en: "Cat 3"
                       },
-                    _id: "ewee32432",
+                    _id: "eweeqwe32432",
                     subStra:{
                         ar:['قسم 2', 'قسم342645 3123', 'قسم123 124324', 'قسم 512312', 'ق543سم 6123'],
                         en: ['english 2 1', 'english 2 2', 'english 2 3', 'english 12 4', 'english 2 5', 'english 2 6', 'english 2 7', ]
@@ -224,7 +228,62 @@ class Aside extends React.Component {
                         ar: "3قسم جديد",
                         en: "Cat 4"
                       },
-                    _id: "ewee32432",
+                    _id: "ewee32432432",
+                    subStra:{
+                        ar:['قسم 2adsf', 'قسم asdf3123', 'قسم123asdf 4', 'قسم 51sadf2312', 'قسم 612adsf3'],
+                        en: ['english 3 1', 'english 3 2', 'english 3 3', 'english 3 4', 'english 3 5', 'english 3 6', 'english 3 7', ]
+                    }
+                },
+                {
+                    name: {
+                        ar: "3قسم جديد",
+                        en: "Cat 4"
+                      },
+                    _id: "ewee326452432",
+                    subStra:{
+                        ar:['قسم 2adsf', 'قسم asdf3123', 'قسم123asdf 4', 'قسم 51sadf2312', 'قسم 612adsf3'],
+                        en: ['english 3 1', 'english 3 2', 'english 3 3', 'english 3 4', 'english 3 5', 'english 3 6', 'english 3 7', ]
+                    }
+                },
+                {
+                    name: {
+                        ar: "3قسم جديد",
+                        en: "Cat 4"
+                      },
+                    _id: "ewee3241237832",
+                    subStra:{
+                        ar:['قسم 2adsf', 'قسم asdf3123', 'قسم123asdf 4', 'قسم 51sadf2312', 'قسم 612adsf3'],
+                        en: ['english 3 1', 'english 3 2', 'english 3 3', 'english 3 4', 'english 3 5', 'english 3 6', 'english 3 7', ]
+                    }
+                },
+                {
+                    name: {
+                        ar: "3قسم جديد",
+                        en: "Cat 4"
+                      },
+                    _id: "ewee32465832",
+                    subStra:{
+                        ar:['قسم 2adsf', 'قسم asdf3123', 'قسم123asdf 4', 'قسم 51sadf2312', 'قسم 612adsf3'],
+                        en: ['english 3 1', 'english 3 2', 'english 3 3', 'english 3 4', 'english 3 5', 'english 3 6', 'english 3 7', ]
+                    }
+                },
+                {
+                    name: {
+                        ar: "3قسم جديد",
+                        en: "Cat 4"
+                      },
+                    _id: "ewee31212432",
+                    subStra:{
+                        ar:['قسم 2adsf', 'قسم asdf3123', 'قسم123asdf 4', 'قسم 51sadf2312', 'قسم 612adsf3'],
+                        en: ['english 3 1', 'english 3 2', 'english 3 3', 'english 3 4', 'english 3 5', 'english 3 6', 'english 3 7', ]
+                    }
+                },
+                {
+                    name: {
+                        ar: "3قسم جديد",
+                        en: "Cat 4"
+                      },
+                    _id: "ewee3241231332",
                     subStra:{
                         ar:['قسم 2adsf', 'قسم asdf3123', 'قسم123asdf 4', 'قسم 51sadf2312', 'قسم 612adsf3'],
                         en: ['english 3 1', 'english 3 2', 'english 3 3', 'english 3 4', 'english 3 5', 'english 3 6', 'english 3 7', ]
@@ -235,7 +294,7 @@ class Aside extends React.Component {
                         ar: "4قسم جديد",
                         en: "Cat 5"
                       },
-                    _id: "ewee32432",
+                    _id: "ewee32434352",
                     subStra:{
                         ar:['قسم 2', 'قسم 312asdf3', 'قسم12asdf3 4', 'قسم 51sdaf2312', 'قسadsfم 6123'],
                         en: ['english 4 1', 'english 4 2', 'english 4 3', 'english 4 4', 'english 4 5', 'english 4 6', 'english 4 7', ]
@@ -246,7 +305,7 @@ class Aside extends React.Component {
                         ar: "5قسم جديد",
                         en: "Cat 6"
                       },
-                    _id: "ewee32432",
+                    _id: "ewee334562432",
                     subStra:{
                         ar:['قسم 2', 'قسم 3123', 'قسم123 4', 'قسم 512312', 'قسم 6123'],
                         en: ['english 5 1', 'english 5 2', 'english 5 3', 'english 5 4', 'english 5 5', 'english 5 6', 'english 5 7', ]
@@ -256,7 +315,7 @@ class Aside extends React.Component {
                         ar: "6قسم جديد",
                         en: "Cat 7"
                       },
-                    _id: "ewee32432",
+                    _id: "ewedfe32432",
                     subStra:{
                         ar:['قسم 2', 'قسم 3123', 'asdfasdfas 4', 'قسم 51asdf2312', 'قسم 6123'],
                         en: ['english 1 1', 'english 1 2', 'english 1 3', 'english 1 4', 'english 1 5', 'english 1 6', 'english 1 7', ]
@@ -266,7 +325,7 @@ class Aside extends React.Component {
                         ar: "7قسم جديد",
                         en: "Cat 8"
                       },
-                    _id: "ewee32432",
+                    _id: "ewee32dfgh432",
                     subStra:{
                         ar:['قسم 2', 'قسم 3123', 'قسم123 4asdf', 'قسم 512312', 'قسم 61234weqr3'],
                         en: ['english 1 1', 'english 1 2', 'english 1 3', 'english 1 4', 'english 1 5', 'english 1 6', 'english 1 7', ]
@@ -276,7 +335,7 @@ class Aside extends React.Component {
                         ar: "6قسم جديد",
                         en: "Cat 7"
                       },
-                    _id: "ewee32432",
+                    _id: "ewee3fhdf2432",
                     subStra:{
                         ar:['قسم 2', 'قسم 3123', 'asdfasdfas 4', 'قسم 51asdf2312', 'قسم 6123'],
                         en: ['english 1 1', 'english 1 2', 'english 1 3', 'english 1 4', 'english 1 5', 'english 1 6', 'english 1 7', ]
@@ -286,7 +345,7 @@ class Aside extends React.Component {
                         ar: "6قسم جديد",
                         en: "Cat 7"
                       },
-                    _id: "ewee32432",
+                    _id: "ewjghfee32432",
                     subStra:{
                         ar:['قسم 2', 'قسم 3123', 'asdfasdfas 4', 'قسم 51asdf2312', 'قسم 6123'],
                         en: ['english 1 1', 'english 1 2', 'english 1 3', 'english 1 4', 'english 1 5', 'english 1 6', 'english 1 7', ]
@@ -296,13 +355,14 @@ class Aside extends React.Component {
                         ar: "6قسم جديد",
                         en: "Cat 7"
                       },
-                    _id: "ewee32432",
+                    _id: "werq",
                     subStra:{
                         ar:['قسم 2', 'قسم 3123', 'asdfasdfas 4', 'قسم 51asdf2312', 'قسم 6123'],
                         en: ['english 1 1', 'english 1 2', 'english 1 3', 'english 1 4', 'english 1 5', 'english 1 6', 'english 1 7', ]
                     }
                 },
-            ]
+            ],
+            toggleSub:false
         }
     }
 
@@ -310,16 +370,23 @@ class Aside extends React.Component {
         e.preventDefault();
 
         const subList = this.state.categories.findIndex(cart => {
-            if(cart.name.ar  == e.target.innerHTML){
+            if(e.target.textContent == cart.name.ar  ){
                 return cart._id 
-            }else if(cart.name.en == e.target.innerHTML){
+            }else if(e.target.textContent == cart.name.en ){
                 return cart._id
             }
         })
 
         this.setState({
-            categoriesRecives: this.props.language === "en" ? this.state.categories[subList].subStra.en : this.state.categories[subList].subStra.ar
-          })
+            categoriesRecives: this.props.language === "en" ? this.state.categories[subList].subStra.en : this.state.categories[subList].subStra.ar,
+            toggleSub:!this.state.toggleSub
+        })
+    }
+
+    deleteSub = () => {
+        this.setState({
+            toggleSub:false
+        })
     }
 
     render (){
@@ -371,14 +438,14 @@ class Aside extends React.Component {
                 </div>
                 <div className="center-slide">
                     <div className="center-primary">
-                        {this.props.language === 'en' ? (<p>All CATEGORIES</p>) : (<p>كل الفئات</p>)}
+                        {this.props.language === 'en' ? (<p style={{display:this.state.toggleSub === true ? 'none' : 'block'}}>All CATEGORIES</p>) : (<p style={{display:this.state.toggleSub === true ? 'none' : 'block'}}>كل الفئات</p>)}
                         <ul>
                             {this.state.categories.map(cata => {
                                 return(
-                                    <li>
+                                    <li key={Math.random()} style={{display: this.state.toggleSub === true ? 'none' : 'block'}}>
                                         
                                         <a href="#" onClick={(e) => this.handleSubSlide(e)}>
-                                            <p>{this.props.language === 'en' ? (cata.name.en) : (cata.name.ar)}</p>
+                                            {this.props.language === 'en' ? (cata.name.en) : (cata.name.ar)}
                                             {this.props.language === 'en' ?(<FontAwesomeIcon icon={faChevronRight} size='xs'></FontAwesomeIcon>) :
                                                                             (<FontAwesomeIcon icon={faChevronLeft} size='xs'></FontAwesomeIcon>)}
                                         </a>
@@ -389,20 +456,20 @@ class Aside extends React.Component {
                     </div>
                     <div className="center-sub">
                     {this.props.language === 'en' ? 
-                        (<p> 
+                        (<p  onClick={this.deleteSub} style={{display:this.state.toggleSub === false ? 'none' : 'block'}}> 
                             <FontAwesomeIcon icon={faChevronLeft} size='xs'></FontAwesomeIcon>
                             Back to Main Menu
                         </p>) 
                             :
-                        (<p>
+                        (<p onClick={this.deleteSub}  style={{display:this.state.toggleSub === false ? 'none' : 'block'}}>
                             <FontAwesomeIcon icon={faChevronRight} size='xs'></FontAwesomeIcon>
                             الرجوع إلي القائمة الرئيسية
                         </p>)}
-                            <ul>
+                            <ul style={{display:this.state.toggleSub === false ? 'none' : 'block'}}>
                                 {this.state.categoriesRecives.map(cata => {
                                     return(
-                                        <li>
-                                            <a href="#">
+                                        <li key={Math.random()}>
+                                            <a href="#" key={Math.random()}>
                                                 <p>{cata}</p>
                                                 {this.props.language === 'en' ?(<FontAwesomeIcon icon={faChevronRight} size='xs'></FontAwesomeIcon>) :
                                                                                 (<FontAwesomeIcon icon={faChevronLeft} size='xs'></FontAwesomeIcon>)}
@@ -412,7 +479,8 @@ class Aside extends React.Component {
                                 })}
                             </ul>     
                     </div>
-                    <div className="center-footer">
+                </div>
+                <div className="center-footer" style={{right:this.props.statue === false ? '-100%' : '0px'}}>
                         <div>
                             <a href="#" onClick={this.props.changeLanguage}>
 
@@ -427,7 +495,6 @@ class Aside extends React.Component {
                             </a>
                         </div>
                     </div>
-                </div>
             </Slide>
         )
     }

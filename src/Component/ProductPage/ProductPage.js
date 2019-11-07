@@ -3,7 +3,7 @@ import React from 'react' ;
 import Navbar from '../Navbar/Navbar'
 import MobileNavbar from '../Mobile-Navbar/Mobile-Navbar'
 import Product from './Product/Product'
-
+// import ProductInformation from './productInformation/ProductInformation'
 // footer import
 import Footer from '../Footer/Footer'
 
@@ -27,6 +27,7 @@ class ProductPage extends React.Component {
                     <Navbar language={this.props.language} changeLanguage={this.props.changeLanguage}/>
                 )}
                 <Product />
+                {/* <ProductInformation /> */}
                 <Footer />
             </ProductsContainer>
         )

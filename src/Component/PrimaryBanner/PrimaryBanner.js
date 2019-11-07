@@ -11,7 +11,6 @@ const Banner = styled.div`
     .row{
         
         > div{
-            padding:0px;
             img{
                 width:100%;
             }
@@ -23,7 +22,7 @@ class PrimaryBanner extends React.Component {
     render(){
         return(
             <Banner>
-                <Container fluid={false}>
+                <Container fluid={true}>
                     <Row>
                         <Col>
                             <img src="https://k.nooncdn.com/cms/pages/20191027/f973cc63b56090f3c915c86759648522/en_banner-01.gif"/>

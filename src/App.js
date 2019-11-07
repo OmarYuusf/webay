@@ -62,7 +62,7 @@ class App extends Component{
 
   render(){
     return(
-    <div className="App" >
+    <div className="App" basename="/webay/">
       <div className="Navbar-container">  
         {this.state.width <= 600 ? 
           (

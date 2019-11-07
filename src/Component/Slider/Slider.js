@@ -14,13 +14,22 @@ const Slide = styled.div`
           margin:0px 0px !important;
       }
 
+      .slick-next{
+        right:0px;
+      }
+
+      .slick-prev{
+        left:0px;
+      }
+
       .slick-arrow{
-        
+        z-index:9999;
+
         &::before{
           color:#000;
-        }
 
-        @media (max-width: 600px){ 
+        }
+          @media (max-width: 600px){ 
             display:none !important;
         }
       }
@@ -45,7 +54,7 @@ export default class AdaptiveHeight extends Component {
     };
     return (
       <Slide>
-        <Container fluid={false}>
+        <Container fluid={true}>
           <Slider {...settings} className="Hello">
             <div>
               <img src="https://k.nooncdn.com/cms/pages/20191030/2f4feb7fa928506673870a787265349b/ar_HP-01.png" alt="slider"/>
