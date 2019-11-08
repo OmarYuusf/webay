@@ -49,7 +49,7 @@ const Product = styled.div`
 
         .information{
             padding-left:10px;
-            width:35%;
+            width:40%;
             margin-inline-end:15px;
 
             @media (max-width: 1024px){ 
@@ -174,7 +174,7 @@ const Product = styled.div`
         }
 
         .imgs{
-            width:35%;
+            width:30%;
             display:flex;
             margin-inline-end:15px;
 
@@ -294,6 +294,40 @@ class ProductItems extends React.Component {
                         </Col>
 
                         <Col xs={12} className="product">
+                            <div className="information">
+                                <div>
+                                    <p className="owner">اسم الشركه</p>
+                                    <h5 className="products-name">هاتف Y6 إصدار (2019) ثنائي الشريحة لون أزرق ياقوتي بذاكرة رام سعة 2 جيجابايت وذاكرة داخلية سعة 32 جيجابايت ويدعم تقنية 4G LTE</h5>
+                                    <p className="model-number">اسم الموديل</p>
+                                    <div className="old-price">
+                                        <p>  السعر القديم:</p>
+                                        <p>  223 جنيه</p>
+                                    </div>
+                                    <div className="new-price">
+                                        <span>
+                                            <p>  السعر الجديد: </p>
+                                            <p>   223 جنيه</p>
+                                        </span>
+                                        <p className="discount">خصم 15%</p>
+                                    </div>
+                                    
+                                </div>
+                                <form>
+                                    <h6>Quantity</h6>
+                                    <div>
+                                        <select>
+                                            {
+                                                this.state.quantity.map(item => {
+                                                    return(
+                                                        <option key={Math.random()} value={item}>{item}</option>
+                                                    )
+                                                })
+                                            }
+                                        </select>
+                                        <input type="submit" value="ADD TO CART"/>
+                                    </div>
+                                </form>
+                            </div>
                             <div className="imgs">
                                     <div className="containerImgs">
                                         {this.state.img.map(imgs => {
@@ -316,48 +350,16 @@ class ProductItems extends React.Component {
                                             },
                                             largeImage: {
                                                 src: this.state.imgSrc,
+                                                srcSet: this.state.imgSrc,
                                                 style:{right:'0px !important'},
-                                                width: 1200,
-                                                height: 1200,
-                                                sizes: '(min-width: 800px) 33.5vw, (min-width: 415px)'
+                                                width: 500,
+                                                height: 2000,
+                                                className:"hello"
                                             }
                                         }} />
                                     </div>
                                 </div>
-                                <div className="information">
-                                    <div>
-                                        <p className="owner">اسم الشركه</p>
-                                        <h5 className="products-name">هاتف Y6 إصدار (2019) ثنائي الشريحة لون أزرق ياقوتي بذاكرة رام سعة 2 جيجابايت وذاكرة داخلية سعة 32 جيجابايت ويدعم تقنية 4G LTE</h5>
-                                        <p className="model-number">اسم الموديل</p>
-                                        <div className="old-price">
-                                            <p>  السعر القديم:</p>
-                                            <p>  223 جنيه</p>
-                                        </div>
-                                        <div className="new-price">
-                                            <span>
-                                                <p>  السعر الجديد: </p>
-                                                <p>   223 جنيه</p>
-                                            </span>
-                                            <p className="discount">خصم 15%</p>
-                                        </div>
-                                        
-                                    </div>
-                                    <form>
-                                        <h6>Quantity</h6>
-                                        <div>
-                                            <select>
-                                                {
-                                                    this.state.quantity.map(item => {
-                                                        return(
-                                                            <option key={Math.random()} value={item}>{item}</option>
-                                                        )
-                                                    })
-                                                }
-                                            </select>
-                                            <input type="submit" value="ADD TO CART"/>
-                                        </div>
-                                    </form>
-                                </div>
+
 
                                 <div className="ship">
                                     <div>

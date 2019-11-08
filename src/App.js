@@ -39,6 +39,9 @@ import "./App.css";
 // ProductPage Component Import 
 import ProductPage from "./Component/ProductPage/ProductPage";
 
+// category Component import 
+import Category from './Component/Categories/Categories'
+
 class App extends Component{
   constructor(props){
     super(props);
@@ -88,6 +91,7 @@ class App extends Component{
 
       <ProductPage language={this.state.language} changeLanguage={(e) => this.changeLanguage(e)} width={this.state.width}/>
 
+      <Category language={this.state.language} changeLanguage={(e) => this.changeLanguage(e)} width={this.state.width}/>
     </div>
     )
   }
