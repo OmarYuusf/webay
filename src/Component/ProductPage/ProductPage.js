@@ -3,14 +3,12 @@ import React from 'react' ;
 import Navbar from '../Navbar/Navbar'
 import MobileNavbar from '../Mobile-Navbar/Mobile-Navbar'
 import Product from './Product/Product'
-// import ProductInformation from './productInformation/ProductInformation'
+import ProductInformation from './productInformation/ProductInformation'
 // footer import
 import Footer from '../Footer/Footer'
 
 // Styled-Component
 import styled from 'styled-components'
-
-import { Container, Row, Col } from 'react-bootstrap'
 
 const ProductsContainer = styled.div`
 
@@ -27,7 +25,7 @@ class ProductPage extends React.Component {
                     <Navbar language={this.props.language} changeLanguage={this.props.changeLanguage}/>
                 )}
                 <Product />
-                {/* <ProductInformation /> */}
+                <ProductInformation />
                 <Footer />
             </ProductsContainer>
         )

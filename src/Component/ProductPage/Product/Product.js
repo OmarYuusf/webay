@@ -9,7 +9,9 @@ import { faUndo } from '@fortawesome/free-solid-svg-icons'
 import { faStoreAlt } from '@fortawesome/free-solid-svg-icons'
 import { faTruckMoving } from '@fortawesome/free-solid-svg-icons'
 import { faUserShield } from '@fortawesome/free-solid-svg-icons'
-import { faTimes } from '@fortawesome/free-solid-svg-icons'
+
+
+import ReactImageMagnify from 'react-image-magnify';
 
 // Styled-Component
 import styled from 'styled-components'
@@ -47,21 +49,22 @@ const Product = styled.div`
 
         .information{
             padding-left:10px;
-            width:40%;
+            width:35%;
+            margin-inline-end:15px;
 
             @media (max-width: 1024px){ 
-                width:50% !important
+                width:50% !important;
+                margin-inline-end:0px;
             }
 
             @media (max-width: 768px){ 
-                width:100% !important
+                width:100% !important;
+                order:2;
+                margin-top:20px;
+                margin-inline-end:0px;
             }
 
-            > div:not(:last-of-type) {
-                border-bottom:1px solid rgba(0,0,0,.1);
-            }
-
-            > div:first-of-type{
+            div {
                 padding:18px 0px;
                 padding-top:0px;
 
@@ -108,6 +111,12 @@ const Product = styled.div`
                     align-items:center;
                     justify-content:space-between;
 
+                    @media (max-width: 425px){ 
+                        justify-content:flex-end;
+                        flex-direction:column;
+                    }
+
+
                     > span {
                         display:flex;
                         align-items:center ;
@@ -133,85 +142,76 @@ const Product = styled.div`
                 
             }
 
-            div:nth-child(2){
-                padding:18px 0px;
-
+            form{   
+                padding:15px 0px; 
+                border-bottom:1px solid rgba(0,0,0,.1);
                 h6{
-                    font-weight:800;
-                    color:#212121
+                    font-size:10px;
+                    color:#777;
                 }
 
-                ul {
-                    margin:0px; 
-                    padding-inline-start:18px;
-
-                    li{
-                        color:#888;
-                        font-size:13px;
-                    }
-                }
-            }
-
-            div:last-of-type{
-                padding:18px 0px;
-
-                h6{
-                    font-weight:800;
-                    color:#212121;
-                    margin-bottom:20px;
-                }
-
-                span{
+                > div{
                     display:flex;
+                    
+                    input{
+                        width:100%;
+                        margin:0px 5px;
+                        background:#03A9F4;
+                        border:0px;
+                        font-size:13px;
+                        color:#FFF;
+                        padding:10px 0px;
+                        box-shadow: 2px 2px 4px rgba(0,0,0,.15);
+                        transition:all .4s ;
 
-                    p{
-                        font-size:12px;
-                    }
-
-                    p:first-of-type{
-                        margin-inline-end:30px;
-                        color:#999
-                    }
-
-                    p:last-of-type{
-                        color:#777;
-                        font-weight:600;
+                        &:hover{
+                            background:#1bb8ff;
+                            box-shadow: 4px 4px 6px rgba(0,0,0,.15);
+                        }
                     }
                 }
             }
         }
 
         .imgs{
-            width:30%;
+            width:35%;
+            display:flex;
+            margin-inline-end:15px;
+
             @media (max-width: 1024px){ 
-                width:50% !important
+                width:50% !important;
+                margin-inline-end:0px;
             }
 
             @media (max-width: 768px){ 
-                width:100% !important
+                width:100% !important;
+                order:1;;
+                margin-inline-end:0px;
             }
-                        
-            div:first-of-type{
-                height:400px;
 
-                img{
-                    width:100%;
-                    height:100%;
-                    object-fit:contain;
-                }
-            }
-            div:last-of-type{
+
+            .containerImgs{
                 display:flex;
-                justify-content:center;;
+                justify-content:flex-start;
+                flex-direction:column;
 
                 img{
                     width:60px;
                     height:60px;
-                    box-shadow:1px 1px 3px rgba(0,0,0,.15);
+                    box-shadow:1px 1px 3px rgba(0,0,0,.09);
                     object-fit:contain;
                     cursor: pointer;
                 }
             }
+
+            div:last-of-type{
+                img{
+                    height:450px !important;
+                    object-fit:contain !important;
+                }
+            }
+                        
+            
         }
         .ship{
             width:30%;
@@ -221,7 +221,7 @@ const Product = styled.div`
 
             @media (max-width: 768px){ 
                 width:100% !important;
-                margin-top:30px;
+                order:3;
             }
 
             > div {
@@ -251,48 +251,22 @@ const Product = styled.div`
         }
     }
 
-    aside{
-        position: fixed;
-        width:100%;
-        height:100%;
-        background:rgba(0,0,0,.8);
-        top:0px;
-        left:0px;
-        display:none;
-        visibility: hidden;
-        justify-content:center;
-        align-items:center;
-        transition:all .4s ;
-        z-index:90000000;
-
-        svg{
-            color:#FFF;
-            position: absolute;
-            top:15px;
-            right:30px;
-        }
-
-        img{
-            max-width:80%;
-            max-height:80%;
-            object-fit:contain;
-            z-index:90000001;
-        }
-    }
 `
 class ProductItems extends React.Component {
     constructor(props) {
         super(props);
 
         this.state = {
-            imgSrc : "https://k.nooncdn.com/t_desktop-thumbnail-v2/v1541138794/N18810846A_1.jpg",
+            imgSrc : "https://k.nooncdn.com/t_desktop-pdp-v1/v1570191588/N23423233A_1.jpg",
             img : [
-                {src: "https://k.nooncdn.com/t_desktop-thumbnail-v2/v1541138794/N18810846A_1.jpg", alt:"product"},
-                {src: "https://k.nooncdn.com/t_desktop-pdp-v1/v1554958477/N22690810A_2.jpg", alt:"product"},
-                {src: "https://k.nooncdn.com/t_desktop-pdp-v1/v1554958476/N22690810A_3.jpg", alt:"product"},
-                {src: "https://k.nooncdn.com/t_desktop-pdp-v1/v1554958477/N22690810A_4.jpg", alt:"product"},
-                {src: "https://k.nooncdn.com/t_desktop-pdp-v1/v1554958476/N22690810A_1.jpg", alt:"product"}
-            ]
+                {src: "https://k.nooncdn.com/t_desktop-pdp-v1/v1570191588/N23423233A_1.jpg", alt:"product"},
+                {src: "https://k.nooncdn.com/t_desktop-pdp-v1/v1556008059/N23423233A_2.jpg", alt:"product"},
+                {src: "https://k.nooncdn.com/t_desktop-pdp-v1/v1570191589/N23423233A_3.jpg", alt:"product"},
+                {src: "https://k.nooncdn.com/t_desktop-pdp-v1/v1570191590/N23423233A_4.jpg", alt:"product"},
+                {src: "https://k.nooncdn.com/t_desktop-pdp-v1/v1570191590/N23423233A_6.jpg", alt:"product"},
+                {src: "https://k.nooncdn.com/t_desktop-pdp-v1/v1570191590/N23423233A_7.jpg", alt:"product"}
+            ],
+            quantity:[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
         }
     }
 
@@ -302,24 +276,7 @@ class ProductItems extends React.Component {
         })
     }
 
-    stopZomming = (e) => {
-        if(e.target.tagName.toLowerCase() === 'aside'){
-            e.target.style.display = 'none'
-            e.target.style.visibility = 'hidden'
-        }
-    }
 
-    exitZomming = () => {
-        const aside = document.getElementById('imgViewer');
-        aside.style.display = 'none'
-        aside.style.visibility = 'hidden'
-    }
-
-    startZomming = () => {
-        const aside = document.getElementById('imgViewer');
-        aside.style.display = 'flex'
-        aside.style.visibility = 'visible'
-    }
 
     render() {
         return(
@@ -337,10 +294,40 @@ class ProductItems extends React.Component {
                         </Col>
 
                         <Col xs={12} className="product">
+                            <div className="imgs">
+                                    <div className="containerImgs">
+                                        {this.state.img.map(imgs => {
+                                            return(
+                                                <img key={Math.random()}
+                                                     src={imgs.src}
+                                                     alt="product" 
+                                                     onClick={(e) => this.handleChangeImg(e)} 
+                                                     />
+                                            )
+                                        })}
+                                    </div>
+                                    <div>
+                                        {/* <Magnifier src={this.state.imgSrc} width={500} /> */}
+                                        <ReactImageMagnify {...{
+                                            smallImage: {
+                                                alt: 'product',
+                                                isFluidWidth: true,
+                                                src: this.state.imgSrc
+                                            },
+                                            largeImage: {
+                                                src: this.state.imgSrc,
+                                                style:{right:'0px !important'},
+                                                width: 1200,
+                                                height: 1200,
+                                                sizes: '(min-width: 800px) 33.5vw, (min-width: 415px)'
+                                            }
+                                        }} />
+                                    </div>
+                                </div>
                                 <div className="information">
                                     <div>
                                         <p className="owner">اسم الشركه</p>
-                                        <h5 className="products-name">DataTraveler 104 Flash Drive أسود 16 غيغابايت</h5>
+                                        <h5 className="products-name">هاتف Y6 إصدار (2019) ثنائي الشريحة لون أزرق ياقوتي بذاكرة رام سعة 2 جيجابايت وذاكرة داخلية سعة 32 جيجابايت ويدعم تقنية 4G LTE</h5>
                                         <p className="model-number">اسم الموديل</p>
                                         <div className="old-price">
                                             <p>  السعر القديم:</p>
@@ -355,46 +342,23 @@ class ProductItems extends React.Component {
                                         </div>
                                         
                                     </div>
-                                    <div>
-                                        <h6>مميزات المنتج</h6>
-                                        <ul>
-                                            <li>Pocket sized for easy transportability.</li>
-                                            <li>Features a stylish black casing with a sliding cap design.</li>
-                                            <li>It is supported by a wide array of devices thanks to the USB 2.0 interface</li>
-                                        </ul>
-                                    </div>
-                                    <div>
-                                        <h6>المواصفات</h6>
-                                        <span>
-                                            <p>الحجم</p>
-                                            <p>84 جرام</p>
-                                        </span>
-                                        <span>
-                                            <p>الطول</p>
-                                            <p>120</p>
-                                        </span>
-                                        <span>
-                                            <p>اللون</p>
-                                            <p>اسود</p>
-                                        </span>
-                                    </div>
+                                    <form>
+                                        <h6>Quantity</h6>
+                                        <div>
+                                            <select>
+                                                {
+                                                    this.state.quantity.map(item => {
+                                                        return(
+                                                            <option key={Math.random()} value={item}>{item}</option>
+                                                        )
+                                                    })
+                                                }
+                                            </select>
+                                            <input type="submit" value="ADD TO CART"/>
+                                        </div>
+                                    </form>
                                 </div>
-                                <div className="imgs">
-                                    <div>
-                                        <img src={this.state.imgSrc} onClick={this.startZomming}/>
-                                    </div>
-                                    <div>
-                                        {this.state.img.map(imgs => {
-                                            return(
-                                                <img key={Math.random()}
-                                                     src={imgs.src}
-                                                     alt="product" 
-                                                     onClick={(e) => this.handleChangeImg(e)} 
-                                                     />
-                                            )
-                                        })}
-                                    </div>
-                                </div>
+
                                 <div className="ship">
                                     <div>
                                         <div>
@@ -425,13 +389,7 @@ class ProductItems extends React.Component {
                                         </div>
                                     </div>
                                 </div>
-                            
                         </Col>
-                    
-                        <aside id="imgViewer" onClick={(e) => this.stopZomming(e)} >
-                            <FontAwesomeIcon icon={faTimes} size='1x' onClick={this.exitZomming}></FontAwesomeIcon>
-                            <img src={this.state.imgSrc}/>
-                        </aside>
                     </Row>
                 </Container>
             </Product>

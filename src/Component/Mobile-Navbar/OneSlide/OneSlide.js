@@ -25,15 +25,15 @@ const Slide = styled.div`
         display:flex;
 
         .fa-shopping-cart{
-            margin-inline-end:15px;
+            margin-inline-start:15px;
         }
 
         .fa-align-right{
-            margin-inline-start:15px;
+            margin-inline-end:15px;
         }
 
         .fa-align-left{
-            margin-inline-start:15px;
+            margin-inline-end:15px;
         }
 
         a{
@@ -63,7 +63,7 @@ const Slide = styled.div`
                 width:95%;
                 border:0px;
                 padding:18px 0px;
-                padding-inline-start:5%;
+                padding-inline-end:5%;
                 display:block;
                 margin:auto;
                 border-bottom:1px solid #999;
@@ -98,20 +98,20 @@ class OneSlide extends React.Component {
         return(
             <Slide style={{direction:this.props.language === 'en' ? "ltr" : "rtl"}}>
                 <div>
-                    <div>
-                        <FontAwesomeIcon className="searchIcon" icon={faShoppingCart} size="md"></FontAwesomeIcon>
+                    <div onClick={this.props.action}>
+                        {this.props.language === "en" ? 
+                        (<FontAwesomeIcon size="md" icon={faAlignLeft}></FontAwesomeIcon>) : (<FontAwesomeIcon size="md" icon={faAlignRight}></FontAwesomeIcon>)}
                     </div>
                     <div>
-                        <FontAwesomeIcon icon={faSearch}  size="md" onClick={this.searchChange}></FontAwesomeIcon>
+                        <a href="#">{this.props.language === 'en' ? 'Logo' : " هنا لوجو"}</a>
                     </div>
                 </div>
                 <div>
                     <div>
-                        <a href="#">{this.props.language === 'en' ? 'Logo' : " هنا لوجو"}</a>
+                        <FontAwesomeIcon icon={faSearch}  size="md" onClick={this.searchChange}></FontAwesomeIcon>
                     </div>
-                    <div onClick={this.props.action}>
-                        {this.props.language === "en" ? 
-                        (<FontAwesomeIcon size="md" icon={faAlignRight}></FontAwesomeIcon>) : (<FontAwesomeIcon size="md" icon={faAlignLeft}></FontAwesomeIcon>)}
+                    <div>
+                        <FontAwesomeIcon className="searchIcon" icon={faShoppingCart} size="md"></FontAwesomeIcon>
                     </div>
                 </div>
                 <aside style={{top: this.state.search === false ? '0px' : '100%',
