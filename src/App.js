@@ -36,8 +36,8 @@ import "./App.css";
 // import Footer from "./Component/Footer/Footer";
 
 
-// ProductPage Component Import 
-import ProductPage from "./Component/ProductPage/ProductPage";
+// // ProductPage Component Import 
+// import ProductPage from "./Component/ProductPage/ProductPage";
 
 // category Component import 
 import Category from './Component/Categories/Categories'
@@ -87,9 +87,9 @@ class App extends Component{
       <Ban />
       <Electronics language={this.state.language}/>
       <LeastProducts language={this.state.language}/>
-      <Footer language={this.state.language} /> */}
+      <Footer language={this.state.language} />
 
-      <ProductPage language={this.state.language} changeLanguage={(e) => this.changeLanguage(e)} width={this.state.width}/>
+      <ProductPage language={this.state.language} changeLanguage={(e) => this.changeLanguage(e)} width={this.state.width}/> */}
 
       <Category language={this.state.language} changeLanguage={(e) => this.changeLanguage(e)} width={this.state.width}/>
     </div>

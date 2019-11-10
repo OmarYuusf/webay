@@ -4,6 +4,8 @@ import React from 'react';
 import Navbar from '../Navbar/Navbar'
 import MobileNavbar from '../Mobile-Navbar/Mobile-Navbar'
 import Footer from '../Footer/Footer'
+import Header from './Header/Header'
+import Center from './Center/Center'
 
 // Styled-Component
 import styled from 'styled-components'
@@ -24,7 +26,8 @@ class Categories extends React.Component {
                     <Navbar language={this.props.language} changeLanguage={this.props.changeLanguage}/>
                 )}
 
-                    <h1>Categories Page</h1>
+                <Header language={this.props.language}/>
+                <Center language={this.props.language}/>
                 <Footer />
             </Category>
         )
