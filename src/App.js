@@ -39,8 +39,11 @@ import "./App.css";
 // // ProductPage Component Import 
 // import ProductPage from "./Component/ProductPage/ProductPage";
 
+// // category Component import 
+// import Category from './Component/Categories/Categories'
+
 // category Component import 
-import Category from './Component/Categories/Categories'
+import Forms from './Component/Forms/Forms'
 
 class App extends Component{
   constructor(props){
@@ -90,8 +93,10 @@ class App extends Component{
       <Footer language={this.state.language} />
 
       <ProductPage language={this.state.language} changeLanguage={(e) => this.changeLanguage(e)} width={this.state.width}/> */}
+{/* 
+      <Category language={this.state.language} changeLanguage={(e) => this.changeLanguage(e)} width={this.state.width}/> */}
 
-      <Category language={this.state.language} changeLanguage={(e) => this.changeLanguage(e)} width={this.state.width}/>
+      <Forms language={this.state.language} changeLanguage={(e) => this.changeLanguage(e)}/>
     </div>
     )
   }
