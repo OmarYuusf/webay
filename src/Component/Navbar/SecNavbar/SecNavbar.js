@@ -217,7 +217,7 @@ class SecNavbar extends React.Component {
                     </span>
                     <span>
                         <FontAwesomeIcon icon={faUser} size="lg"></FontAwesomeIcon>
-                        {this.props.language === 'en' ?  (<a href="#">Sign in or Sign up</a>) :(<a href="#">تسجيل الدخول أو الاشتراك</a>)}
+                        {this.props.language === 'en' ?  (<a href="/#">Sign in or Sign up</a>) :(<a href="/#">تسجيل الدخول أو الاشتراك</a>)}
                     </span>
                 </div>
                 <div className="SearchBoxAndLogo" style={{direction:this.props.language === 'en' ? "ltr" : "rtl",

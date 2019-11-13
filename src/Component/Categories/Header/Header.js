@@ -21,7 +21,9 @@ const Head = styled.div`
             margin:15px;
             background:transparent;
 
-            
+            @media (max-width: 1024px){ 
+                margin:5px;
+            }
 
             .card{
                 background:transparent;
@@ -120,12 +122,12 @@ class Header extends React.Component {
                             <Accordion.Collapse eventKey="0">
                             <Card.Body>
                                 <ul>
-                                    <li><a href="#">نوع القسم</a></li>
-                                    <li><a href="#">نوع القسم</a></li>
-                                    <li><a href="#">نوع القسم</a></li>
-                                    <li><a href="#">نوع القسم</a></li>
-                                    <li><a href="#">نوع القسم</a></li>
-                                    <li><a href="#">نوع القسم</a></li>
+                                    <li><a href="/#">نوع القسم</a></li>
+                                    <li><a href="/#">نوع القسم</a></li>
+                                    <li><a href="/#">نوع القسم</a></li>
+                                    <li><a href="/#">نوع القسم</a></li>
+                                    <li><a href="/#">نوع القسم</a></li>
+                                    <li><a href="/#">نوع القسم</a></li>
                                 </ul>
                             </Card.Body>
                             </Accordion.Collapse>
@@ -137,12 +139,12 @@ class Header extends React.Component {
                             <Accordion.Collapse eventKey="1">
                             <Card.Body>
                                 <ul>
-                                    <li><a href="#">نوع القسم</a></li>
-                                    <li><a href="#">نوع القسم</a></li>
-                                    <li><a href="#">نوع القسم</a></li>
-                                    <li><a href="#">نوع القسم</a></li>
-                                    <li><a href="#">نوع القسم</a></li>
-                                    <li><a href="#">نوع القسم</a></li>
+                                    <li><a href="/#">نوع القسم</a></li>
+                                    <li><a href="/#">نوع القسم</a></li>
+                                    <li><a href="/#">نوع القسم</a></li>
+                                    <li><a href="/#">نوع القسم</a></li>
+                                    <li><a href="/#">نوع القسم</a></li>
+                                    <li><a href="/#">نوع القسم</a></li>
                                 </ul>
                             </Card.Body>
                             </Accordion.Collapse>
@@ -154,12 +156,12 @@ class Header extends React.Component {
                             <Accordion.Collapse eventKey="2">
                             <Card.Body>
                                 <ul>
-                                    <li><a href="#">نوع القسم</a></li>
-                                    <li><a href="#">نوع القسم</a></li>
-                                    <li><a href="#">نوع القسم</a></li>
-                                    <li><a href="#">نوع القسم</a></li>
-                                    <li><a href="#">نوع القسم</a></li>
-                                    <li><a href="#">نوع القسم</a></li>
+                                    <li><a href="/#">نوع القسم</a></li>
+                                    <li><a href="/#">نوع القسم</a></li>
+                                    <li><a href="/#">نوع القسم</a></li>
+                                    <li><a href="/#">نوع القسم</a></li>
+                                    <li><a href="/#">نوع القسم</a></li>
+                                    <li><a href="/#">نوع القسم</a></li>
                                 </ul>
                             </Card.Body>
                             </Accordion.Collapse>
@@ -171,12 +173,12 @@ class Header extends React.Component {
                             <Accordion.Collapse eventKey="3">
                             <Card.Body>
                                 <ul>
-                                    <li><a href="#">نوع القسم</a></li>
-                                    <li><a href="#">نوع القسم</a></li>
-                                    <li><a href="#">نوع القسم</a></li>
-                                    <li><a href="#">نوع القسم</a></li>
-                                    <li><a href="#">نوع القسم</a></li>
-                                    <li><a href="#">نوع القسم</a></li>
+                                    <li><a href="/#">نوع القسم</a></li>
+                                    <li><a href="/#">نوع القسم</a></li>
+                                    <li><a href="/#">نوع القسم</a></li>
+                                    <li><a href="/#">نوع القسم</a></li>
+                                    <li><a href="/#">نوع القسم</a></li>
+                                    <li><a href="/#">نوع القسم</a></li>
                                 </ul>
                             </Card.Body>
                             </Accordion.Collapse>
@@ -188,12 +190,12 @@ class Header extends React.Component {
                             <Accordion.Collapse eventKey="4">
                             <Card.Body>
                                 <ul>
-                                    <li><a href="#">نوع القسم</a></li>
-                                    <li><a href="#">نوع القسم</a></li>
-                                    <li><a href="#">نوع القسم</a></li>
-                                    <li><a href="#">نوع القسم</a></li>
-                                    <li><a href="#">نوع القسم</a></li>
-                                    <li><a href="#">نوع القسم</a></li>
+                                    <li><a href="/#">نوع القسم</a></li>
+                                    <li><a href="/#">نوع القسم</a></li>
+                                    <li><a href="/#">نوع القسم</a></li>
+                                    <li><a href="/#">نوع القسم</a></li>
+                                    <li><a href="/#">نوع القسم</a></li>
+                                    <li><a href="/#">نوع القسم</a></li>
                                 </ul>
                             </Card.Body>
                             </Accordion.Collapse>
@@ -205,12 +207,12 @@ class Header extends React.Component {
                             <Accordion.Collapse eventKey="5">
                             <Card.Body>
                                 <ul>
-                                    <li><a href="#">نوع القسم</a></li>
-                                    <li><a href="#">نوع القسم</a></li>
-                                    <li><a href="#">نوع القسم</a></li>
-                                    <li><a href="#">نوع القسم</a></li>
-                                    <li><a href="#">نوع القسم</a></li>
-                                    <li><a href="#">نوع القسم</a></li>
+                                    <li><a href="/#">نوع القسم</a></li>
+                                    <li><a href="/#">نوع القسم</a></li>
+                                    <li><a href="/#">نوع القسم</a></li>
+                                    <li><a href="/#">نوع القسم</a></li>
+                                    <li><a href="/#">نوع القسم</a></li>
+                                    <li><a href="/#">نوع القسم</a></li>
                                 </ul>
                             </Card.Body>
                             </Accordion.Collapse>

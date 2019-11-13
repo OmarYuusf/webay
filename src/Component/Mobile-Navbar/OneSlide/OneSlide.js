@@ -103,7 +103,7 @@ class OneSlide extends React.Component {
                         (<FontAwesomeIcon size="md" icon={faAlignLeft}></FontAwesomeIcon>) : (<FontAwesomeIcon size="md" icon={faAlignRight}></FontAwesomeIcon>)}
                     </div>
                     <div>
-                        <a href="#">{this.props.language === 'en' ? 'Logo' : " هنا لوجو"}</a>
+                        <a href="/#">{this.props.language === 'en' ? 'Logo' : " هنا لوجو"}</a>
                     </div>
                 </div>
                 <div>

@@ -101,16 +101,17 @@ const Added = styled.div`
 class ProductsAdded extends React.Component {
 
     handleDelete = (index) => {
-        console.log(index)
+        
     }
+
     render() {
 
         const pro = this.props.ProductsInCart.map((product,index) => {
             return(
-                <div className="productInCart">
+                <div className="productInCart" key={Math.random()}>
                     <div className="right">
                         <div>
-                            <img src={product.imgSrc} />
+                            <img src={product.imgSrc} alt={product.productName}/>
                         </div>
                         <div>
                             <p className="ownerName">{product.owner}</p>

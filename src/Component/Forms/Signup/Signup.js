@@ -158,7 +158,7 @@ class Signup extends React.Component {
                             </button>
                         </div>
                         <div className="link-group">
-                             {this.props.language === 'ar' ? (<p>لديك بالفعل حساب؟ <a href="#">اضغط هنا</a></p>) :  (<p>already have an account? <a href="#">Press here</a></p>)}
+                             {this.props.language === 'ar' ? (<p>لديك بالفعل حساب؟ <a href="/#">اضغط هنا</a></p>) :  (<p>already have an account? <a href="/#">Press here</a></p>)}
                         </div>
                     </form>
                 </div>

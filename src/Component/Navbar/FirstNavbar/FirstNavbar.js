@@ -37,7 +37,7 @@ const FirstNav = styled.div`
 
                 @media (max-width: 1440px){ 
                     font-size:14px
-                    }
+                }
 
                 @media (max-width: 1024px){ 
                     font-size:10px;
@@ -151,15 +151,15 @@ class FirstNavbar extends React.Component {
             <FirstNav className="first-nav" style={{direction:this.props.language === 'en' ? "ltr" : "rtl"}}>
                 <div className="nav-info" style={{direction:this.props.language === 'en' ? "ltr" : "rtl"}}>
                     <div>
-                        <FontAwesomeIcon size="md" icon={faTruck}></FontAwesomeIcon>
+                        <FontAwesomeIcon size="sm" icon={faTruck}></FontAwesomeIcon>
                         {this.props.language === 'en' ? (<p>charge for fr1ee first 400 ryal</p>) :(<p>توصيل مجاني عالي المنتجات فوق 400 ريال</p>)}
                     </div>
                     <div>
-                        <FontAwesomeIcon size="md" icon={faUserCheck}></FontAwesomeIcon>
+                        <FontAwesomeIcon size="sm" icon={faUserCheck}></FontAwesomeIcon>
                         {this.props.language === 'en' ? (<p>charge for fr2ee first 400 ryal</p>): (<p>ارجاع مجانى بسهولة</p>)}  
                     </div>
                     <div>
-                        <FontAwesomeIcon size="md" icon={faPercentage}></FontAwesomeIcon>
+                        <FontAwesomeIcon size="sm" icon={faPercentage}></FontAwesomeIcon>
                         {this.props.language === 'en' ? (<p>charge for f3ree first 400 ryal</p>) : (<p>افضل العروض</p>)}
                     </div>
                 </div>
@@ -169,7 +169,7 @@ class FirstNavbar extends React.Component {
                         {this.props.language === "en" ? (<p>Langauge</p>) : (<p>اللغه</p>)}
                     </span>
                     <span>
-                        <a href="#" onClick={this.props.changeLanguage}>{this.props.language === "en" ? 'العربيه' : 'English'}</a>
+                        <a href="/#" onClick={this.props.changeLanguage}>{this.props.language === "en" ? 'العربيه' : 'English'}</a>
                     </span>
                 </div>
             </FirstNav>

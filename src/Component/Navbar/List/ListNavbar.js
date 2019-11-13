@@ -450,7 +450,7 @@ class ListNavbar extends React.Component {
                              textAlign : this.props.language === "en" ? 'left' : "right"}}>
                     <ul>
                         <li>
-                            <a href="#">{this.props.language === 'en' ? "ALL CATEGORIES" : 'جميع الفئات'}</a>  
+                            <a href="/#">{this.props.language === 'en' ? "ALL CATEGORIES" : 'جميع الفئات'}</a>  
                             <FontAwesomeIcon icon={faAngleDown} size="xs"></FontAwesomeIcon>
                             <div className="dropdown">
                                 <div className="dropdown-header">
@@ -468,7 +468,7 @@ class ListNavbar extends React.Component {
                                             {this.state.categories.map(cata => {
                                                 return(
                                                     <li key={cata._id}>
-                                                        <a href="#" onMouseEnter={(e) => this.textChanger(e)}>{this.props.language === 'en' ? (cata.name.en) : (cata.name.ar) }</a>
+                                                        <a href="/#" onMouseEnter={(e) => this.textChanger(e)}>{this.props.language === 'en' ? (cata.name.en) : (cata.name.ar) }</a>
                                                     </li>
                                                 )
                                             })}
@@ -479,7 +479,7 @@ class ListNavbar extends React.Component {
                                         {this.state.dropRecives.map(sub => {
                                             return(
                                                 <li key={Math.random()}>
-                                                    <a href="#">{sub}</a>
+                                                    <a href="/#">{sub}</a>
                                                 </li>
                                             )
                                         })}
@@ -491,7 +491,7 @@ class ListNavbar extends React.Component {
                         {this.state.categories.map(cata => {
                             return(
                                 <li key={cata._id} onMouseMove={this.isOpen} onMouseLeave={this.isClosed} onMouseEnter={(e) => this.subCheck(e)}>
-                                    <a href="#">{this.props.language === 'en' ? (cata.name.en) : (cata.name.ar) }</a>  
+                                    <a href="/#">{this.props.language === 'en' ? (cata.name.en) : (cata.name.ar) }</a>  
                                 </li>
                                 
                             )
@@ -512,7 +512,7 @@ class ListNavbar extends React.Component {
                             {this.state.subRecives.map(sub => {
                                 return(
                                     <li key={Math.random()}>
-                                        <a href="#">{sub}</a>
+                                        <a href="/#">{sub}</a>
                                     </li>
                                 )
                             })}
@@ -530,7 +530,7 @@ class ListNavbar extends React.Component {
                         </div>
                     </div>
                     <div>
-                        <img src="https://via.placeholder.com/400.png/09f/fffC/O https://placeholder.com/#How_To_Set_Image_Size"/>
+                        <img src="https://via.placeholder.com/400.png/09f/fffC/O https://placeholder.com/#How_To_Set_Image_Size" alt="products"/>
                     </div>
                 </div>
             </ContainerList>

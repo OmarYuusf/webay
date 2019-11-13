@@ -36,16 +36,16 @@ import "./App.css";
 // import Footer from "./Component/Footer/Footer";
 
 
-// // ProductPage Component Import 
+// ProductPage Component Import 
 // import ProductPage from "./Component/ProductPage/ProductPage";
 
-// // category Component import 
-// import Category from './Component/Categories/Categories'
+// category Component import 
+import Category from './Component/Categories/Categories'
 
 // // category Component import 
 // import Forms from './Component/Forms/Forms'
 
-import CartPage from './Component/CartPage/CartPage'
+// import CartPage from './Component/CartPage/CartPage'
 
 class App extends Component{
   constructor(props){
@@ -92,15 +92,15 @@ class App extends Component{
       <Ban />
       <Electronics language={this.state.language}/>
       <LeastProducts language={this.state.language}/>
-      <Footer language={this.state.language} />
+      <Footer language={this.state.language} />*/}
 
-      <ProductPage language={this.state.language} changeLanguage={(e) => this.changeLanguage(e)} width={this.state.width}/> */}
-{/* 
-      <Category language={this.state.language} changeLanguage={(e) => this.changeLanguage(e)} width={this.state.width}/> */}
+      {/* <ProductPage language={this.state.language} changeLanguage={(e) => this.changeLanguage(e)} width={this.state.width}/>  */}
+
+      <Category language={this.state.language} changeLanguage={(e) => this.changeLanguage(e)} width={this.state.width}/>
 
       {/* <Forms language={this.state.language} changeLanguage={(e) => this.changeLanguage(e)}/> */}
 
-      <CartPage language={this.state.language} changeLanguage={(e) => this.changeLanguage(e)}/> />
+      {/* <CartPage language={this.state.language} changeLanguage={(e) => this.changeLanguage(e)}/> /> */}
     </div>
     )
   }

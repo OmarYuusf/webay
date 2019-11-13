@@ -126,9 +126,9 @@ class Login extends React.Component {
                             </button>
                         </div>
                         <div className="link-group">
-                             {this.props.language === 'ar' ?(<p>عضو جديد؟ <a href="#" onClick={this.props.HandleAction}>انشاء حساب جديد</a></p>)
+                             {this.props.language === 'ar' ?(<p>عضو جديد؟ <a href="/#" onClick={this.props.HandleAction}>انشاء حساب جديد</a></p>)
                                                             : 
-                                                            (<p>first time? <a href="#"onClick={this.stopAction}>SignUp</a></p>)}
+                                                            (<p>first time? <a href="/#"onClick={this.stopAction}>SignUp</a></p>)}
                         </div>
                     </form>
                 </div>

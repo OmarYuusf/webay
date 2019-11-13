@@ -169,73 +169,73 @@ class Footer extends React.Component {
                         <Col>
                             <h5>الإلكترونيات</h5>
                             <ul>
-                                <li><a href="#">اجهزة التابلت</a></li>
-                                <li><a href="#">اجهزة التابلت</a></li>
-                                <li><a href="#">اجهزة التابلت</a></li>
-                                <li><a href="#">اجهزة التابلت</a></li>
-                                <li><a href="#">اجهزة التابلت</a></li>
-                                <li><a href="#">اجهزة التابلت</a></li>
-                                <li><a href="#">اجهزة التابلت</a></li>
+                                <li><a href="/#">اجهزة التابلت</a></li>
+                                <li><a href="/#">اجهزة التابلت</a></li>
+                                <li><a href="/#">اجهزة التابلت</a></li>
+                                <li><a href="/#">اجهزة التابلت</a></li>
+                                <li><a href="/#">اجهزة التابلت</a></li>
+                                <li><a href="/#">اجهزة التابلت</a></li>
+                                <li><a href="/#">اجهزة التابلت</a></li>
                             </ul>
                         </Col>
                         <Col>
                             <h5>الأزياء</h5>
                             <ul>
-                                <li><a href="#">اجهزة التابلت</a></li>
-                                <li><a href="#">اجهزة التابلت</a></li>
-                                <li><a href="#">اجهزة التابلت</a></li>
-                                <li><a href="#">اجهزة التابلت</a></li>
-                                <li><a href="#">اجهزة التابلت</a></li>
-                                <li><a href="#">اجهزة التابلت</a></li>
-                                <li><a href="#">اجهزة التابلت</a></li>
+                                <li><a href="/#">اجهزة التابلت</a></li>
+                                <li><a href="/#">اجهزة التابلت</a></li>
+                                <li><a href="/#">اجهزة التابلت</a></li>
+                                <li><a href="/#">اجهزة التابلت</a></li>
+                                <li><a href="/#">اجهزة التابلت</a></li>
+                                <li><a href="/#">اجهزة التابلت</a></li>
+                                <li><a href="/#">اجهزة التابلت</a></li>
                             </ul>
                         </Col>
                         <Col>
                             <h5>المطبخ والأجهزة المنزلية</h5>
                             <ul>
-                                <li><a href="#">اجهزة التابلت</a></li>
-                                <li><a href="#">اجهزة التابلت</a></li>
-                                <li><a href="#">اجهزة التابلت</a></li>
-                                <li><a href="#">اجهزة التابلت</a></li>
-                                <li><a href="#">اجهزة التابلت</a></li>
-                                <li><a href="#">اجهزة التابلت</a></li>
-                                <li><a href="#">اجهزة التابلت</a></li>
+                                <li><a href="/#">اجهزة التابلت</a></li>
+                                <li><a href="/#">اجهزة التابلت</a></li>
+                                <li><a href="/#">اجهزة التابلت</a></li>
+                                <li><a href="/#">اجهزة التابلت</a></li>
+                                <li><a href="/#">اجهزة التابلت</a></li>
+                                <li><a href="/#">اجهزة التابلت</a></li>
+                                <li><a href="/#">اجهزة التابلت</a></li>
                             </ul>
                         </Col>
                         <Col>
                             <h5>الجمال</h5>
                             <ul>
-                                <li><a href="#">اجهزة التابلت</a></li>
-                                <li><a href="#">اجهزة التابلت</a></li>
-                                <li><a href="#">اجهزة التابلت</a></li>
-                                <li><a href="#">اجهزة التابلت</a></li>
-                                <li><a href="#">اجهزة التابلت</a></li>
-                                <li><a href="#">اجهزة التابلت</a></li>
-                                <li><a href="#">اجهزة التابلت</a></li>
+                                <li><a href="/#">اجهزة التابلت</a></li>
+                                <li><a href="/#">اجهزة التابلت</a></li>
+                                <li><a href="/#">اجهزة التابلت</a></li>
+                                <li><a href="/#">اجهزة التابلت</a></li>
+                                <li><a href="/#">اجهزة التابلت</a></li>
+                                <li><a href="/#">اجهزة التابلت</a></li>
+                                <li><a href="/#">اجهزة التابلت</a></li>
                             </ul>
                         </Col>
                         <Col>
                             <h5>الأطفال، البيبي والألعاب</h5>
                             <ul>
-                                <li><a href="#">اجهزة التابلت</a></li>
-                                <li><a href="#">اجهزة التابلت</a></li>
-                                <li><a href="#">اجهزة التابلت</a></li>
-                                <li><a href="#">اجهزة التابلت</a></li>
-                                <li><a href="#">اجهزة التابلت</a></li>
-                                <li><a href="#">اجهزة التابلت</a></li>
-                                <li><a href="#">اجهزة التابلت</a></li>
+                                <li><a href="/#">اجهزة التابلت</a></li>
+                                <li><a href="/#">اجهزة التابلت</a></li>
+                                <li><a href="/#">اجهزة التابلت</a></li>
+                                <li><a href="/#">اجهزة التابلت</a></li>
+                                <li><a href="/#">اجهزة التابلت</a></li>
+                                <li><a href="/#">اجهزة التابلت</a></li>
+                                <li><a href="/#">اجهزة التابلت</a></li>
                             </ul>
                         </Col>
                         <Col>
                             <h5>أفضل الماركات</h5>
                             <ul>
-                                <li><a href="#">اجهزة التابلت</a></li>
-                                <li><a href="#">اجهزة التابلت</a></li>
-                                <li><a href="#">اجهزة التابلت</a></li>
-                                <li><a href="#">اجهزة التابلت</a></li>
-                                <li><a href="#">اجهزة التابلت</a></li>
-                                <li><a href="#">اجهزة التابلت</a></li>
-                                <li><a href="#">اجهزة التابلت</a></li>
+                                <li><a href="/#">اجهزة التابلت</a></li>
+                                <li><a href="/#">اجهزة التابلت</a></li>
+                                <li><a href="/#">اجهزة التابلت</a></li>
+                                <li><a href="/#">اجهزة التابلت</a></li>
+                                <li><a href="/#">اجهزة التابلت</a></li>
+                                <li><a href="/#">اجهزة التابلت</a></li>
+                                <li><a href="/#">اجهزة التابلت</a></li>
                             </ul>
                         </Col>
                     </Row>
@@ -244,21 +244,21 @@ class Footer extends React.Component {
                             <h5>تواصل معانا عبر</h5>
                             <div>
                                 <span>
-                                    <a href="#"><FontAwesomeIcon size="sm" icon={faFacebook}></FontAwesomeIcon></a>
+                                    <a href="/#"><FontAwesomeIcon size="sm" icon={faFacebook}></FontAwesomeIcon></a>
                                 </span>
                                 <span>
-                                    <a href="#"><FontAwesomeIcon size="sm" icon={faTwitter}></FontAwesomeIcon></a>
+                                    <a href="/#"><FontAwesomeIcon size="sm" icon={faTwitter}></FontAwesomeIcon></a>
                                 </span>
                                 <span>
-                                    <a href="#"><FontAwesomeIcon size="sm" icon={faInstagram}></FontAwesomeIcon></a>
+                                    <a href="/#"><FontAwesomeIcon size="sm" icon={faInstagram}></FontAwesomeIcon></a>
                                 </span>
                             </div>
                         </Col>
                         <Col xs={12}>
                             <h5>تواصل معانا عبر</h5>
                             <div>
-                                <img src="https://www.google.com/intl/en/cast/about/static/images/download-badges/android-download.png"/>
-                                <img src="https://www.google.com/intl/en/cast/about/static/images/download-badges/ios-download.svg"/>
+                                <img src="https://www.google.com/intl/en/cast/about/static/images/download-badges/android-download.png" alt="Contact"/>
+                                <img src="https://www.google.com/intl/en/cast/about/static/images/download-badges/ios-download.svg" alt="Contact"/>
                             </div>
                         </Col>
                     </Row>

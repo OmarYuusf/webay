@@ -8,9 +8,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 // FontAwsome Icons
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'
-import { faGlobeAmericas } from '@fortawesome/free-solid-svg-icons'
 import { faPhoneAlt } from '@fortawesome/free-solid-svg-icons'
-import { faInfo } from '@fortawesome/free-solid-svg-icons'
 import { faHome } from '@fortawesome/free-solid-svg-icons'
 import { faUserPlus } from '@fortawesome/free-solid-svg-icons'
 import { faUser } from '@fortawesome/free-solid-svg-icons'
@@ -370,9 +368,9 @@ class Aside extends React.Component {
         e.preventDefault();
 
         const subList = this.state.categories.findIndex(cart => {
-            if(e.target.textContent == cart.name.ar  ){
+            if(e.target.textContent === cart.name.ar  ){
                 return cart._id 
-            }else if(e.target.textContent == cart.name.en ){
+            }else if(e.target.textContent === cart.name.en ){
                 return cart._id
             }
         })
@@ -397,7 +395,7 @@ class Aside extends React.Component {
                 <div className="header-slide">
                     <div className="nav-slide">
                         <div>
-                            <a href="#">{this.props.language === 'en' ? 'Logo Here' : 'لوجو هنا'}</a>
+                            <a href="/#">{this.props.language === 'en' ? 'Logo Here' : 'لوجو هنا'}</a>
                             <h3>{this.props.language === 'en' ? 'Hi, We are Name' : "اهلا بيك, احنا اسم"}</h3>
                         </div>
                         <div onClick={this.props.action}>
@@ -444,7 +442,7 @@ class Aside extends React.Component {
                                 return(
                                     <li key={Math.random()} style={{display: this.state.toggleSub === true ? 'none' : 'block'}}>
                                         
-                                        <a href="#" onClick={(e) => this.handleSubSlide(e)}>
+                                        <a href="/#" onClick={(e) => this.handleSubSlide(e)}>
                                             {this.props.language === 'en' ? (cata.name.en) : (cata.name.ar)}
                                             {this.props.language === 'en' ?(<FontAwesomeIcon icon={faChevronRight} size='xs'></FontAwesomeIcon>) :
                                                                             (<FontAwesomeIcon icon={faChevronLeft} size='xs'></FontAwesomeIcon>)}
@@ -469,7 +467,7 @@ class Aside extends React.Component {
                                 {this.state.categoriesRecives.map(cata => {
                                     return(
                                         <li key={Math.random()}>
-                                            <a href="#" key={Math.random()}>
+                                            <a href="/#" key={Math.random()}>
                                                 <p>{cata}</p>
                                                 {this.props.language === 'en' ?(<FontAwesomeIcon icon={faChevronRight} size='xs'></FontAwesomeIcon>) :
                                                                                 (<FontAwesomeIcon icon={faChevronLeft} size='xs'></FontAwesomeIcon>)}
@@ -482,14 +480,14 @@ class Aside extends React.Component {
                 </div>
                 <div className="center-footer" style={{right:this.props.statue === false ? '-100%' : '0px'}}>
                         <div>
-                            <a href="#" onClick={this.props.changeLanguage}>
+                            <a href="/#" onClick={this.props.changeLanguage}>
 
                                 {this.props.language === 'en' ? 
                                     ([<span>اللغه</span>,<span>العربيه</span>]) : ([<span>Language</span>,<span>English</span>])}
                             </a>
                         </div>
                         <div>
-                            <a href="#">
+                            <a href="/#">
                                 <FontAwesomeIcon icon={faPhoneAlt} size='xs'></FontAwesomeIcon>
                                 Contact
                             </a>
