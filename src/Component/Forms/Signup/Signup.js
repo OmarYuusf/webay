@@ -151,10 +151,10 @@ class Signup extends React.Component {
                         </div>
                         <div className="buttons-group">
                             <button onClick={this.props.changeLanguage}>
-                                English
+                                {this.props.language === 'ar' ? 'English' : 'العربيه'}
                             </button>
                             <button>
-                                تسجيل 
+                                {this.props.language === 'ar' ? 'تسجيل' : 'SIGN UP'}
                             </button>
                         </div>
                         <div className="link-group">

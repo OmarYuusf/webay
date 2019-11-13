@@ -151,15 +151,15 @@ class FirstNavbar extends React.Component {
             <FirstNav className="first-nav" style={{direction:this.props.language === 'en' ? "ltr" : "rtl"}}>
                 <div className="nav-info" style={{direction:this.props.language === 'en' ? "ltr" : "rtl"}}>
                     <div>
-                        <FontAwesomeIcon size="lg" icon={faTruck}></FontAwesomeIcon>
+                        <FontAwesomeIcon size="md" icon={faTruck}></FontAwesomeIcon>
                         {this.props.language === 'en' ? (<p>charge for fr1ee first 400 ryal</p>) :(<p>توصيل مجاني عالي المنتجات فوق 400 ريال</p>)}
                     </div>
                     <div>
-                        <FontAwesomeIcon size="lg" icon={faUserCheck}></FontAwesomeIcon>
+                        <FontAwesomeIcon size="md" icon={faUserCheck}></FontAwesomeIcon>
                         {this.props.language === 'en' ? (<p>charge for fr2ee first 400 ryal</p>): (<p>ارجاع مجانى بسهولة</p>)}  
                     </div>
                     <div>
-                        <FontAwesomeIcon size="lg" icon={faPercentage}></FontAwesomeIcon>
+                        <FontAwesomeIcon size="md" icon={faPercentage}></FontAwesomeIcon>
                         {this.props.language === 'en' ? (<p>charge for f3ree first 400 ryal</p>) : (<p>افضل العروض</p>)}
                     </div>
                 </div>

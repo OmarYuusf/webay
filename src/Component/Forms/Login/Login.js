@@ -97,6 +97,11 @@ const Log = styled.div`
 `
 
 class Login extends React.Component {
+
+    stopAction = (e) => {
+        e.preventDefault();
+    }
+
     render() {
         return(
             <Log >
@@ -117,13 +122,13 @@ class Login extends React.Component {
                                 {this.props.language === 'ar' ? 'English' : 'عربي'}
                             </button>
                             <button>
-                                {this.props.language === 'ar' ? 'تسجيل الدخول' : 'LOGIN'}
+                                {this.props.language === 'ar' ? 'دخول' : 'LOGIN'}
                             </button>
                         </div>
                         <div className="link-group">
-                             {this.props.language === 'ar' ?(<p>عضو جديد؟ <a href="#"> تسجيل</a></p>)
+                             {this.props.language === 'ar' ?(<p>عضو جديد؟ <a href="#" onClick={this.props.HandleAction}>انشاء حساب جديد</a></p>)
                                                             : 
-                                                            (<p>first time? <a href="#">SignUp</a></p>)}
+                                                            (<p>first time? <a href="#"onClick={this.stopAction}>SignUp</a></p>)}
                         </div>
                     </form>
                 </div>

@@ -118,7 +118,13 @@ class Forms extends React.Component {
         this.setState({
             form: !this.state.form
         })
-        console.log(this.state.form)
+    }
+
+    HandleAction = (e) => {
+        e.preventDefault();
+        this.setState({
+            form: !this.state.form
+        })
     }
 
     render() {
@@ -128,7 +134,7 @@ class Forms extends React.Component {
 
                 <div className="Container-forms">
                     <div className="form">
-                        {this.state.form === true ? (<Login language={this.props.language} changeLanguage={this.props.changeLanguage}/>) 
+                        {this.state.form === false ? (<Login language={this.props.language} changeLanguage={this.props.changeLanguage} HandleAction={this.HandleAction}/>) 
                                                     : 
                                                     (<Signup language={this.props.language} changeLanguage={this.props.changeLanguage}/>) }
                     </div>
@@ -136,7 +142,7 @@ class Forms extends React.Component {
                         <div>
                             <h1>{this.props.language === 'ar' ? 'مرحبا صديقي' : 'HELLO FRIEND'}</h1>
                             <p>{this.props.language === 'ar' ? 'ادخل بياناتك الشخصية وابدأ الشراء معنا' : 'Please, Enter your personal details and start journey with us'}</p>
-                            <button onClick={() => this.Toggle()}>{this.state.form === false ? 'تسجيل الدخول' : 'انشاء حساب جديد'}</button>
+                            <button onClick={() => this.Toggle()}>{this.state.form === false ? 'انشاء حساب جديد' : 'تسجيل الدخول'}</button>
                         </div>
                     </div>
                 </div>
