@@ -467,7 +467,7 @@ class Aside extends React.Component {
                                 {this.state.categoriesRecives.map(cata => {
                                     return(
                                         <li key={Math.random()}>
-                                            <a href="/#" key={Math.random()}>
+                                            <a href="/#">
                                                 <p>{cata}</p>
                                                 {this.props.language === 'en' ?(<FontAwesomeIcon icon={faChevronRight} size='xs'></FontAwesomeIcon>) :
                                                                                 (<FontAwesomeIcon icon={faChevronLeft} size='xs'></FontAwesomeIcon>)}

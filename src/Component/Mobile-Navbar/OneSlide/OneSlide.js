@@ -100,7 +100,7 @@ class OneSlide extends React.Component {
                 <div>
                     <div onClick={this.props.action}>
                         {this.props.language === "en" ? 
-                        (<FontAwesomeIcon size="md" icon={faAlignLeft}></FontAwesomeIcon>) : (<FontAwesomeIcon size="md" icon={faAlignRight}></FontAwesomeIcon>)}
+                        (<FontAwesomeIcon size="sm" icon={faAlignLeft}></FontAwesomeIcon>) : (<FontAwesomeIcon size="sm" icon={faAlignRight}></FontAwesomeIcon>)}
                     </div>
                     <div>
                         <a href="/#">{this.props.language === 'en' ? 'Logo' : " هنا لوجو"}</a>
@@ -108,10 +108,10 @@ class OneSlide extends React.Component {
                 </div>
                 <div>
                     <div>
-                        <FontAwesomeIcon icon={faSearch}  size="md" onClick={this.searchChange}></FontAwesomeIcon>
+                        <FontAwesomeIcon icon={faSearch}  size="sm" onClick={this.searchChange}></FontAwesomeIcon>
                     </div>
                     <div>
-                        <FontAwesomeIcon className="searchIcon" icon={faShoppingCart} size="md"></FontAwesomeIcon>
+                        <FontAwesomeIcon className="searchIcon" icon={faShoppingCart} size="sm"></FontAwesomeIcon>
                     </div>
                 </div>
                 <aside style={{top: this.state.search === false ? '0px' : '100%',

@@ -19,112 +19,37 @@ const Cent = styled.div`
     margin-top:80px;
     display:flex;
 
+    
+    @media (max-width: 768px){
+        margin-top:40px;
+    }
+
     .sideBar{
         width:15%;
         margin:0px 15px;
 
-        .accordion{
-            .card{
-                box-shadow:0px 0px 0px;
-
-                .card-header{
-                    padding:3px 0px;
-                    font-size:14px;
-                    font-weight:800;
-
-                }
-                    
-                .card-body{
-                    padding:12px 5px;
-                }
-            }
+        @media (max-width: 1024px){ 
+            display:fixed;
         }
 
-        .accordion:first-of-type{
-            .card-body{
-                > div{
-                    display:flex;   
+        > div {
+
+            h4{
+                border-bottom:1px solid #333;
+                margin:0px;
+                padding:10px 0px ;
+                font-size:21px;
+            }
+
+            table{
+                width:100%;
+                margin-top:10px;    
+                tr{
+                    display:flex;
                     justify-content:space-between;
-                    align-items:center;
-                    margin:5px 0px;
-
-                    p{
-                        margin:0px;
-                        display:flex;
-                        font-size:12px;
-                        color:#777;
-                    }
-                }
-            }
-        }
-
-        .accordion:nth-child(2){
-            .card-body{
-                form{
-
-                    > div{
-                        display:flex;   
-                        justify-content:space-between;
-                        align-items:center;
-                        font-size:12px;
-                        color:#777;
-                        margin:5px 0px;
-
-                        > span{
-                            display:flex;  
-                            justify-content:space-between;
-                            align-items:center;
-
-                            input{
-
-                            }
-
-                            label{
-                                margin:0px;
-                                margin-inline-start:5px;
-                            }
-                        }
-
-                        p{
-                            margin:0px;
-                        }
-                    }
-                }
-            }
-        }
-
-        .accordion:last-of-type{
-            .card-body{
-                form{
-                    div{
-                        display:flex;
-                        justify-content:space-between;
-                        margin:5px 0px;
-                        font-size:12px;
-                        align-items:center;
-
-                        label{
-                            color:#777;
-                        }
-
-                    }
-
-                    div:last-of-type{
-                        justify-content:flex-end;
-
-                        input{
-                            width:100%;
-                            border:0px;
-                            color:#f1f1f1;
-                            background:#03A9F4;
-                            padding:5px 15px;
-                            margin:10px 0px;
-                            transition:all .3s;
-                            &:hover{
-                                box-shadow:4px 4px 6px rgb(0,0,0,.1)
-                            }
-                        }
-                    }
+                    margin:8px 0px ;
+                    color:#777;
+                    font-size:14px;
                 }
             }
         }
@@ -135,6 +60,10 @@ const Cent = styled.div`
         width:85%;
         margin:15px;
 
+        @media (max-width: 1024px){ 
+            width:100%;
+        }
+
         h6{
             margin:0px;
         }
@@ -143,8 +72,18 @@ const Cent = styled.div`
             width:100%;
             display:flex;
             justify-content:space-between;
+            align-items:center;
+            
+            @media (max-width: 768px){
+                flex-direction:column
+            }
 
             > div:first-of-type{
+
+                @media (max-width: 768px){
+                    margin:15px;
+                }
+
                 span{
                     font-weight:800
                 }
@@ -153,6 +92,10 @@ const Cent = styled.div`
             > div:last-of-type{
                 display:flex;
                 align-items:center;
+
+                @media (max-width: 768px){
+                    flex-direction:column;
+                }
 
                 > span{
                     margin:0px 18px;
@@ -187,20 +130,24 @@ const Cent = styled.div`
     .products{
         margin-top:25px;
         width:100%;
-        flex-wrap:wrap;
+        display:grid;
+        grid-template-columns:1fr 1fr 1fr 1fr 1fr;
 
-        .products-row{
-            width:100%;
-            display:flex;
+        @media (max-width: 1024px){ 
+            grid-template-columns:1fr 1fr 1fr 1fr ;
+        }
+
+        @media (max-width: 768px){ 
+            grid-template-columns:1fr 1fr 1fr ;
+        }
+        
+        @media (max-width: 600px){ 
+            grid-template-columns:1fr 1fr ;
+        }
 
             > div{
-                width:20%;
                 margin:8px;
                 cursor: pointer;
-
-                @media (max-width: 1440px){ 
-                    font-size:14px
-                }
 
                 .container-img{
                     display:flex;
@@ -209,7 +156,10 @@ const Cent = styled.div`
 
                     img{
                         height:250px;
-                        object-fit:contain
+
+                        @media (max-width: 1024px){ 
+                            height:180px;
+                        }
                     }
                 }
 
@@ -249,8 +199,7 @@ const Cent = styled.div`
                     }
                 }
             }
-            
-        }
+    
 
         .list-view{
             flex-wrap:wrap;
@@ -346,86 +295,52 @@ class Center extends React.Component {
                         textAlign:this.props.language === 'en' ? "left" : "right"}}>
                 
                 <div className="sideBar">
-                    <Accordion defaultActiveKey="0">
-                        <Card>
-                            <Accordion.Toggle as={Card.Header} eventKey="0">
-                                الفئه
-                            </Accordion.Toggle>
-                            <Accordion.Collapse eventKey="0">
-                            <Card.Body>
-                                <div>
-                                    <p>القسم</p>
-                                    <p>(<span>رقم هنا</span>)</p>
-                                </div>
-                            </Card.Body>
-                            </Accordion.Collapse>
-                        </Card>
-                    </Accordion>
-                    <Accordion defaultActiveKey="0">
-                        <Card>
-                            <Accordion.Toggle as={Card.Header} eventKey="0">
-                                الماركه
-                            </Accordion.Toggle>
-                            <Accordion.Collapse eventKey="0">
-                            <Card.Body>
-                                <Form>
-                                    <div>
-                                        <span>
-                                            <input type="checkbox" id="samsung"/>
-                                            <label for="samsung">اسم الماركه</label>
-                                        </span>
-                                        <p>(<span>رقم هنا</span>)</p>
-                                    </div>
-                                    <div>
-                                        <span>
-                                            <input type="checkbox" id=""/>
-                                            <label for="">اسم الماركه</label>
-                                        </span>
-                                        <p>(<span>رقم هنا</span>)</p>
-                                    </div>
-                                    <div>
-                                        <span>
-                                            <input type="checkbox" id=""/>
-                                            <label for="">اسم الماركه</label>
-                                        </span>
-                                        <p>(<span>رقم هنا</span>)</p>
-                                    </div>
-                                    <div>
-                                        <span>
-                                            <input type="checkbox" id=""/>
-                                            <label for="">اسم الماركه</label>
-                                        </span>
-                                        <p>(<span>رقم هنا</span>)</p>
-                                    </div>
-                                </Form>
-                            </Card.Body>
-                            </Accordion.Collapse>
-                        </Card>
-                    </Accordion>
-                    <Accordion defaultActiveKey="0">
-                        <Card>
-                            <Accordion.Toggle as={Card.Header} eventKey="0">
-                               السعر
-                            </Accordion.Toggle>
-                            <Accordion.Collapse eventKey="0">
-                            <Card.Body>
-                                <form>
-                                    <div>
-                                        <label>من</label>
-                                        <input type="number"/>
-                                    </div>
-                                    <div>
-                                        <label>الي</label>
-                                        <input type="number"/>
-                                    </div>
-                                    <div>
-                                        <input type="submit" value="بحث"/>
-                                    </div>
-                                </form>
-                            </Card.Body>
-                            </Accordion.Collapse>
-                        </Card>
-                    </Accordion>
+                    <div>
+                        <h4>
+                            الفئه   
+                        </h4>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td>القسم</td>
+                                    <td>(رقم هنا)</td>
+                                </tr>
+                                <tr>
+                                    <td>القسم</td>
+                                    <td>(رقم هنا)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                        <h4>
+                         الماركه   
+                        </h4>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td><input type="checkbox" /> القسم </td>
+                                    <td>(رقم هنا)</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" /> القسم </td>
+                                    <td>(رقم هنا)</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" /> القسم </td>
+                                    <td>(رقم هنا)</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" /> القسم </td>
+                                    <td>(رقم هنا)</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" /> القسم </td>
+                                    <td>(رقم هنا)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
                 <div className="head">
                     <div className="filter-sort">
@@ -458,314 +373,309 @@ class Center extends React.Component {
                             </span>
                         </div>
                     </div>
-                        <div className="products">
-                            <div className={`products-row ${this.state.toggleView === true ? 'list-view' : null }`}>
-                                    <div className="product">
-                                        <div className="container-img">
-                                            <img src="https://k.nooncdn.com/t_desktop-thumbnail-v2/v1554877481/N23046819A_1.jpg"/>
-                                        </div>
-                                        <div className="container-body">
-                                            <p className="owner" style={{display: this.state.toggleView === false ? 'none' : 'block'}}>أريستون</p>
-                                            <h6>ديلونجي Multifunctional Coffee Machine 1450W ECAM650.55MS أسود/ فضي رقم الموديل: ECAM650.55MS</h6>
-                                            <span className="price">
-                                                <p class="real-price">2150.00 جنيه</p>
-                                                <p class="fake-price">2220.00 جنيه</p>
-                                            </span>
-                                            <span class="discount">
-                                                خصم 15%
-                                            </span>
-                                        </div>
-                                        <div className="container-buttons"  style={{display: this.state.toggleView === false ? 'none' : 'flex'}}>
-                                            <button> اضافه إلي عربة التسوق<FontAwesomeIcon icon={faShoppingCart}></FontAwesomeIcon></button>
-                                            <button>إاضافه إالي منتجاتك المفضلة<FontAwesomeIcon icon={faHeart}></FontAwesomeIcon></button>
-                                        </div>
-                                    </div>
-                                    <div className="product">
-                                        <div className="container-img">
-                                            <img src="https://k.nooncdn.com/t_desktop-thumbnail-v2/v1554877481/N23046819A_1.jpg"/>
-                                        </div>
-                                        <div className="container-body">
-                                            <p className="owner" style={{display: this.state.toggleView === false ? 'none' : 'block'}}>أريستون</p>
-                                            <h6>ديلونجي Multifunctional Coffee Machine 1450W ECAM650.55MS أسود/ فضي رقم الموديل: ECAM650.55MS</h6>
-                                            <span className="price">
-                                                <p class="real-price">2150.00 جنيه</p>
-                                                <p class="fake-price">2220.00 جنيه</p>
-                                            </span>
-                                            <span class="discount">
-                                                خصم 15%
-                                            </span>
-                                        </div>
-                                        <div className="container-buttons"  style={{display: this.state.toggleView === false ? 'none' : 'flex'}}>
-                                            <button> اضافه إلي عربة التسوق<FontAwesomeIcon icon={faShoppingCart}></FontAwesomeIcon></button>
-                                            <button>إاضافه إالي منتجاتك المفضلة<FontAwesomeIcon icon={faHeart}></FontAwesomeIcon></button>
-                                        </div>
-                                    </div>
-                                    <div className="product">
-                                        <div className="container-img">
-                                            <img src="https://k.nooncdn.com/t_desktop-thumbnail-v2/v1554877481/N23046819A_1.jpg"/>
-                                        </div>
-                                        <div className="container-body">
-                                            <p className="owner" style={{display: this.state.toggleView === false ? 'none' : 'block'}}>أريستون</p>
-                                            <h6>ديلونجي Multifunctional Coffee Machine 1450W ECAM650.55MS أسود/ فضي رقم الموديل: ECAM650.55MS</h6>
-                                            <span className="price">
-                                                <p class="real-price">2150.00 جنيه</p>
-                                                <p class="fake-price">2220.00 جنيه</p>
-                                            </span>
-                                            <span class="discount">
-                                                خصم 15%
-                                            </span>
-                                        </div>
-                                        <div className="container-buttons"  style={{display: this.state.toggleView === false ? 'none' : 'flex'}}>
-                                            <button> اضافه إلي عربة التسوق<FontAwesomeIcon icon={faShoppingCart}></FontAwesomeIcon></button>
-                                            <button>إاضافه إالي منتجاتك المفضلة<FontAwesomeIcon icon={faHeart}></FontAwesomeIcon></button>
-                                        </div>
-                                    </div>
-                                    <div className="product">
-                                        <div className="container-img">
-                                            <img src="https://k.nooncdn.com/t_desktop-thumbnail-v2/v1554877481/N23046819A_1.jpg"/>
-                                        </div>
-                                        <div className="container-body">
-                                            <p className="owner" style={{display: this.state.toggleView === false ? 'none' : 'block'}}>أريستون</p>
-                                            <h6>ديلونجي Multifunctional Coffee Machine 1450W ECAM650.55MS أسود/ فضي رقم الموديل: ECAM650.55MS</h6>
-                                            <span className="price">
-                                                <p class="real-price">2150.00 جنيه</p>
-                                                <p class="fake-price">2220.00 جنيه</p>
-                                            </span>
-                                            <span class="discount">
-                                                خصم 15%
-                                            </span>
-                                        </div>
-                                        <div className="container-buttons"  style={{display: this.state.toggleView === false ? 'none' : 'flex'}}>
-                                            <button> اضافه إلي عربة التسوق<FontAwesomeIcon icon={faShoppingCart}></FontAwesomeIcon></button>
-                                            <button>إاضافه إالي منتجاتك المفضلة<FontAwesomeIcon icon={faHeart}></FontAwesomeIcon></button>
-                                        </div>
-                                    </div>
-                                    <div className="product">
-                                        <div className="container-img">
-                                            <img src="https://k.nooncdn.com/t_desktop-thumbnail-v2/v1554877481/N23046819A_1.jpg"/>
-                                        </div>
-                                        <div className="container-body">
-                                            <p className="owner" style={{display: this.state.toggleView === false ? 'none' : 'block'}}>أريستون</p>
-                                            <h6>ديلونجي Multifunctional Coffee Machine 1450W ECAM650.55MS أسود/ فضي رقم الموديل: ECAM650.55MS</h6>
-                                            <span className="price">
-                                                <p class="real-price">2150.00 جنيه</p>
-                                                <p class="fake-price">2220.00 جنيه</p>
-                                            </span>
-                                            <span class="discount">
-                                                خصم 15%
-                                            </span>
-                                        </div>
-                                        <div className="container-buttons"  style={{display: this.state.toggleView === false ? 'none' : 'flex'}}>
-                                            <button> اضافه إلي عربة التسوق<FontAwesomeIcon icon={faShoppingCart}></FontAwesomeIcon></button>
-                                            <button>إاضافه إالي منتجاتك المفضلة<FontAwesomeIcon icon={faHeart}></FontAwesomeIcon></button>
-                                        </div>
-                                    </div>
-                                </div>
-                            <div className={`products-row ${this.state.toggleView === true ? 'list-view' : null }`}>
-                                    <div className="product">
-                                        <div className="container-img">
-                                            <img src="https://k.nooncdn.com/t_desktop-thumbnail-v2/v1554877481/N23046819A_1.jpg"/>
-                                        </div>
-                                        <div className="container-body">
-                                            <p className="owner" style={{display: this.state.toggleView === false ? 'none' : 'block'}}>أريستون</p>
-                                            <h6>ديلونجي Multifunctional Coffee Machine 1450W ECAM650.55MS أسود/ فضي رقم الموديل: ECAM650.55MS</h6>
-                                            <span className="price">
-                                                <p class="real-price">2150.00 جنيه</p>
-                                                <p class="fake-price">2220.00 جنيه</p>
-                                            </span>
-                                            <span class="discount">
-                                                خصم 15%
-                                            </span>
-                                        </div>
-                                        <div className="container-buttons"  style={{display: this.state.toggleView === false ? 'none' : 'flex'}}>
-                                            <button> اضافه إلي عربة التسوق<FontAwesomeIcon icon={faShoppingCart}></FontAwesomeIcon></button>
-                                            <button>إاضافه إالي منتجاتك المفضلة<FontAwesomeIcon icon={faHeart}></FontAwesomeIcon></button>
-                                        </div>
-                                    </div>
-                                    <div className="product">
-                                        <div className="container-img">
-                                            <img src="https://k.nooncdn.com/t_desktop-thumbnail-v2/v1554877481/N23046819A_1.jpg"/>
-                                        </div>
-                                        <div className="container-body">
-                                            <p className="owner" style={{display: this.state.toggleView === false ? 'none' : 'block'}}>أريستون</p>
-                                            <h6>ديلونجي Multifunctional Coffee Machine 1450W ECAM650.55MS أسود/ فضي رقم الموديل: ECAM650.55MS</h6>
-                                            <span className="price">
-                                                <p class="real-price">2150.00 جنيه</p>
-                                                <p class="fake-price">2220.00 جنيه</p>
-                                            </span>
-                                            <span class="discount">
-                                                خصم 15%
-                                            </span>
-                                        </div>
-                                        <div className="container-buttons"  style={{display: this.state.toggleView === false ? 'none' : 'flex'}}>
-                                            <button> اضافه إلي عربة التسوق<FontAwesomeIcon icon={faShoppingCart}></FontAwesomeIcon></button>
-                                            <button>إاضافه إالي منتجاتك المفضلة<FontAwesomeIcon icon={faHeart}></FontAwesomeIcon></button>
-                                        </div>
-                                    </div>
-                                    <div className="product">
-                                        <div className="container-img">
-                                            <img src="https://k.nooncdn.com/t_desktop-thumbnail-v2/v1554877481/N23046819A_1.jpg"/>
-                                        </div>
-                                        <div className="container-body">
-                                            <p className="owner" style={{display: this.state.toggleView === false ? 'none' : 'block'}}>أريستون</p>
-                                            <h6>ديلونجي Multifunctional Coffee Machine 1450W ECAM650.55MS أسود/ فضي رقم الموديل: ECAM650.55MS</h6>
-                                            <span className="price">
-                                                <p class="real-price">2150.00 جنيه</p>
-                                                <p class="fake-price">2220.00 جنيه</p>
-                                            </span>
-                                            <span class="discount">
-                                                خصم 15%
-                                            </span>
-                                        </div>
-                                        <div className="container-buttons"  style={{display: this.state.toggleView === false ? 'none' : 'flex'}}>
-                                            <button> اضافه إلي عربة التسوق<FontAwesomeIcon icon={faShoppingCart}></FontAwesomeIcon></button>
-                                            <button>إاضافه إالي منتجاتك المفضلة<FontAwesomeIcon icon={faHeart}></FontAwesomeIcon></button>
-                                        </div>
-                                    </div>
-                                    <div className="product">
-                                        <div className="container-img">
-                                            <img src="https://k.nooncdn.com/t_desktop-thumbnail-v2/v1554877481/N23046819A_1.jpg"/>
-                                        </div>
-                                        <div className="container-body">
-                                            <p className="owner" style={{display: this.state.toggleView === false ? 'none' : 'block'}}>أريستون</p>
-                                            <h6>ديلونجي Multifunctional Coffee Machine 1450W ECAM650.55MS أسود/ فضي رقم الموديل: ECAM650.55MS</h6>
-                                            <span className="price">
-                                                <p class="real-price">2150.00 جنيه</p>
-                                                <p class="fake-price">2220.00 جنيه</p>
-                                            </span>
-                                            <span class="discount">
-                                                خصم 15%
-                                            </span>
-                                        </div>
-                                        <div className="container-buttons"  style={{display: this.state.toggleView === false ? 'none' : 'flex'}}>
-                                            <button> اضافه إلي عربة التسوق<FontAwesomeIcon icon={faShoppingCart}></FontAwesomeIcon></button>
-                                            <button>إاضافه إالي منتجاتك المفضلة<FontAwesomeIcon icon={faHeart}></FontAwesomeIcon></button>
-                                        </div>
-                                    </div>
-                                    <div className="product">
-                                        <div className="container-img">
-                                            <img src="https://k.nooncdn.com/t_desktop-thumbnail-v2/v1554877481/N23046819A_1.jpg"/>
-                                        </div>
-                                        <div className="container-body">
-                                            <p className="owner" style={{display: this.state.toggleView === false ? 'none' : 'block'}}>أريستون</p>
-                                            <h6>ديلونجي Multifunctional Coffee Machine 1450W ECAM650.55MS أسود/ فضي رقم الموديل: ECAM650.55MS</h6>
-                                            <span className="price">
-                                                <p class="real-price">2150.00 جنيه</p>
-                                                <p class="fake-price">2220.00 جنيه</p>
-                                            </span>
-                                            <span class="discount">
-                                                خصم 15%
-                                            </span>
-                                        </div>
-                                        <div className="container-buttons"  style={{display: this.state.toggleView === false ? 'none' : 'flex'}}>
-                                            <button> اضافه إلي عربة التسوق<FontAwesomeIcon icon={faShoppingCart}></FontAwesomeIcon></button>
-                                            <button>إاضافه إالي منتجاتك المفضلة<FontAwesomeIcon icon={faHeart}></FontAwesomeIcon></button>
-                                        </div>
-                                    </div>
-                                </div>
-                            <div className={`products-row ${this.state.toggleView === true ? 'list-view' : null }`}>
-                                <div className="product">
-                                    <div className="container-img">
-                                        <img src="https://k.nooncdn.com/t_desktop-thumbnail-v2/v1554877481/N23046819A_1.jpg"/>
-                                    </div>
-                                    <div className="container-body">
-                                        <p className="owner" style={{display: this.state.toggleView === false ? 'none' : 'block'}}>أريستون</p>
-                                        <h6>ديلونجي Multifunctional Coffee Machine 1450W ECAM650.55MS أسود/ فضي رقم الموديل: ECAM650.55MS</h6>
-                                        <span className="price">
-                                            <p class="real-price">2150.00 جنيه</p>
-                                            <p class="fake-price">2220.00 جنيه</p>
-                                        </span>
-                                        <span class="discount">
-                                            خصم 15%
-                                        </span>
-                                    </div>
-                                    <div className="container-buttons"  style={{display: this.state.toggleView === false ? 'none' : 'flex'}}>
-                                        <button> اضافه إلي عربة التسوق<FontAwesomeIcon icon={faShoppingCart}></FontAwesomeIcon></button>
-                                        <button>إاضافه إالي منتجاتك المفضلة<FontAwesomeIcon icon={faHeart}></FontAwesomeIcon></button>
-                                    </div>
-                                </div>
-                                <div className="product">
-                                    <div className="container-img">
-                                        <img src="https://k.nooncdn.com/t_desktop-thumbnail-v2/v1554877481/N23046819A_1.jpg"/>
-                                    </div>
-                                    <div className="container-body">
-                                        <p className="owner" style={{display: this.state.toggleView === false ? 'none' : 'block'}}>أريستون</p>
-                                        <h6>ديلونجي Multifunctional Coffee Machine 1450W ECAM650.55MS أسود/ فضي رقم الموديل: ECAM650.55MS</h6>
-                                        <span className="price">
-                                            <p class="real-price">2150.00 جنيه</p>
-                                            <p class="fake-price">2220.00 جنيه</p>
-                                        </span>
-                                        <span class="discount">
-                                            خصم 15%
-                                        </span>
-                                    </div>
-                                    <div className="container-buttons"  style={{display: this.state.toggleView === false ? 'none' : 'flex'}}>
-                                        <button> اضافه إلي عربة التسوق<FontAwesomeIcon icon={faShoppingCart}></FontAwesomeIcon></button>
-                                        <button>إاضافه إالي منتجاتك المفضلة<FontAwesomeIcon icon={faHeart}></FontAwesomeIcon></button>
-                                    </div>
-                                </div>
-                                <div className="product">
-                                    <div className="container-img">
-                                        <img src="https://k.nooncdn.com/t_desktop-thumbnail-v2/v1554877481/N23046819A_1.jpg"/>
-                                    </div>
-                                    <div className="container-body">
-                                        <p className="owner" style={{display: this.state.toggleView === false ? 'none' : 'block'}}>أريستون</p>
-                                        <h6>ديلونجي Multifunctional Coffee Machine 1450W ECAM650.55MS أسود/ فضي رقم الموديل: ECAM650.55MS</h6>
-                                        <span className="price">
-                                            <p class="real-price">2150.00 جنيه</p>
-                                            <p class="fake-price">2220.00 جنيه</p>
-                                        </span>
-                                        <span class="discount">
-                                            خصم 15%
-                                        </span>
-                                    </div>
-                                    <div className="container-buttons"  style={{display: this.state.toggleView === false ? 'none' : 'flex'}}>
-                                        <button> اضافه إلي عربة التسوق<FontAwesomeIcon icon={faShoppingCart}></FontAwesomeIcon></button>
-                                        <button>إاضافه إالي منتجاتك المفضلة<FontAwesomeIcon icon={faHeart}></FontAwesomeIcon></button>
-                                    </div>
-                                </div>
-                                <div className="product">
-                                    <div className="container-img">
-                                        <img src="https://k.nooncdn.com/t_desktop-thumbnail-v2/v1554877481/N23046819A_1.jpg"/>
-                                    </div>
-                                    <div className="container-body">
-                                        <p className="owner" style={{display: this.state.toggleView === false ? 'none' : 'block'}}>أريستون</p>
-                                        <h6>ديلونجي Multifunctional Coffee Machine 1450W ECAM650.55MS أسود/ فضي رقم الموديل: ECAM650.55MS</h6>
-                                        <span className="price">
-                                            <p class="real-price">2150.00 جنيه</p>
-                                            <p class="fake-price">2220.00 جنيه</p>
-                                        </span>
-                                        <span class="discount">
-                                            خصم 15%
-                                        </span>
-                                    </div>
-                                    <div className="container-buttons"  style={{display: this.state.toggleView === false ? 'none' : 'flex'}}>
-                                        <button> اضافه إلي عربة التسوق<FontAwesomeIcon icon={faShoppingCart}></FontAwesomeIcon></button>
-                                        <button>إاضافه إالي منتجاتك المفضلة<FontAwesomeIcon icon={faHeart}></FontAwesomeIcon></button>
-                                    </div>
-                                </div>
-                                <div className="product">
-                                    <div className="container-img">
-                                        <img src="https://k.nooncdn.com/t_desktop-thumbnail-v2/v1554877481/N23046819A_1.jpg"/>
-                                    </div>
-                                    <div className="container-body">
-                                        <p className="owner" style={{display: this.state.toggleView === false ? 'none' : 'block'}}>أريستون</p>
-                                        <h6>ديلونجي Multifunctional Coffee Machine 1450W ECAM650.55MS أسود/ فضي رقم الموديل: ECAM650.55MS</h6>
-                                        <span className="price">
-                                            <p class="real-price">2150.00 جنيه</p>
-                                            <p class="fake-price">2220.00 جنيه</p>
-                                        </span>
-                                        <span class="discount">
-                                            خصم 15%
-                                        </span>
-                                    </div>
-                                    <div className="container-buttons"  style={{display: this.state.toggleView === false ? 'none' : 'flex'}}>
-                                        <button> اضافه إلي عربة التسوق<FontAwesomeIcon icon={faShoppingCart}></FontAwesomeIcon></button>
-                                        <button>إاضافه إالي منتجاتك المفضلة<FontAwesomeIcon icon={faHeart}></FontAwesomeIcon></button>
-                                    </div>
-                                </div>
+
+                    <div className="products">
+                        <div className="product">
+                            <div className="container-img">
+                                <img src="https://k.nooncdn.com/t_desktop-pdp-v1/v1569837374/N30427673A_1.jpg" alt="product"/>
+                            </div>
+                            <div className="container-body">
+                                <p className="owner" style={{display: this.state.toggleView === false ? 'none' : 'block'}}>أريستون</p>
+                                <h6>ديلونجي Multifunctional Coffee Machine 1450W ECAM650.55MS أسود/ فضي رقم الموديل: ECAM650.55MS</h6>
+                                <span className="price">
+                                    <p class="real-price">2150.00 جنيه</p>
+                                    <p class="fake-price">2220.00 جنيه</p>
+                                </span>
+                                <span class="discount">
+                                    خصم 15%
+                                </span>
+                            </div>
+                            <div className="container-buttons"  style={{display: this.state.toggleView === false ? 'none' : 'flex'}}>
+                                <button> اضافه إلي عربة التسوق<FontAwesomeIcon icon={faShoppingCart}></FontAwesomeIcon></button>
+                                <button>إاضافه إالي منتجاتك المفضلة<FontAwesomeIcon icon={faHeart}></FontAwesomeIcon></button>
                             </div>
                         </div>
+                        <div className="product">
+                            <div className="container-img">
+                                <img src="https://k.nooncdn.com/t_desktop-thumbnail-v2/v1554877481/N23046819A_1.jpg" alt="product"/>
+                            </div>
+                            <div className="container-body">
+                                <p className="owner" style={{display: this.state.toggleView === false ? 'none' : 'block'}}>أريستون</p>
+                                <h6>ديلونجي Multifunctional Coffee Machine 1450W ECAM650.55MS أسود/ فضي رقم الموديل: ECAM650.55MS</h6>
+                                <span className="price">
+                                    <p class="real-price">2150.00 جنيه</p>
+                                    <p class="fake-price">2220.00 جنيه</p>
+                                </span>
+                                <span class="discount">
+                                    خصم 15%
+                                </span>
+                            </div>
+                            <div className="container-buttons"  style={{display: this.state.toggleView === false ? 'none' : 'flex'}}>
+                                <button> اضافه إلي عربة التسوق<FontAwesomeIcon icon={faShoppingCart}></FontAwesomeIcon></button>
+                                <button>إاضافه إالي منتجاتك المفضلة<FontAwesomeIcon icon={faHeart}></FontAwesomeIcon></button>
+                            </div>
+                        </div>
+                        <div className="product">
+                            <div className="container-img">
+                                <img src="https://k.nooncdn.com/t_desktop-thumbnail-v2/v1554877481/N23046819A_1.jpg" alt="product"/>
+                            </div>
+                            <div className="container-body">
+                                <p className="owner" style={{display: this.state.toggleView === false ? 'none' : 'block'}}>أريستون</p>
+                                <h6>ديلونجي Multifunctional Coffee Machine 1450W ECAM650.55MS أسود/ فضي رقم الموديل: ECAM650.55MS</h6>
+                                <span className="price">
+                                    <p class="real-price">2150.00 جنيه</p>
+                                    <p class="fake-price">2220.00 جنيه</p>
+                                </span>
+                                <span class="discount">
+                                    خصم 15%
+                                </span>
+                            </div>
+                            <div className="container-buttons"  style={{display: this.state.toggleView === false ? 'none' : 'flex'}}>
+                                <button> اضافه إلي عربة التسوق<FontAwesomeIcon icon={faShoppingCart}></FontAwesomeIcon></button>
+                                <button>إاضافه إالي منتجاتك المفضلة<FontAwesomeIcon icon={faHeart}></FontAwesomeIcon></button>
+                            </div>
+                        </div>
+                        <div className="product">
+                            <div className="container-img">
+                                <img src="https://k.nooncdn.com/t_desktop-thumbnail-v2/v1554877481/N23046819A_1.jpg" alt="product"/>
+                            </div>
+                            <div className="container-body">
+                                <p className="owner" style={{display: this.state.toggleView === false ? 'none' : 'block'}}>أريستون</p>
+                                <h6>ديلونجي Multifunctional Coffee Machine 1450W ECAM650.55MS أسود/ فضي رقم الموديل: ECAM650.55MS</h6>
+                                <span className="price">
+                                    <p class="real-price">2150.00 جنيه</p>
+                                    <p class="fake-price">2220.00 جنيه</p>
+                                </span>
+                                <span class="discount">
+                                    خصم 15%
+                                </span>
+                            </div>
+                            <div className="container-buttons"  style={{display: this.state.toggleView === false ? 'none' : 'flex'}}>
+                                <button> اضافه إلي عربة التسوق<FontAwesomeIcon icon={faShoppingCart}></FontAwesomeIcon></button>
+                                <button>إاضافه إالي منتجاتك المفضلة<FontAwesomeIcon icon={faHeart}></FontAwesomeIcon></button>
+                            </div>
+                        </div>
+                        <div className="product">
+                            <div className="container-img">
+                                <img src="https://k.nooncdn.com/t_desktop-thumbnail-v2/v1554877481/N23046819A_1.jpg" alt="product"/>
+                            </div>
+                            <div className="container-body">
+                                <p className="owner" style={{display: this.state.toggleView === false ? 'none' : 'block'}}>أريستون</p>
+                                <h6>ديلونجي Multifunctional Coffee Machine 1450W ECAM650.55MS أسود/ فضي رقم الموديل: ECAM650.55MS</h6>
+                                <span className="price">
+                                    <p class="real-price">2150.00 جنيه</p>
+                                    <p class="fake-price">2220.00 جنيه</p>
+                                </span>
+                                <span class="discount">
+                                    خصم 15%
+                                </span>
+                            </div>
+                            <div className="container-buttons"  style={{display: this.state.toggleView === false ? 'none' : 'flex'}}>
+                                <button> اضافه إلي عربة التسوق<FontAwesomeIcon icon={faShoppingCart}></FontAwesomeIcon></button>
+                                <button>إاضافه إالي منتجاتك المفضلة<FontAwesomeIcon icon={faHeart}></FontAwesomeIcon></button>
+                            </div>
+                        </div>
+                        <div className="product">
+                            <div className="container-img">
+                                <img src="https://k.nooncdn.com/t_desktop-thumbnail-v2/v1554877481/N23046819A_1.jpg" alt="product"/>
+                            </div>
+                            <div className="container-body">
+                                <p className="owner" style={{display: this.state.toggleView === false ? 'none' : 'block'}}>أريستون</p>
+                                <h6>ديلونجي Multifunctional Coffee Machine 1450W ECAM650.55MS أسود/ فضي رقم الموديل: ECAM650.55MS</h6>
+                                <span className="price">
+                                    <p class="real-price">2150.00 جنيه</p>
+                                    <p class="fake-price">2220.00 جنيه</p>
+                                </span>
+                                <span class="discount">
+                                    خصم 15%
+                                </span>
+                            </div>
+                            <div className="container-buttons"  style={{display: this.state.toggleView === false ? 'none' : 'flex'}}>
+                                <button> اضافه إلي عربة التسوق<FontAwesomeIcon icon={faShoppingCart}></FontAwesomeIcon></button>
+                                <button>إاضافه إالي منتجاتك المفضلة<FontAwesomeIcon icon={faHeart}></FontAwesomeIcon></button>
+                            </div>
+                        </div>
+                        <div className="product">
+                            <div className="container-img">
+                                <img src="https://k.nooncdn.com/t_desktop-thumbnail-v2/v1554877481/N23046819A_1.jpg" alt="product"/>
+                            </div>
+                            <div className="container-body">
+                                <p className="owner" style={{display: this.state.toggleView === false ? 'none' : 'block'}}>أريستون</p>
+                                <h6>ديلونجي Multifunctional Coffee Machine 1450W ECAM650.55MS أسود/ فضي رقم الموديل: ECAM650.55MS</h6>
+                                <span className="price">
+                                    <p class="real-price">2150.00 جنيه</p>
+                                    <p class="fake-price">2220.00 جنيه</p>
+                                </span>
+                                <span class="discount">
+                                    خصم 15%
+                                </span>
+                            </div>
+                            <div className="container-buttons"  style={{display: this.state.toggleView === false ? 'none' : 'flex'}}>
+                                <button> اضافه إلي عربة التسوق<FontAwesomeIcon icon={faShoppingCart}></FontAwesomeIcon></button>
+                                <button>إاضافه إالي منتجاتك المفضلة<FontAwesomeIcon icon={faHeart}></FontAwesomeIcon></button>
+                            </div>
+                        </div>
+                        <div className="product">
+                            <div className="container-img">
+                                <img src="https://k.nooncdn.com/t_desktop-thumbnail-v2/v1554877481/N23046819A_1.jpg" alt="product"/>
+                            </div>
+                            <div className="container-body">
+                                <p className="owner" style={{display: this.state.toggleView === false ? 'none' : 'block'}}>أريستون</p>
+                                <h6>ديلونجي Multifunctional Coffee Machine 1450W ECAM650.55MS أسود/ فضي رقم الموديل: ECAM650.55MS</h6>
+                                <span className="price">
+                                    <p class="real-price">2150.00 جنيه</p>
+                                    <p class="fake-price">2220.00 جنيه</p>
+                                </span>
+                                <span class="discount">
+                                    خصم 15%
+                                </span>
+                            </div>
+                            <div className="container-buttons"  style={{display: this.state.toggleView === false ? 'none' : 'flex'}}>
+                                <button> اضافه إلي عربة التسوق<FontAwesomeIcon icon={faShoppingCart}></FontAwesomeIcon></button>
+                                <button>إاضافه إالي منتجاتك المفضلة<FontAwesomeIcon icon={faHeart}></FontAwesomeIcon></button>
+                            </div>
+                        </div>
+                        <div className="product">
+                            <div className="container-img">
+                                <img src="https://k.nooncdn.com/t_desktop-thumbnail-v2/v1554877481/N23046819A_1.jpg" alt="product"/>
+                            </div>
+                            <div className="container-body">
+                                <p className="owner" style={{display: this.state.toggleView === false ? 'none' : 'block'}}>أريستون</p>
+                                <h6>ديلونجي Multifunctional Coffee Machine 1450W ECAM650.55MS أسود/ فضي رقم الموديل: ECAM650.55MS</h6>
+                                <span className="price">
+                                    <p class="real-price">2150.00 جنيه</p>
+                                    <p class="fake-price">2220.00 جنيه</p>
+                                </span>
+                                <span class="discount">
+                                    خصم 15%
+                                </span>
+                            </div>
+                            <div className="container-buttons"  style={{display: this.state.toggleView === false ? 'none' : 'flex'}}>
+                                <button> اضافه إلي عربة التسوق<FontAwesomeIcon icon={faShoppingCart}></FontAwesomeIcon></button>
+                                <button>إاضافه إالي منتجاتك المفضلة<FontAwesomeIcon icon={faHeart}></FontAwesomeIcon></button>
+                            </div>
+                        </div>
+                        <div className="product">
+                            <div className="container-img">
+                                <img src="https://k.nooncdn.com/t_desktop-thumbnail-v2/v1554877481/N23046819A_1.jpg" alt="product"/>
+                            </div>
+                            <div className="container-body">
+                                <p className="owner" style={{display: this.state.toggleView === false ? 'none' : 'block'}}>أريستون</p>
+                                <h6>ديلونجي Multifunctional Coffee Machine 1450W ECAM650.55MS أسود/ فضي رقم الموديل: ECAM650.55MS</h6>
+                                <span className="price">
+                                    <p class="real-price">2150.00 جنيه</p>
+                                    <p class="fake-price">2220.00 جنيه</p>
+                                </span>
+                                <span class="discount">
+                                    خصم 15%
+                                </span>
+                            </div>
+                            <div className="container-buttons"  style={{display: this.state.toggleView === false ? 'none' : 'flex'}}>
+                                <button> اضافه إلي عربة التسوق<FontAwesomeIcon icon={faShoppingCart}></FontAwesomeIcon></button>
+                                <button>إاضافه إالي منتجاتك المفضلة<FontAwesomeIcon icon={faHeart}></FontAwesomeIcon></button>
+                            </div>
+                        </div>
+                        <div className="product">
+                            <div className="container-img">
+                                <img src="https://k.nooncdn.com/t_desktop-thumbnail-v2/v1554877481/N23046819A_1.jpg" alt="product"/>
+                            </div>
+                            <div className="container-body">
+                                <p className="owner" style={{display: this.state.toggleView === false ? 'none' : 'block'}}>أريستون</p>
+                                <h6>ديلونجي Multifunctional Coffee Machine 1450W ECAM650.55MS أسود/ فضي رقم الموديل: ECAM650.55MS</h6>
+                                <span className="price">
+                                    <p class="real-price">2150.00 جنيه</p>
+                                    <p class="fake-price">2220.00 جنيه</p>
+                                </span>
+                                <span class="discount">
+                                    خصم 15%
+                                </span>
+                            </div>
+                            <div className="container-buttons"  style={{display: this.state.toggleView === false ? 'none' : 'flex'}}>
+                                <button> اضافه إلي عربة التسوق<FontAwesomeIcon icon={faShoppingCart}></FontAwesomeIcon></button>
+                                <button>إاضافه إالي منتجاتك المفضلة<FontAwesomeIcon icon={faHeart}></FontAwesomeIcon></button>
+                            </div>
+                        </div>
+                        <div className="product">
+                            <div className="container-img">
+                                <img src="https://k.nooncdn.com/t_desktop-thumbnail-v2/v1554877481/N23046819A_1.jpg" alt="product"/>
+                            </div>
+                            <div className="container-body">
+                                <p className="owner" style={{display: this.state.toggleView === false ? 'none' : 'block'}}>أريستون</p>
+                                <h6>ديلونجي Multifunctional Coffee Machine 1450W ECAM650.55MS أسود/ فضي رقم الموديل: ECAM650.55MS</h6>
+                                <span className="price">
+                                    <p class="real-price">2150.00 جنيه</p>
+                                    <p class="fake-price">2220.00 جنيه</p>
+                                </span>
+                                <span class="discount">
+                                    خصم 15%
+                                </span>
+                            </div>
+                            <div className="container-buttons"  style={{display: this.state.toggleView === false ? 'none' : 'flex'}}>
+                                <button> اضافه إلي عربة التسوق<FontAwesomeIcon icon={faShoppingCart}></FontAwesomeIcon></button>
+                                <button>إاضافه إالي منتجاتك المفضلة<FontAwesomeIcon icon={faHeart}></FontAwesomeIcon></button>
+                            </div>
+                        </div>
+                        <div className="product">
+                            <div className="container-img">
+                                <img src="https://k.nooncdn.com/t_desktop-thumbnail-v2/v1554877481/N23046819A_1.jpg" alt="product"/>
+                            </div>
+                            <div className="container-body">
+                                <p className="owner" style={{display: this.state.toggleView === false ? 'none' : 'block'}}>أريستون</p>
+                                <h6>ديلونجي Multifunctional Coffee Machine 1450W ECAM650.55MS أسود/ فضي رقم الموديل: ECAM650.55MS</h6>
+                                <span className="price">
+                                    <p class="real-price">2150.00 جنيه</p>
+                                    <p class="fake-price">2220.00 جنيه</p>
+                                </span>
+                                <span class="discount">
+                                    خصم 15%
+                                </span>
+                            </div>
+                            <div className="container-buttons"  style={{display: this.state.toggleView === false ? 'none' : 'flex'}}>
+                                <button> اضافه إلي عربة التسوق<FontAwesomeIcon icon={faShoppingCart}></FontAwesomeIcon></button>
+                                <button>إاضافه إالي منتجاتك المفضلة<FontAwesomeIcon icon={faHeart}></FontAwesomeIcon></button>
+                            </div>
+                        </div>
+                        <div className="product">
+                            <div className="container-img">
+                                <img src="https://k.nooncdn.com/t_desktop-thumbnail-v2/v1554877481/N23046819A_1.jpg" alt="product"/>
+                            </div>
+                            <div className="container-body">
+                                <p className="owner" style={{display: this.state.toggleView === false ? 'none' : 'block'}}>أريستون</p>
+                                <h6>ديلونجي Multifunctional Coffee Machine 1450W ECAM650.55MS أسود/ فضي رقم الموديل: ECAM650.55MS</h6>
+                                <span className="price">
+                                    <p class="real-price">2150.00 جنيه</p>
+                                    <p class="fake-price">2220.00 جنيه</p>
+                                </span>
+                                <span class="discount">
+                                    خصم 15%
+                                </span>
+                            </div>
+                            <div className="container-buttons"  style={{display: this.state.toggleView === false ? 'none' : 'flex'}}>
+                                <button> اضافه إلي عربة التسوق<FontAwesomeIcon icon={faShoppingCart}></FontAwesomeIcon></button>
+                                <button>إاضافه إالي منتجاتك المفضلة<FontAwesomeIcon icon={faHeart}></FontAwesomeIcon></button>
+                            </div>
+                        </div>
+                        <div className="product">
+                            <div className="container-img">
+                                <img src="https://k.nooncdn.com/t_desktop-thumbnail-v2/v1554877481/N23046819A_1.jpg" alt="product"/>
+                            </div>
+                            <div className="container-body">
+                                <p className="owner" style={{display: this.state.toggleView === false ? 'none' : 'block'}}>أريستون</p>
+                                <h6>ديلونجي Multifunctional Coffee Machine 1450W ECAM650.55MS أسود/ فضي رقم الموديل: ECAM650.55MS</h6>
+                                <span className="price">
+                                    <p class="real-price">2150.00 جنيه</p>
+                                    <p class="fake-price">2220.00 جنيه</p>
+                                </span>
+                                <span class="discount">
+                                    خصم 15%
+                                </span>
+                            </div>
+                            <div className="container-buttons"  style={{display: this.state.toggleView === false ? 'none' : 'flex'}}>
+                                <button> اضافه إلي عربة التسوق<FontAwesomeIcon icon={faShoppingCart}></FontAwesomeIcon></button>
+                                <button>إاضافه إالي منتجاتك المفضلة<FontAwesomeIcon icon={faHeart}></FontAwesomeIcon></button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </Cent>
         )

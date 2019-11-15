@@ -10,6 +10,10 @@ const Head = styled.div`
 
     .sideBar{
         width:15%;
+        
+        @media (max-width: 1024px){ 
+            display:none;
+        }
 
         h3{
             margin:30px 5px;
@@ -81,9 +85,18 @@ const Head = styled.div`
     .head{
         width:85%;
 
+        @media (max-width: 1024px){ 
+            width:100%;
+        }
+
         .slider{
             width:100%;
             margin:15px;
+
+            @media (max-width: 768px){
+                margin:5px;
+            }
+
 
             img{
                 width:100%;
@@ -93,6 +106,10 @@ const Head = styled.div`
         .products{
             display:flex;
             margin:15px;
+
+            @media (max-width: 768px){
+                margin:5px;
+            }
 
             > div {
                 margin:5px;
