@@ -82,8 +82,8 @@ class App extends Component{
             <Navbar language={this.state.language} changeLanguage={(e) => this.changeLanguage(e)}/>
           </div>}
       </div>
-
-      <Slider language={this.state.language}/>
+      
+      {/* <Slider language={this.state.language}/>
       <PrimaryBanner language={this.state.language}/>
       <HighCata language={this.state.language}/>
       <BestProducts language={this.state.language}/>
@@ -93,15 +93,15 @@ class App extends Component{
       <Electronics language={this.state.language}/>
       <LeastProducts language={this.state.language}/>
       <Footer language={this.state.language} />
+       */}
 
-{/* 
-      <ProductPage language={this.state.language} changeLanguage={(e) => this.changeLanguage(e)} width={this.state.width}/> 
+      {/*<ProductPage language={this.state.language} changeLanguage={(e) => this.changeLanguage(e)} width={this.state.width}/> 
 
-      <Category language={this.state.language} changeLanguage={(e) => this.changeLanguage(e)} width={this.state.width}/> */}
+      <Category language={this.state.language} changeLanguage={(e) => this.changeLanguage(e)} width={this.state.width}/> 
 
-      {/* <Forms language={this.state.language} changeLanguage={(e) => this.changeLanguage(e)}/> */}
+      <Forms language={this.state.language} changeLanguage={(e) => this.changeLanguage(e)}/> 
 
-      {/* <CartPage language={this.state.language} changeLanguage={(e) => this.changeLanguage(e)}/> /> */}
+      <CartPage language={this.state.language} changeLanguage={(e) => this.changeLanguage(e)}/> /> */}
     </div>
     )
   }

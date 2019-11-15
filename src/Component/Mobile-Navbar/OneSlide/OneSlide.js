@@ -1,7 +1,6 @@
 import React from 'react';
 
-// Styled-Component
-import styled from 'styled-components'
+import "./OneSlide.scss"
 
 // FontAwsome 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -11,74 +10,6 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons'
 import { faAlignRight } from '@fortawesome/free-solid-svg-icons'
 import { faAlignLeft } from '@fortawesome/free-solid-svg-icons'
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'
-
-
-const Slide = styled.div`
-    color:#FFF;
-    display:flex;
-    background:rgb(3, 169, 244);
-    justify-content:space-between;
-    padding:18px 15px;
-    position:relative;
-
-    > div {
-        display:flex;
-
-        .fa-shopping-cart{
-            margin-inline-start:15px;
-        }
-
-        .fa-align-right{
-            margin-inline-end:15px;
-        }
-
-        .fa-align-left{
-            margin-inline-end:15px;
-        }
-
-        a{
-            color:#FFF;
-            text-decoration:none;
-        }
-    }
-
-    aside{
-        position:absolute;
-        width:100%;
-        height:100%;
-        top:100%;
-        background:#FFF;
-        visibility:hidden;
-        left:0px;
-        z-index:-1;
-        transition:all .2s;
-        z-index:99999999;
-        
-        span{
-            display:block;
-            position:relative;
-            overflow:hidden;
-
-            input{
-                width:95%;
-                border:0px;
-                padding:18px 0px;
-                padding-inline-end:5%;
-                display:block;
-                margin:auto;
-                border-bottom:1px solid #999;
-            }
-
-            .fa-search{
-                position:absolute;
-                top:34%;
-                left:18px;
-                z-index:2;
-                color:#999;
-            }
-        }
-    }
-`
 
 class OneSlide extends React.Component {
     constructor(props) {
@@ -96,7 +27,7 @@ class OneSlide extends React.Component {
     }
     render (){
         return(
-            <Slide style={{direction:this.props.language === 'en' ? "ltr" : "rtl"}}>
+            <div style={{direction:this.props.language === 'en' ? "ltr" : "rtl"}} className="slide">
                 <div>
                     <div onClick={this.props.action}>
                         {this.props.language === "en" ? 
@@ -123,7 +54,7 @@ class OneSlide extends React.Component {
                         style={{textAlign: this.props.language === 'en' ? "left": "right"}}/>
                     </span>
                 </aside>
-            </Slide>
+            </div>
         )
     }
 }
