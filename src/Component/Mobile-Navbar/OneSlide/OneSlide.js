@@ -1,6 +1,6 @@
 import React from 'react';
 
-import "./OneSlide.scss"
+import "./OneSlide.css"
 
 // FontAwsome 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -48,7 +48,7 @@ class OneSlide extends React.Component {
                 <aside style={{top: this.state.search === false ? '0px' : '100%',
                                 visibility: this.state.search === false ? "hidden" : "visible"}}>
                     <span>
-                        <FontAwesomeIcon icon={faSearch}  size="sm"></FontAwesomeIcon>
+                        <FontAwesomeIcon icon={faSearch}  size="sm"  style={{left:this.props.language === "ar" ? '18px' : null , right:this.props.language === "en" ? '18px' :null}}></FontAwesomeIcon>
                         <input type="text"  
                         placeholder={this.props.language === 'en' ? "What are you looking for ?" : 'ما الذى تبحث عنه ؟'}
                         style={{textAlign: this.props.language === 'en' ? "left": "right"}}/>

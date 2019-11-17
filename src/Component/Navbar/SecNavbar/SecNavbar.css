@@ -1,0 +1,264 @@
+.nav {
+  background: #03A9F4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px 15px;
+  padding-bottom: 20px;
+  font-size: 14px;
+}
+
+.nav a {
+  color: #FFF;
+}
+
+.nav .cartsAndLogIn {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  color: #FFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav .cartsAndLogIn a {
+  -webkit-margin-start: 6px;
+          margin-inline-start: 6px;
+}
+
+@media (max-width: 1440px) {
+  .nav .cartsAndLogIn a {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .nav .cartsAndLogIn a {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav .cartsAndLogIn a {
+    font-size: 8px;
+    display: none;
+  }
+}
+
+.nav .cartsAndLogIn .fa-shopping-cart {
+  position: relative;
+}
+
+@media (max-width: 2560px) {
+  .nav .cartsAndLogIn .fa-shopping-cart {
+    display: inline;
+  }
+}
+
+@media (max-width: 1024px) {
+  .nav .cartsAndLogIn .fa-shopping-cart {
+    display: inline;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav .cartsAndLogIn .fa-shopping-cart {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 425px) {
+  .nav .cartsAndLogIn .fa-shopping-cart {
+    display: inline;
+    font-size: 14px;
+  }
+}
+
+.nav .cartsAndLogIn .fa-user {
+  -webkit-margin-end: 8px;
+          margin-inline-end: 8px;
+}
+
+@media (max-width: 2560px) {
+  .nav .cartsAndLogIn .fa-user {
+    display: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  .nav .cartsAndLogIn .fa-user {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav .cartsAndLogIn .fa-user {
+    display: inline;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 425px) {
+  .nav .cartsAndLogIn .fa-user {
+    display: inline;
+    font-size: 14px;
+  }
+}
+
+.nav .cartsAndLogIn span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+@media (max-width: 1440px) {
+  .nav .cartsAndLogIn span p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .nav .cartsAndLogIn span p {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav .cartsAndLogIn span p {
+    font-size: 8px;
+    display: none;
+  }
+}
+
+.nav .cartsAndLogIn span:first-of-type {
+  -webkit-margin-end: 12px;
+          margin-inline-end: 12px;
+}
+
+@media (max-width: 768px) {
+  .nav .cartsAndLogIn span:first-of-type {
+    -webkit-margin-end: 16px;
+            margin-inline-end: 16px;
+  }
+}
+
+.nav .cartsAndLogIn span:first-of-type p {
+  margin: 0px;
+  -webkit-margin-start: 6px;
+          margin-inline-start: 6px;
+}
+
+.nav .SearchBoxAndLogo {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 768px) {
+  .nav .SearchBoxAndLogo {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-flex: 3;
+        -ms-flex: 3;
+            flex: 3;
+  }
+}
+
+.nav .SearchBoxAndLogo h1 {
+  margin: 0px;
+  -webkit-margin-end: 25px;
+          margin-inline-end: 25px;
+}
+
+@media (max-width: 1024px) {
+  .nav .SearchBoxAndLogo h1 {
+    -webkit-margin-end: 25px;
+            margin-inline-end: 25px;
+    font-size: 19px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav .SearchBoxAndLogo h1 {
+    -webkit-margin-end: 5px;
+            margin-inline-end: 5px;
+    font-size: 16px !important;
+  }
+}
+
+@media (max-width: 425px) {
+  .nav .SearchBoxAndLogo h1 {
+    -webkit-margin-end: 0px;
+            margin-inline-end: 0px;
+    font-size: 16px !important;
+  }
+}
+
+.nav .SearchBoxAndLogo div span {
+  position: relative;
+}
+
+.nav .SearchBoxAndLogo div span input {
+  width: 650px;
+  padding: 10px 10px;
+  border-radius: 30px;
+  border: 0px;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+  outline: none;
+  font-size: 13px;
+}
+
+@media (max-width: 1440px) {
+  .nav .SearchBoxAndLogo div span input {
+    width: 500px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .nav .SearchBoxAndLogo div span input {
+    width: 350px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav .SearchBoxAndLogo div span input {
+    width: 200px;
+    padding: 8px 6px;
+    font-size: 8px;
+  }
+}
+
+.nav .SearchBoxAndLogo div span input :focus {
+  -webkit-box-shadow: 4px 4px 3px rgba(0, 0, 0, 0.15);
+          box-shadow: 4px 4px 3px rgba(0, 0, 0, 0.15);
+}
+
+.nav .SearchBoxAndLogo div span .fa-search {
+  position: absolute;
+  top: 30%;
+}
+
+@media (max-width: 768px) {
+  .nav .SearchBoxAndLogo div span .fa-search {
+    font-size: 10px;
+    top: 40%;
+    left: 10px;
+  }
+}
+/*# sourceMappingURL=SecNavbar.css.map */

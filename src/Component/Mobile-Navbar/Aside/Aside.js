@@ -1,9 +1,5 @@
 import React from 'react';
-
-// Styled-Component
-import styled from 'styled-components'
-
-import "./Aside.scss"
+import './Aside.css'
 
 // FontAwsome 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -234,28 +230,28 @@ class Aside extends React.Component {
                     <div className="buttons-group">
                         <div>
                             <span>
-                                <FontAwesomeIcon icon={faHome} size='md'></FontAwesomeIcon>
+                                <FontAwesomeIcon icon={faHome} size='sm'></FontAwesomeIcon>
                             </span>
                             {this.props.language === 'en' ? 'Home' : 'الرئيسية'}
                             
                         </div>
                         <div>
                             <span>
-                                <FontAwesomeIcon icon={faUserPlus} size='md'></FontAwesomeIcon>
+                                <FontAwesomeIcon icon={faUserPlus} size='sm'></FontAwesomeIcon>
                             </span>
                             {this.props.language === 'en' ? 'Sign up' : 'اشترك'}
                             
                         </div>
                         <div>
                             <span>
-                                <FontAwesomeIcon icon={faUser} size='md'></FontAwesomeIcon>
+                                <FontAwesomeIcon icon={faUser} size='sm'></FontAwesomeIcon>
                             </span>
                             {this.props.language === 'en' ? 'Log in' : 'تسجيل الدخول'}
                             
                         </div>
                         <div>
                             <span>
-                                <FontAwesomeIcon icon={faShoppingCart} size='md'></FontAwesomeIcon>
+                                <FontAwesomeIcon icon={faShoppingCart} size='sm'></FontAwesomeIcon>
                             </span>
                             {this.props.language === 'en' ? 'Cart' : 'عربه التسوق'}
                             

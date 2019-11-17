@@ -1,6 +1,6 @@
 import React from 'react';
 
-import "./ListNavbar.scss"
+import "./ListNavbar.css"
 
 // FontAwsome 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'

@@ -13,26 +13,41 @@ import { faMobileAlt } from  '@fortawesome/free-solid-svg-icons'
 import styled from 'styled-components'
 
 const Sign = styled.div`
-padding:15px;
+    padding:15px;
     width:100%;
     height:100%;
     position: relative;;
 
     .form-group{
-        margin-top:80px;
+        margin-top:60px;
+
+
+        @media (max-width: 600px){ 
+            margin:0px;
+        }
 
         h2{
             font-weight:800;
+
+             @media (max-width: 600px){ 
+                font-size:21px;
+            }
         }
 
         p{
             color:#333;
 
+            @media (max-width: 600px){ 
+                font-size:13px;
+            }
+
         }
 
         form{
             margin-top:50px;
-
+            @media (max-width: 425px){ 
+                margin-top:15px;
+            }
             .container-inputs-group{
                 display:flex;
 
@@ -51,6 +66,10 @@ padding:15px;
                         outline-color:rgba(0,0,0,.1);
                         padding-inline-start:12px;
                         font-size:14px;
+                        
+                        @media (max-width: 600px){ 
+                            font-size:12px;
+                        }
                     }
                 }
 
@@ -60,6 +79,11 @@ padding:15px;
             .inputs-group{
                 margin:25px 0px;
                 position: relative;
+
+                @media (max-width: 600px){ 
+                    margin:10px 0px;
+                }
+
                 input{
                     width:100%;
                     border:0px;
@@ -68,6 +92,10 @@ padding:15px;
                     outline-color:rgba(0,0,0,.1);
                     padding-inline-start:48px;
                     font-size:14px;
+                                            
+                    @media (max-width: 600px){ 
+                            font-size:12px;
+                    }
                 }
 
                 svg{
@@ -112,6 +140,10 @@ padding:15px;
                 bottom:0px;
                 left:50%;
                 transform:translateX(-50%);
+
+                @media (max-width: 425px){ 
+                    display:none;
+                }
 
                 p{
                     font-size:13px

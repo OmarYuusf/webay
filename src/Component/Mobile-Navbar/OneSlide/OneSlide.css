@@ -1,0 +1,77 @@
+.slide {
+  color: #FFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #03a9f4;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 18px 15px;
+  position: relative;
+}
+
+.slide > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.slide > div .fa-shopping-cart {
+  -webkit-margin-start: 15px;
+          margin-inline-start: 15px;
+}
+
+.slide > div .fa-align-right {
+  -webkit-margin-end: 15px;
+          margin-inline-end: 15px;
+}
+
+.slide > div .fa-align-left {
+  -webkit-margin-end: 15px;
+          margin-inline-end: 15px;
+}
+
+.slide > div a {
+  color: #FFF;
+  text-decoration: none;
+}
+
+.slide aside {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 100%;
+  background: #FFF;
+  visibility: hidden;
+  left: 0px;
+  z-index: -1;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+  z-index: 1;
+}
+
+.slide aside span {
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+
+.slide aside span input {
+  width: 95%;
+  border: 0px;
+  padding: 18px 0px;
+  -webkit-padding-end: 5%;
+          padding-inline-end: 5%;
+  display: block;
+  margin: auto;
+  border-bottom: 1px solid #999;
+}
+
+.slide aside span .fa-search {
+  position: absolute;
+  top: 34%;
+  z-index: 2;
+  color: #999;
+}
+/*# sourceMappingURL=OneSlide.css.map */

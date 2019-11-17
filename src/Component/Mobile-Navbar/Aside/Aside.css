@@ -1,0 +1,213 @@
+.mobile-nav {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: #fff;
+  z-index: 9999;
+  top: 0px;
+  left: 0%;
+  -webkit-transition: all .4s;
+  transition: all .4s;
+  overflow: scroll;
+  z-index: 999999999;
+  padding-bottom: 45px;
+}
+
+.mobile-nav .header-slide {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding-bottom: 10px;
+}
+
+.mobile-nav .header-slide > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 5px 12px;
+}
+
+.mobile-nav .header-slide .nav-slide {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.mobile-nav .header-slide .nav-slide a {
+  text-decoration: none;
+  color: #000;
+}
+
+.mobile-nav .header-slide .nav-slide h3 {
+  margin: 4px 0px;
+}
+
+.mobile-nav .header-slide .nav-slide .fa-times {
+  margin-top: 15px;
+}
+
+.mobile-nav .header-slide .buttons-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-top: 18px;
+}
+
+.mobile-nav .header-slide .buttons-group > div {
+  width: 25%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 11px;
+}
+
+.mobile-nav .header-slide .buttons-group > div span {
+  font-size: 13px;
+  background: #03A9F4;
+  padding: 7px 12px;
+  border-radius: 5px;
+  color: #FFF;
+}
+
+.mobile-nav .center-slide {
+  padding: 5px 12px;
+  padding-bottom: 0px;
+}
+
+.mobile-nav .center-slide .center-primary {
+  position: relative;
+}
+
+.mobile-nav .center-slide .center-primary > p {
+  font-size: 11px;
+  font-weight: 800;
+  color: #333;
+}
+
+.mobile-nav .center-slide .center-primary ul {
+  padding: 0px;
+  margin: 0px;
+}
+
+.mobile-nav .center-slide .center-primary ul li {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.mobile-nav .center-slide .center-primary ul li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #212121;
+  text-decoration: none;
+  height: 50px;
+  font-size: 13px;
+}
+
+.mobile-nav .center-slide .center-primary ul li a .fa-chevron-left {
+  color: #555;
+}
+
+.mobile-nav .center-sub p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #555;
+}
+
+.mobile-nav .center-sub p .fa-chevron-right, .mobile-nav .center-sub p .fa-chevron-left {
+  -webkit-margin-end: 8px;
+          margin-inline-end: 8px;
+}
+
+.mobile-nav .center-sub ul {
+  padding: 0px;
+  margin: 0px;
+}
+
+.mobile-nav .center-sub ul li {
+  padding: 11px 0px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.mobile-nav .center-sub ul li a {
+  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #212121;
+  text-decoration: none;
+}
+
+.mobile-nav .center-sub ul li a .fa-chevron-left {
+  color: #555;
+}
+
+.mobile-nav .center-sub ul li a p {
+  margin: 0px;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.mobile-nav .center-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 45px;
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  width: 100%;
+  -webkit-transition: all .4s;
+  transition: all .4s;
+}
+
+.mobile-nav .center-footer > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  background: #f1f1f1;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 0px 10px;
+}
+
+.mobile-nav .center-footer > div a {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+  color: #212121;
+  font-size: 11px;
+}
+/*# sourceMappingURL=Aside.css.map */

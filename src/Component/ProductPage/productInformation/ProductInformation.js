@@ -15,15 +15,17 @@ const ContainerTap = styled.div`
 
     .nav-tabs{
         padding:0px 15px;
+        background:transparent ;
 
         a{
             font-weight:800;
             font-size:15px;
+            color:#777;
         }
 
         .active{
             border-bottom:1px solid rgba(0,0,0,1) ;
-
+            color:#212121
         }
     }
 

@@ -19,12 +19,25 @@ const Log = styled.div`
     .form-group{
         margin-top:80px;
 
+
+        @media (max-width: 600px){ 
+            margin:0px;
+        }
+
         h2{
             font-weight:800;
+
+             @media (max-width: 600px){ 
+                font-size:21px;
+            }
         }
 
         p{
             color:#333;
+
+            @media (max-width: 600px){ 
+                font-size:13px;
+            }
 
         }
 
@@ -43,6 +56,10 @@ const Log = styled.div`
                     outline-color:rgba(0,0,0,.1);
                     padding-inline-start:48px;
                     font-size:14px;
+
+                    @media (max-width: 600px){ 
+                        font-size:12px;
+                    }
                 }
 
                 svg{

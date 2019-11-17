@@ -5,7 +5,7 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 // FontAwsome Icons
-import { faList } from '@fortawesome/free-solid-svg-icons'
+import { faList, faFilter } from '@fortawesome/free-solid-svg-icons'
 import { faBorderAll } from '@fortawesome/free-solid-svg-icons'
 import { faHeart } from '@fortawesome/free-solid-svg-icons'
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'
@@ -29,7 +29,15 @@ const Cent = styled.div`
         margin:0px 15px;
 
         @media (max-width: 1024px){ 
-            display:fixed;
+            width:23%;
+            margin:0px 5px;
+        }
+
+        @media (max-width: 600px){ 
+            position:fixed;
+            width:100%;
+            bottom:-100%;
+
         }
 
         > div {
@@ -39,6 +47,10 @@ const Cent = styled.div`
                 margin:0px;
                 padding:10px 0px ;
                 font-size:21px;
+
+                @media (max-width: 768px){ 
+                font-size:16px;
+                }
             }
 
             table{
@@ -50,17 +62,60 @@ const Cent = styled.div`
                     margin:8px 0px ;
                     color:#777;
                     font-size:14px;
+
+                    td{
+                        @media (max-width: 768px){ 
+                        font-size:11px;
+                        }
+                    }
                 }
             }
+        }
+    }
+
+    .sideBar-Mobile{
+        @media (min-width: 601px){ 
+            display:none;
+        }
+
+        transition:all .3s ;
+        display:block;
+        margin:0px;
+        position:fixed;
+        bottom:0px;
+        left:0px;
+        width:100%;
+        background:#212121;
+
+        > div {
+            padding:6px;
+
+            td{
+                display:flex;
+                align-items:center;
+            }
+
+            input{
+                margin-inline-end:6px;
+            }
+        }
+
+        h4{
+            color:#eee;
+
         }
     }
 }
 
     .head{
         width:85%;
-        margin:15px;
+        margin:0px 15px;
 
         @media (max-width: 1024px){ 
+            margin:0px 5px;
+        }
+
+        @media (max-width:600px){ 
             width:100%;
         }
 
@@ -93,12 +148,16 @@ const Cent = styled.div`
                 display:flex;
                 align-items:center;
 
-                @media (max-width: 768px){
-                    flex-direction:column;
-                }
-
                 > span{
                     margin:0px 18px;
+
+                    @media (max-width: 600px){ 
+                        margin:0px 5px;
+                    }
+
+                    @media (max-width: 1024px){ 
+                        margin:0px 5px;
+                    }
 
                     label{
                         margin-inline-end:10px;
@@ -125,6 +184,28 @@ const Cent = styled.div`
                 }
             }
         }
+
+        .filter-product{
+            @media (min-width: 600px){ 
+                display:none;
+            }
+            .icon{
+                position:fixed;
+                width:40px;
+                height:40px;
+                bottom:15px;
+                right:10px;
+                border-radius:50%;
+                background:#03a9f4;
+                display:flex;
+                justify-content:center;
+                align-items:center;
+
+                svg{
+                    color:#fff
+                }
+            }
+        }
     }
 
     .products{
@@ -133,16 +214,20 @@ const Cent = styled.div`
         display:grid;
         grid-template-columns:1fr 1fr 1fr 1fr 1fr;
 
-        @media (max-width: 1024px){ 
+        @media (max-width: 1144px){ 
             grid-template-columns:1fr 1fr 1fr 1fr ;
         }
 
-        @media (max-width: 768px){ 
+        @media (max-width: 1024px){ 
             grid-template-columns:1fr 1fr 1fr ;
+        }
+
+        @media (max-width: 768px){ 
+            grid-template-columns:1fr 1fr;
         }
         
         @media (max-width: 600px){ 
-            grid-template-columns:1fr 1fr ;
+            grid-template-columns:1fr 1fr;
         }
 
             > div{
@@ -199,64 +284,97 @@ const Cent = styled.div`
                     }
                 }
             }
-    
+    }
 
-        .list-view{
-            flex-wrap:wrap;
-
-            .product {
-                width:100%;
-                display:flex;
-                border-bottom:1px solid rgba(0,0,0,.1);
-
-                .container-img{
-                    flex:1;
-                    img{
-                        height:150px;
-                    }
+    .list-view{
+        grid-template-columns:1fr !important;
+        margin-top:40px;
+        .product {
+            width:100%;
+            display:flex;
+            border-bottom:1px solid rgba(0,0,0,.1) ;
+            padding:10px 0px;
+            
+            .container-img{
+                img{
+                    height:150px;
                 }
-                
-                .container-body{
-                    flex:6;
-                    .owner{
-                        margin:0px;
-                        color:#222;
-                        font-size:14px;
+            }
+            
+            .container-body{
+                padding:8px 0px;
 
-                    }
+                .owner{
+                    margin-bottom:4px;
+                    font-size:13px;
+                    color:#777;
                 }
-                
-                .container-buttons{
-                    flex:2;
+
+                h6{
+                    width:60%;
+                    font-size:13px;
+
+                }
+
+                .price{
+                    width:60%;
                     display:flex;
-                    flex-direction:column;
-                    justify-content:center;
+                    margin-top:8px;
+                    display:flex;
                     align-items:center;
 
-                    button{
-                        font-size:12px;
-                        display:block;
-                        width:80%;
-                        padding:6px 0px;
-                        border:0px;
-                        margin:6px 0px;
-                        background:#03A9F4;
-                        color:#fff;
-
-                        svg{
-                            margin-inline-start:6px;
-                        }
-                    }
-
-                    button:last-of-type{
-                        background:transparent;
-                        border:1px solid #03A9F4;
+                    .real-price{
                         color:#03A9F4;
+                        font-size:21px;
+                        font-weight:800;
                     }
+
+                    .fake-price{
+                        font-size:12px;
+                        color:#777;
+                        margin-inline-start:10px;
+                        text-decoration:line-through
+                    }   
+                }
+
+                .discount{
+                    background:rgba(0,255,43,.3);
+                    font-size:12px;
+                    padding:3px 15px;
+                }
+            }
+            
+            .container-buttons{
+                flex:1;
+                display:flex;
+                flex-direction:column;
+                justify-content:center;
+                align-items:center;
+
+                button{
+                    font-size:12px;
+                    display:block;
+                    width:220px;
+                    padding:6px 0px;
+                    border:0px;
+                    margin:6px 0px;
+                    background:#03A9F4;
+                    color:#fff;
+
+                    svg{
+                        margin-inline-start:6px;
+                    }
+                }
+
+                button:last-of-type{
+                    background:transparent;
+                    border:1px solid #03A9F4;
+                    color:#03A9F4;
                 }
             }
         }
     }
+    
 `
 
 class Center extends React.Component {
@@ -264,6 +382,8 @@ class Center extends React.Component {
         super(props);
 
         this.state = {
+            classes : ["sideBar"],
+            ProductsDirection: ["products"],
             toggleView : false,
             product: [
                 {   owner:'أرسيتون', 
@@ -284,17 +404,19 @@ class Center extends React.Component {
         }
     }
 
+    handleFilter = () => {
+        this.state.classes.length > 1 ? this.setState({classes: ["sideBar"]}) : this.setState({classes: ["sideBar", "sideBar-Mobile"]})
+    }
+
     handleView = () => {
-        this.setState({
-            toggleView:!this.state.toggleView
-        })
+        this.state.ProductsDirection.length > 1 ? this.setState({ProductsDirection: ["products"],toggleView:!this.state.toggleView}) : this.setState({ProductsDirection: ["products", "list-view"],toggleView:!this.state.toggleView});
     }
     render() {
         return(
             <Cent style={{direction:this.props.language === 'en' ? "ltr" : "rtl",
                         textAlign:this.props.language === 'en' ? "left" : "right"}}>
                 
-                <div className="sideBar">
+                <div className={this.state.classes.join(' ')}>
                     <div>
                         <h4>
                             الفئه   
@@ -365,16 +487,25 @@ class Center extends React.Component {
                                 </select>
                             </span>
                             <span>
-                                <label>جنب بعض</label>
-                                <span>
-                                    {this.state.toggleView === true ? (<FontAwesomeIcon onClick={this.handleView} icon={faBorderAll}></FontAwesomeIcon>)
-                                                                     : <FontAwesomeIcon onClick={this.handleView} icon={faList}></FontAwesomeIcon>}
-                                </span>
+
+                                {window.innerWidth < 600 ? null 
+                                : [<label>جنب بعض</label>,
+                                <span onClick={this.handleView} >
+                                    {this.state.toggleView === true ? (<FontAwesomeIcon icon={faBorderAll}></FontAwesomeIcon>)
+                                                                     : <FontAwesomeIcon icon={faList}></FontAwesomeIcon>}
+                                </span>]
+                                }
                             </span>
                         </div>
                     </div>
 
-                    <div className="products">
+                    <div className="filter-product">
+                        <div className="icon" onClick={this.handleFilter}>
+                            <FontAwesomeIcon icon={faFilter} size="xs"></FontAwesomeIcon>
+                        </div>
+                    </div>
+
+                    <div className={this.state.ProductsDirection.join(' ')}>
                         <div className="product">
                             <div className="container-img">
                                 <img src="https://k.nooncdn.com/t_desktop-pdp-v1/v1569837374/N30427673A_1.jpg" alt="product"/>

@@ -16,6 +16,8 @@ const Form = styled.div`
     justify-content:center;
     align-items:center;
 
+
+
         .Container-forms{
             width:75%;
             height:80%;
@@ -24,8 +26,24 @@ const Form = styled.div`
             box-shadow:2px 2px rgba(0,0,0,.1);
             border-top:1px solid rgba(0,0,0,.1);
 
+            @media (max-width: 1024px){ 
+                width:85%;
+            }
+
+            @media (max-width: 768px){ 
+                width:100%;
+                height:100%;
+                flex-direction:column-reverse;
+            }
+
             .form{
-                width:67%
+                width:67%;
+
+                @media (max-width: 768px){ 
+                    width:100%;
+                    flex:2;
+                    overflow:scroll
+                }
             }
 
             .info{
@@ -34,6 +52,11 @@ const Form = styled.div`
                 justify-content:flex-start;
                 align-items:center;
                 display:flex;
+                
+                @media (max-width: 768px){ 
+                    width:100%;
+                    flex:1
+                }
 
                 > div {
                     display:flex;
@@ -45,11 +68,19 @@ const Form = styled.div`
 
                     h1{
                         font-weight:800;
+
+                        @media (max-width: 1024px){ 
+                            font-size:21px;
+                        }
                     }
 
                     p{
                         color:#eee;
                         font-size:13px;
+
+                        @media (max-width: 1024px){ 
+                            font-size:12px;
+                        }
                     }
 
                     button{

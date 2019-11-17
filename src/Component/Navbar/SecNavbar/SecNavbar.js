@@ -1,6 +1,6 @@
 import React from 'react';
 
-import "./SecNavbar.scss"
+import "./SecNavbar.css"
 
 // FontAwsome 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
