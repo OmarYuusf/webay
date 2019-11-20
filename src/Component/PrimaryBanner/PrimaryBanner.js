@@ -1,27 +1,13 @@
 import React from 'react';
-
-// Styled-Component
-import styled from 'styled-components';
+import "./PrimaryBanner.css"
 
 import { Container, Row, Col } from 'react-bootstrap';
 
-const Banner = styled.div`
-    margin-top:40px;
-
-    .row{
-        
-        > div{
-            img{
-                width:100%;
-            }
-        }
-    }
-`
 
 class PrimaryBanner extends React.Component {
     render(){
         return(
-            <Banner>
+            <div className="banner">
                 <Container fluid={true}>
                     <Row>
                         <Col>
@@ -29,7 +15,7 @@ class PrimaryBanner extends React.Component {
                         </Col>
                     </Row>
                 </Container>
-            </Banner>
+            </div>
         )
     }
 }

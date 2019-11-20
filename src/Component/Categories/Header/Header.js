@@ -1,133 +1,14 @@
 import React from 'react';
-
-// Styled-Component
-import styled from 'styled-components'
+import "./Header.css"
 
 import { Accordion, Card, Container, Row } from 'react-bootstrap'
 
-const Head = styled.div`
-    display:flex;
-
-    .sideBar{
-        width:15%;
-        
-        @media (max-width: 1024px){ 
-            display:none;
-        }
-
-        h3{
-            margin:30px 5px;
-            font-weight:800;
-            font-size:19px;
-        }
-
-        .accordion{
-            margin:15px;
-            background:transparent;
-
-            @media (max-width: 1024px){ 
-                margin:5px;
-            }
-
-            .card{
-                background:transparent;
-                box-shadow:0px 0px 0px;
-                border:1px solid rgba(0,0,0,.1);
-                border-radius:10px;
-                margin:10px 0px;
-
-                .card-header{
-                    box-shadow:0px;
-                    padding:5px 8px;
-                    font-size:14px;
-                }
-
-                .collapsing {
-                    -webkit-transition: none;
-                    transition: none;
-                    display: none;
-                }
-
-                .collapse{
-                    background:transparent;
-                    
-                    .card-body{
-                        padding:0px;
-
-                        ul{
-                            margin:0px;
-                            padding:5px 8px;
-                            list-style:none;
-                            
-                            li{
-                                padding:2px 0px;
-                                a{
-                                    font-size:12px;
-                                    color:#777;
-
-                                    &:hover{
-                                        color:#03A9F4;
-
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-
-                .collapse.show{
-                    background:#f1f1f1;
-                }
-            }
-        }
-    }
-
-    .head{
-        width:85%;
-
-        @media (max-width: 1024px){ 
-            width:100%;
-        }
-
-        .slider{
-            width:100%;
-            margin:15px;
-
-            @media (max-width: 768px){
-                margin:5px;
-            }
-
-
-            img{
-                width:100%;
-            }
-        }
-
-        .products{
-            display:flex;
-            margin:15px;
-
-            @media (max-width: 768px){
-                margin:5px;
-            }
-
-            > div {
-                margin:5px;
-
-                img{
-                    width:100%;
-                }
-            }
-        }
-    }
-
-`
 
 class Header extends React.Component {
     render() {
         return(
-            <Head style={{direction:this.props.language === 'en' ? "ltr" : "rtl",
-                        textAlign:this.props.language === 'en' ? "left" : "right"}}>
+            <div style={{direction:this.props.language === 'en' ? "ltr" : "rtl",
+                        textAlign:this.props.language === 'en' ? "left" : "right"}} className="head">
                 
                 <div className="sideBar">
                     <h3>الاقسام المميزة</h3>
@@ -259,7 +140,7 @@ class Header extends React.Component {
                         </Row>
                     </Container>
                 </div>
-            </Head>
+            </div>
         )
     }
 }

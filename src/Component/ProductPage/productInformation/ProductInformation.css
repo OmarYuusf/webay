@@ -1,0 +1,123 @@
+.container-tap {
+  width: 80%;
+  margin: 35px auto;
+}
+
+@media (max-width: 1024px) {
+  .container-tap {
+    width: 100% !important;
+  }
+}
+
+.container-tap .nav-tabs {
+  padding: 0px 15px;
+  background: transparent;
+}
+
+.container-tap .nav-tabs a {
+  font-weight: 800;
+  font-size: 15px;
+  color: #777;
+}
+
+.container-tap .nav-tabs .active {
+  border-bottom: 1px solid black;
+  color: #212121;
+}
+
+.container-tap .view h6 {
+  font-weight: 800;
+  color: #777;
+  font-size: 14px;
+}
+
+.container-tap .view ul {
+  margin: 0px;
+  -webkit-padding-start: 18px;
+          padding-inline-start: 18px;
+}
+
+.container-tap .view ul li {
+  color: #888;
+  font-size: 13px;
+  color: #414141;
+  font-size: 12px;
+}
+
+.container-tap .tablesContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+@media (max-width: 425px) {
+  .container-tap .tablesContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.container-tap .tablesContainer table {
+  width: 40%;
+  -webkit-margin-end: 10%;
+          margin-inline-end: 10%;
+}
+
+@media (max-width: 768px) {
+  .container-tap .tablesContainer table {
+    -webkit-margin-end: 0%;
+            margin-inline-end: 0%;
+    width: 50%;
+  }
+}
+
+@media (max-width: 425px) {
+  .container-tap .tablesContainer table {
+    width: 100%;
+  }
+}
+
+.container-tap .tablesContainer table tr {
+  width: 65%;
+  -webkit-margin-end: 10%;
+          margin-inline-end: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 8px 5px;
+}
+
+@media (max-width: 768px) {
+  .container-tap .tablesContainer table tr {
+    padding: 8px 10px;
+    width: 100%;
+    -webkit-margin-end: 3%;
+            margin-inline-end: 3%;
+  }
+}
+
+.container-tap .tablesContainer table tr td {
+  font-size: 12px;
+}
+
+.container-tap .tablesContainer table tr td:first-of-type {
+  color: #777;
+}
+
+.container-tap .tablesContainer table tr td:last-of-type {
+  font-weight: 600;
+  color: #414141;
+}
+
+.container-tap .tab-content > div {
+  padding: 20px;
+}
+/*# sourceMappingURL=ProductInformation.css.map */

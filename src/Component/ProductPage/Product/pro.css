@@ -1,0 +1,300 @@
+.product {
+  margin-top: 20px;
+}
+
+.product .header {
+  font-size: 11px;
+}
+
+.product .header a {
+  color: #515151;
+  text-decoration: underline;
+}
+
+.product .header a:not(:last-of-type) {
+  color: blue;
+}
+
+.product .header .fa-chevron-right, .product .header .fa-chevron-left {
+  margin: 0px 10px;
+  color: #515151;
+}
+
+.product .product {
+  margin-top: 35px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (max-width: 1024px) {
+  .product .product {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+.product .product .information {
+  padding-left: 10px;
+  width: 40%;
+  -webkit-margin-end: 15px;
+          margin-inline-end: 15px;
+}
+
+@media (max-width: 1024px) {
+  .product .product .information {
+    width: 50% !important;
+    -webkit-margin-end: 0px;
+            margin-inline-end: 0px;
+  }
+}
+
+@media (max-width: 768px) {
+  .product .product .information {
+    width: 100% !important;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    margin-top: 20px;
+    -webkit-margin-end: 0px;
+            margin-inline-end: 0px;
+  }
+}
+
+.product .product .information div {
+  padding: 18px 0px;
+  padding-top: 0px;
+}
+
+.product .product .information div .owner {
+  font-size: 14px;
+  color: #515151;
+  margin: 0px;
+}
+
+.product .product .information div .products-name {
+  font-weight: 800;
+  margin: 10px 0px;
+  margin-bottom: 4px;
+  color: #212121;
+}
+
+.product .product .information div .model-number {
+  font-size: 11px;
+  color: #515151;
+  margin: 0px;
+}
+
+.product .product .information div > div p {
+  margin: 0px;
+}
+
+.product .product .information div .old-price {
+  margin-top: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 14px;
+}
+
+.product .product .information div .old-price p:first-of-type {
+  color: #888;
+  -webkit-margin-end: 6px;
+          margin-inline-end: 6px;
+}
+
+.product .product .information div .old-price p:last-of-type {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.product .product .information div .new-price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 14px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media (max-width: 425px) {
+  .product .product .information div .new-price {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.product .product .information div .new-price > span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.product .product .information div .new-price > span p:first-of-type {
+  color: #888;
+  -webkit-margin-end: 6px;
+          margin-inline-end: 6px;
+}
+
+.product .product .information div .new-price > span p:last-of-type {
+  font-size: 32px;
+  font-weight: 800;
+  color: #03A9F4;
+}
+
+.product .product .information div .new-price .discount {
+  background: #05ff056b;
+  display: inline;
+  border-radius: 15px;
+  font-size: 13px;
+  padding: 5px 15px;
+}
+
+.product .product .information form {
+  padding: 15px 0px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.product .product .information form h6 {
+  font-size: 10px;
+  color: #777;
+}
+
+.product .product .information form > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.product .product .information form > div input {
+  width: 100%;
+  margin: 0px 5px;
+  background: #03A9F4;
+  border: 0px;
+  font-size: 13px;
+  color: #FFF;
+  padding: 10px 0px;
+  -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
+          box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
+  -webkit-transition: all .4s;
+  transition: all .4s;
+}
+
+.product .product .information form > div input:hover {
+  background: #1bb8ff;
+  -webkit-box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.15);
+          box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+.product .product .imgs {
+  width: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-margin-end: 15px;
+          margin-inline-end: 15px;
+}
+
+@media (max-width: 1024px) {
+  .product .product .imgs {
+    width: 50% !important;
+    -webkit-margin-end: 0px;
+            margin-inline-end: 0px;
+  }
+}
+
+@media (max-width: 768px) {
+  .product .product .imgs {
+    width: 100% !important;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    -webkit-margin-end: 0px;
+            margin-inline-end: 0px;
+  }
+}
+
+.product .product .imgs .containerImgs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.product .product .imgs .containerImgs img {
+  width: 60px;
+  height: 60px;
+  -webkit-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.09);
+          box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.09);
+  -o-object-fit: contain;
+     object-fit: contain;
+  cursor: pointer;
+}
+
+.product .product .imgs div:last-of-type img {
+  height: 450px !important;
+  -o-object-fit: contain !important;
+     object-fit: contain !important;
+}
+
+.product .product .ship {
+  width: 30%;
+}
+
+@media (max-width: 768px) {
+  .product .product .ship {
+    width: 100% !important;
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+}
+
+.product .product .ship > div {
+  margin: 0px 10px;
+}
+
+.product .product .ship > div > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 16px 0px;
+}
+
+.product .product .ship > div > div svg {
+  -webkit-margin-end: 10px;
+          margin-inline-end: 10px;
+  color: #03A9F4;
+}
+
+.product .product .ship > div > div p {
+  margin: 0px;
+  font-size: 11px;
+  color: #777;
+}
+
+.product .product .ship > div:first-of-type {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+/*# sourceMappingURL=pro.css.map */

@@ -1,0 +1,36 @@
+.slide {
+  margin: 15px 0px;
+}
+
+@media (max-width: 600px) {
+  .slide {
+    margin: 0px 0px !important;
+  }
+}
+
+.slide .slick-next {
+  right: 0px;
+}
+
+.slide .slick-prev {
+  left: 0px;
+}
+
+.slide .slick-arrow {
+  z-index: 9999;
+}
+
+.slide .slick-arrow::before {
+  color: #000;
+}
+
+@media (max-width: 600px) {
+  .slide .slick-arrow {
+    display: none !important;
+  }
+}
+
+.slide img {
+  width: 100%;
+}
+/*# sourceMappingURL=Slider.css.map */

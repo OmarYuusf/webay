@@ -1,0 +1,167 @@
+.sign {
+  padding: 15px;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.sign .form-group {
+  margin-top: 60px;
+}
+
+@media (max-width: 600px) {
+  .sign .form-group {
+    margin: 0px;
+  }
+}
+
+.sign .form-group h2 {
+  font-weight: 800;
+}
+
+@media (max-width: 600px) {
+  .sign .form-group h2 {
+    font-size: 21px;
+  }
+}
+
+.sign .form-group p {
+  color: #333;
+}
+
+@media (max-width: 600px) {
+  .sign .form-group p {
+    font-size: 13px;
+  }
+}
+
+.sign .form-group form {
+  margin-top: 50px;
+}
+
+@media (max-width: 425px) {
+  .sign .form-group form {
+    margin-top: 15px;
+  }
+}
+
+.sign .form-group form .container-inputs-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.sign .form-group form .container-inputs-group .inputs-group-name:first-of-type {
+  -webkit-margin-end: 18px;
+          margin-inline-end: 18px;
+}
+
+.sign .form-group form .container-inputs-group .inputs-group-name {
+  width: 50%;
+}
+
+.sign .form-group form .container-inputs-group .inputs-group-name input {
+  width: 100%;
+  border: 0px;
+  background: #F1F1F1;
+  padding: 15px 0px;
+  outline-color: rgba(0, 0, 0, 0.1);
+  -webkit-padding-start: 12px;
+          padding-inline-start: 12px;
+  font-size: 14px;
+}
+
+@media (max-width: 600px) {
+  .sign .form-group form .container-inputs-group .inputs-group-name input {
+    font-size: 12px;
+  }
+}
+
+.sign .form-group form .inputs-group {
+  margin: 25px 0px;
+  position: relative;
+}
+
+@media (max-width: 600px) {
+  .sign .form-group form .inputs-group {
+    margin: 10px 0px;
+  }
+}
+
+.sign .form-group form .inputs-group input {
+  width: 100%;
+  border: 0px;
+  background: #F1F1F1;
+  padding: 15px 0px;
+  outline-color: rgba(0, 0, 0, 0.1);
+  -webkit-padding-start: 48px;
+          padding-inline-start: 48px;
+  font-size: 14px;
+}
+
+@media (max-width: 600px) {
+  .sign .form-group form .inputs-group input {
+    font-size: 12px;
+  }
+}
+
+.sign .form-group form .inputs-group svg {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  color: #777;
+}
+
+.sign .form-group form .buttons-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 10px 0px;
+}
+
+.sign .form-group form .buttons-group button {
+  margin: 0px 10px;
+  font-size: 14px;
+}
+
+.sign .form-group form .buttons-group button:first-of-type {
+  background: transparent;
+  border: 1px solid #03A9F4;
+  padding: 8px 15px;
+}
+
+.sign .form-group form .buttons-group button:last-of-type {
+  background: #03A9F4;
+  width: 150px;
+  color: #F1F1F1;
+  border: 0px;
+  -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+          box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+  -webkit-margin-end: 0px;
+          margin-inline-end: 0px;
+}
+
+.sign .form-group form .link-group {
+  text-align: center;
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+@media (max-width: 425px) {
+  .sign .form-group form .link-group {
+    display: none;
+  }
+}
+
+.sign .form-group form .link-group p {
+  font-size: 13px;
+}
+/*# sourceMappingURL=Signup.css.map */

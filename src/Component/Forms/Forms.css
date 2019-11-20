@@ -1,0 +1,169 @@
+.forms {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.forms .Container-forms {
+  width: 75%;
+  height: 80%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-shadow: 2px 2px rgba(0, 0, 0, 0.1);
+          box-shadow: 2px 2px rgba(0, 0, 0, 0.1);
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 1024px) {
+  .forms .Container-forms {
+    width: 85%;
+  }
+}
+
+@media (max-width: 768px) {
+  .forms .Container-forms {
+    width: 100%;
+    height: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+}
+
+.forms .Container-forms .form {
+  width: 67%;
+}
+
+@media (max-width: 768px) {
+  .forms .Container-forms .form {
+    width: 100%;
+    -webkit-box-flex: 2;
+        -ms-flex: 2;
+            flex: 2;
+    overflow: scroll;
+  }
+}
+
+.forms .Container-forms .info {
+  width: 33%;
+  background: linear-gradient(141deg, #03A9F4 0%, #0B76A5 75%);
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  .forms .Container-forms .info {
+    width: 100%;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+}
+
+.forms .Container-forms .info > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-padding-start: 10px;
+          padding-inline-start: 10px;
+  color: #FFF;
+  width: 100%;
+  text-align: center;
+}
+
+.forms .Container-forms .info > div h1 {
+  font-weight: 800;
+}
+
+@media (max-width: 1024px) {
+  .forms .Container-forms .info > div h1 {
+    font-size: 21px;
+  }
+}
+
+.forms .Container-forms .info > div p {
+  color: #eee;
+  font-size: 13px;
+}
+
+@media (max-width: 1024px) {
+  .forms .Container-forms .info > div p {
+    font-size: 12px;
+  }
+}
+
+.forms .Container-forms .info > div button {
+  border: 1px solid #fff;
+  padding: 4px 20px;
+  font-size: 13px;
+  background: transparent;
+  color: #FFF;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.forms .Container-forms .info > div button:hover {
+  -webkit-transform: translateY(2px);
+          transform: translateY(2px);
+}
+
+.forms .side {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+}
+
+.forms .side span:first-of-type {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 30px;
+  height: 70px;
+  background: #03a9f4;
+  z-index: 3;
+}
+
+.forms .side span:nth-child(2) {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 50px;
+  height: 90px;
+  background: rgba(3, 169, 244, 0.6);
+  z-index: 2;
+}
+
+.forms .side span:last-of-type {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 70px;
+  height: 120px;
+  background: rgba(3, 169, 244, 0.2);
+  z-index: 1;
+}
+/*# sourceMappingURL=Forms.css.map */

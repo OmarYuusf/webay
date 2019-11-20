@@ -1,0 +1,23 @@
+.best-seller {
+  margin-top: 40px;
+}
+
+.best-seller .header div {
+  text-align: right;
+  background: #FFF;
+  margin: 0px 15px;
+  padding: 0px 8px;
+  border-radius: 4px;
+}
+
+.best-seller .header div h2 {
+  font-weight: 900;
+  margin: 25px 0px;
+}
+
+@media (max-width: 425px) {
+  .best-seller .header div h2 {
+    font-size: 15px;
+  }
+}
+/*# sourceMappingURL=BestProducts.css.map */

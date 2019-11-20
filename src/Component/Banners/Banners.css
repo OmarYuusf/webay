@@ -1,0 +1,24 @@
+.banners {
+  margin-top: 150px;
+}
+
+@media (max-width: 600px) {
+  .banners {
+    margin-top: 80px;
+  }
+}
+
+.banners .row > div {
+  margin-top: 15px;
+}
+
+.banners .row > div img {
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+  .banners .row > div {
+    margin-top: 15px;
+  }
+}
+/*# sourceMappingURL=Banners.css.map */

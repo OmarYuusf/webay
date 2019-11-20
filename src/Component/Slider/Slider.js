@@ -9,31 +9,24 @@ import Slider from "react-slick";
 
 const Slide = styled.div`
       margin:15px 0px;
-
       @media (max-width: 600px){ 
           margin:0px 0px !important;
       }
-
       .slick-next{
         right:0px;
       }
-
       .slick-prev{
         left:0px;
       }
-
       .slick-arrow{
         z-index:9999;
-
         &::before{
           color:#000;
-
         }
           @media (max-width: 600px){ 
             display:none !important;
         }
       }
-
       img{
         width:100%;
       }

@@ -1,0 +1,130 @@
+.foot {
+  margin-top: 120px;
+  background: #f4f4f4;
+  padding: 50px 0px;
+}
+
+.foot h4 {
+  padding: 35px 0px !important;
+  font-size: 17px;
+  font-weight: 800;
+  margin: 0px;
+}
+
+@media (max-width: 600px) {
+  .foot h4 {
+    font-size: 13px;
+    padding: 15px 0px !important;
+    text-align: center;
+  }
+}
+
+.foot .row:first-of-type {
+  border-top: 1px solid rgba(0, 0, 0, 0.07);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+}
+
+.foot .conect-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.foot .conect-footer > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.foot .conect-footer > div span {
+  padding: 8px;
+  margin: 10px;
+  color: #666;
+}
+
+.foot .conect-footer > div p {
+  margin: 0px;
+}
+
+.foot .conect-footer > div p:first-of-type {
+  font-size: 13px;
+}
+
+.foot .conect-footer > div p:last-of-type {
+  font-size: 11px;
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .foot .row:nth-child(2) {
+    display: none;
+  }
+}
+
+.foot .row:nth-child(2) h5 {
+  font-size: 14px;
+  color: #000;
+  margin: 15px 0px;
+  font-weight: 800;
+}
+
+.foot .row:nth-child(2) ul {
+  padding: 0px;
+}
+
+.foot .row:nth-child(2) ul li {
+  padding: 3px 0px;
+  margin: 3px 0px;
+  list-style: none;
+}
+
+.foot .row:nth-child(2) ul li a {
+  font-size: 11px;
+  color: #666;
+}
+
+.foot .row:last-of-type {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .foot .row:last-of-type {
+    display: block;
+  }
+}
+
+.foot .row:last-of-type h5 {
+  text-align: center;
+  font-size: 13px;
+  font-weight: 800;
+  padding: 15px 0px;
+  margin: 0px;
+}
+
+.foot .row:last-of-type > div > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.foot .row:last-of-type > div > div span {
+  margin: 5px 10px;
+}
+
+.foot .row:last-of-type > div > div span a {
+  color: #666;
+}
+
+.foot .row:last-of-type > div > div img {
+  width: 100px;
+  margin: 10px;
+}
+/*# sourceMappingURL=Footer.css.map */

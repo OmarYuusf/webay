@@ -1,4 +1,5 @@
 import React from 'react';
+import "./CartPage.css"
 
 // components import 
 import Navbar from '../Navbar/Navbar'
@@ -8,23 +9,6 @@ import ProductsAdded from './ProductsAdded/ProductsAdded'
 import ProductsPrice from './ProductsPrice/ProductsPrice'
 
 import { Container, Row, Col} from 'react-bootstrap'
-
-// Styled-Component
-import styled from 'styled-components'
-
-const Cart = styled.div`
-    
-    .containerCart{
-        margin-top:25px;
-
-        .row{
-            > div{
-                
-            }
-        }
-    }
-
-`
 
 class CartPage extends React.Component {
     constructor(props) {
@@ -63,8 +47,8 @@ class CartPage extends React.Component {
 
     render(){
         return(
-            <Cart style={{direction:this.props.language === 'en' ? "ltr" : "rtl",
-                    textAlign:this.props.language === 'en' ? "left" : "right"}}>
+            <div style={{direction:this.props.language === 'en' ? "ltr" : "rtl",
+                    textAlign:this.props.language === 'en' ? "left" : "right"}} className="cart">
 
                 {this.props.width <= 600 ? (
                     <MobileNavbar language={this.props.language} changeLanguage={this.props.changeLanguage}/>
@@ -72,7 +56,7 @@ class CartPage extends React.Component {
                     <Navbar language={this.props.language} changeLanguage={this.props.changeLanguage}/>
                 )}
                 
-                <Container fluid={false} className="containerCart">
+                <Container fluid={false} className="containerCart mt-4">
                     <Row>
                         <Col md={8}>
                             <ProductsAdded ProductsInCart={this.state.ProductsInCart}/>
@@ -84,7 +68,7 @@ class CartPage extends React.Component {
                 </Container>
 
                 <Footer />
-            </Cart>
+            </div>
             
         )
     }

@@ -1,0 +1,23 @@
+.my-profile {
+  margin-top: 40px;
+}
+
+.my-profile .nav-pills {
+  background: #FFF;
+}
+
+.my-profile .nav-pills .nav-item a[aria-selected="true"] {
+  background: #eee;
+  color: #000;
+}
+
+.my-profile .nav-pills .nav-item a {
+  color: #777;
+}
+
+.my-profile .tab-content {
+  height: 500px;
+  background: #eee;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+/*# sourceMappingURL=Profile.css.map */

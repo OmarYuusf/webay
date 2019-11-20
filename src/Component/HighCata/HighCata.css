@@ -1,0 +1,69 @@
+.high {
+  margin-top: 100px;
+}
+
+@media (max-width: 600px) {
+  .high {
+    margin-top: 80px;
+  }
+}
+
+@media (max-width: 425px) {
+  .high {
+    margin-top: 30px;
+  }
+}
+
+.high .header-High div {
+  padding: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 20px 15px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.high .header-High div h5 {
+  font-weight: 800;
+}
+
+@media (max-width: 425px) {
+  .high .header-High div h5 {
+    font-size: 16px;
+  }
+}
+
+.high .header-High div p {
+  color: red;
+}
+
+@media (max-width: 768px) {
+  .high .header-High div p {
+    font-size: 10px;
+  }
+}
+
+.high .cata-High {
+  margin-top: 30px;
+}
+
+@media (max-width: 768px) {
+  .high .cata-High {
+    margin-top: 0px;
+  }
+}
+
+.high .cata-High img {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+@media (max-width: 768px) {
+  .high .cata-High > div {
+    margin: 15px 0px;
+  }
+}
+/*# sourceMappingURL=HighCata.css.map */

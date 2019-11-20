@@ -1,0 +1,80 @@
+.price > div {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  padding: 10px;
+}
+
+.price > div h6 {
+  font-weight: 800;
+  margin-top: 8px;
+}
+
+.price > div table {
+  width: 100%;
+}
+
+.price > div table tr:first-of-type td span {
+  font-size: 11px;
+  color: #999;
+}
+
+.price > div table tr:first-of-type td span b {
+  font-weight: 800;
+}
+
+.price > div table tr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.price > div table tr td {
+  color: #777;
+  font-size: 14px;
+}
+
+.price > div > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px 0px;
+  margin: 0px;
+  margin: 10px 0px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  font-size: 14px;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.price > div > div p {
+  margin: 0px;
+}
+
+.price button {
+  width: 100%;
+  border: 0px;
+  font-size: 14px;
+  background: #03A9F4;
+  padding: 8px 0px;
+  color: #FFF;
+  -webkit-box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.15);
+          box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.15);
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.price button:hover {
+  -webkit-transform: translateY(2px);
+          transform: translateY(2px);
+}
+
+.price button:active {
+  -webkit-transform: translateY(4px);
+          transform: translateY(4px);
+}
+/*# sourceMappingURL=ProductsPrice.css.map */

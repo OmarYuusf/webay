@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './Profile.scss'
+import './Profile.css'
 
 import {Container,
         Row,

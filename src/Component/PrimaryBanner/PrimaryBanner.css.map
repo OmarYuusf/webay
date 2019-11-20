@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,OAAO,CAAA;EACH,UAAU,EAAC,IAAI;CAUlB;;AAXD,AAMY,OANL,CAGH,IAAI,GAEE,GAAG,CACD,GAAG,CAAA;EACC,KAAK,EAAC,IAAI;CACb",
+    "sources": [
+        "PrimaryBanner.scss"
+    ],
+    "names": [],
+    "file": "PrimaryBanner.css"
+}

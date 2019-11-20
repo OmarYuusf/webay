@@ -1,5 +1,5 @@
 import React from 'react';
-
+import "./Signup.css"
 
 // fontAwsome import
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -156,7 +156,7 @@ const Sign = styled.div`
 class Signup extends React.Component {
     render() {
         return(
-            <Sign >
+            <div className="sign">
                 <div className="form-group">
                     <h2>{this.props.language === 'ar' ? 'تسجيل ' : 'Sign up'}</h2>
                     <p>{this.props.language === 'ar' ? 'انها سريعة وسهلة' : "It's quick and easy."}</p>
@@ -194,7 +194,7 @@ class Signup extends React.Component {
                         </div>
                     </form>
                 </div>
-            </Sign>
+            </div>
         )
     }
 }

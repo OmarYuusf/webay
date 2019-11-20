@@ -1,4 +1,5 @@
 import React from 'react';
+import "./Forms.css"
 
 // components Import
 import Login from './Login/Login'
@@ -8,132 +9,6 @@ import Signup from './Signup/Signup'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 // Styled-Component
-import styled from 'styled-components'
-
-const Form = styled.div`
-    height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-
-
-        .Container-forms{
-            width:75%;
-            height:80%;
-            margin:auto;
-            display:flex;
-            box-shadow:2px 2px rgba(0,0,0,.1);
-            border-top:1px solid rgba(0,0,0,.1);
-
-            @media (max-width: 1024px){ 
-                width:85%;
-            }
-
-            @media (max-width: 768px){ 
-                width:100%;
-                height:100%;
-                flex-direction:column-reverse;
-            }
-
-            .form{
-                width:67%;
-
-                @media (max-width: 768px){ 
-                    width:100%;
-                    flex:2;
-                    overflow:scroll
-                }
-            }
-
-            .info{
-                width:33%;
-                background:linear-gradient(141deg, #03A9F4 0%, #0B76A5 75%);
-                justify-content:flex-start;
-                align-items:center;
-                display:flex;
-                
-                @media (max-width: 768px){ 
-                    width:100%;
-                    flex:1
-                }
-
-                > div {
-                    display:flex;
-                    flex-direction:column;
-                    padding-inline-start:10px;
-                    color:#FFF;
-                    width:100%;
-                    text-align:center;
-
-                    h1{
-                        font-weight:800;
-
-                        @media (max-width: 1024px){ 
-                            font-size:21px;
-                        }
-                    }
-
-                    p{
-                        color:#eee;
-                        font-size:13px;
-
-                        @media (max-width: 1024px){ 
-                            font-size:12px;
-                        }
-                    }
-
-                    button{
-                        border:1px solid #fff;
-                        padding:4px 20px;
-                        font-size:13px;
-                        background:transparent;
-                        color:#FFF;
-                        align-self:center;
-                        transition:all .3s;
-
-                        &:hover{
-                            transform:translateY(2px)
-                        }
-                    }
-                }
-            }
-        }
-
-        .side{
-            position:fixed;
-            left:0px;
-            top:0px;
-
-            span:first-of-type{
-                position:absolute;
-                top:0px;
-                left:0px;
-                width:30px;
-                height:70px;
-                background:rgb(3, 169, 244);
-                z-index:3;
-            }
-            span:nth-child(2){
-                position:absolute;
-                top:0px;
-                left:0px;
-                width:50px;
-                height:90px;
-                background:rgb(3, 169, 244, 0.6);
-                z-index:2;
-            }
-            span:last-of-type{
-                position:absolute;
-                top:0px;
-                left:0px;
-                width:70px;
-                height:120px;
-                background:rgb(3, 169, 244, 0.2);
-                z-index:1;
-            }
-        }
-`
 
 class Forms extends React.Component {
     constructor(props) {
@@ -160,8 +35,8 @@ class Forms extends React.Component {
 
     render() {
         return(
-            <Form style={{direction:this.props.language === 'en' ? "ltr" : "rtl",
-                        textAlign:this.props.language === 'en' ? "left" : "right"}}>
+            <div style={{direction:this.props.language === 'en' ? "ltr" : "rtl",
+                        textAlign:this.props.language === 'en' ? "left" : "right"}} className="forms">
 
                 <div className="Container-forms">
                     <div className="form">
@@ -182,7 +57,7 @@ class Forms extends React.Component {
                     <span></span>
                     <span></span>
                 </div>
-            </Form>
+            </div>
         )
     }
 }

@@ -2,48 +2,48 @@ import React, { Component } from "react";
 import "./App.css";
 
 // Navbar Component import 
-// import Navbar from './Component/Navbar/Navbar';
-// import MobileNavbar from './Component/Mobile-Navbar/Mobile-Navbar'
+import Navbar from './Component/Navbar/Navbar';
+import MobileNavbar from './Component/Mobile-Navbar/Mobile-Navbar'
 
-// // HeaderSlider Component Import 
-// import Slider from './Component/Slider/Slider'
+// HeaderSlider Component Import 
+import Slider from './Component/Slider/Slider'
 
-// // PrimaryBanner Component Import 
-// import PrimaryBanner from "./Component/PrimaryBanner/PrimaryBanner";
+// PrimaryBanner Component Import 
+import PrimaryBanner from "./Component/PrimaryBanner/PrimaryBanner";
 
-// // HighCatagorie Component Import 
-// import HighCata from "./Component/HighCata/HighCata";
+// HighCatagorie Component Import 
+import HighCata from "./Component/HighCata/HighCata";
 
-// // BestSeller Component Import 
-// import BestProducts from "./Component/BestProducts/BestProducts";
+// BestProducts Component Import 
+import BestProducts from "./Component/BestProducts/BestProducts";
 
-// // BestSeller Component Import 
-// import BestSeller from "./Component/BestSeller/BestSeller";
+// BestSeller Component Import 
+import BestSeller from "./Component/BestSeller/BestSeller";
 
-// // Banners Component Import 
-// import Banners from "./Component/Banners/Banners";
+// Banners Component Import 
+import Banners from "./Component/Banners/Banners";
 
-// // Banners Component Import 
-// import Ban from "./Component/Banner/Banner";
+// Ban Component Import 
+import Ban from "./Component/Banner/Banner";
 
-// // Banners Component Import 
-// import Electronics from "./Component/Electronics/Electronics";
+// Electronics Component Import 
+import Electronics from "./Component/Electronics/Electronics";
 
-// // Banners Component Import 
-// import LeastProducts from "./Component/LeastProducts/LeastProducts";
+// LeastProducts Component Import 
+import LeastProducts from "./Component/LeastProducts/LeastProducts";
 
 // Footer Component Import 
-// import Footer from "./Component/Footer/Footer";
+import Footer from "./Component/Footer/Footer";
 
 
 // // ProductPage Component Import 
 // import ProductPage from "./Component/ProductPage/ProductPage";
 
-// category Component import 
+// // category Component import 
 // import Category from './Component/Categories/Categories'
 
-// Forms Component import 
-import Forms from './Component/Forms/Forms'
+// // Forms Component import 
+// import Forms from './Component/Forms/Forms'
 
 // // CartPage Component import 
 // import CartPage from './Component/CartPage/CartPage'
@@ -74,7 +74,7 @@ class App extends Component{
   render(){
     return(
     <div className="App" basename="/webay/">
-      {/* <div className="Navbar-container">  
+      <div className="Navbar-container">  
         {this.state.width <= 600 ? 
           (
           <div className="navbar-mob">
@@ -84,9 +84,9 @@ class App extends Component{
           <div className="navbar-pc">
             <Navbar language={this.state.language} changeLanguage={(e) => this.changeLanguage(e)}/>
           </div>}
-      </div> */}
-      
-      {/* <Slider language={this.state.language}/>
+      </div>
+
+      <Slider language={this.state.language}/>
       <PrimaryBanner language={this.state.language}/>
       <HighCata language={this.state.language}/>
       <BestProducts language={this.state.language}/>
@@ -96,17 +96,15 @@ class App extends Component{
       <Electronics language={this.state.language}/>
       <LeastProducts language={this.state.language}/>
       <Footer language={this.state.language} />
-       */}
+      
 
-      {/* <ProductPage language={this.state.language} changeLanguage={(e) => this.changeLanguage(e)} width={this.state.width}/>  */}
+      {/* <ProductPage language={this.state.language} changeLanguage={(e) => this.changeLanguage(e)} width={this.state.width}/> 
+      <Category language={this.state.language} changeLanguage={(e) => this.changeLanguage(e)} width={this.state.width}/> 
+      <CartPage language={this.state.language} changeLanguage={(e) => this.changeLanguage(e)}/> />
 
-      {/* <Category language={this.state.language} changeLanguage={(e) => this.changeLanguage(e)} width={this.state.width}/>  */}
 
-      <Forms language={this.state.language} changeLanguage={(e) => this.changeLanguage(e)}/> 
-
-      {/* <CartPage language={this.state.language} changeLanguage={(e) => this.changeLanguage(e)}/> /> */}
-
-      {/* <Profile language={this.state.language} changeLanguage={(e) => this.changeLanguage(e)}/> */}
+      <Profile language={this.state.language} changeLanguage={(e) => this.changeLanguage(e)}/>
+      <Forms language={this.state.language} changeLanguage={(e) => this.changeLanguage(e)}/>   */}
     </div>
     )
   }
