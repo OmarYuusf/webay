@@ -1,112 +1,117 @@
 import React, { Component } from "react";
 import "./App.css";
 
-// Navbar Component import 
-import Navbar from './Component/Navbar/Navbar';
-import MobileNavbar from './Component/Mobile-Navbar/Mobile-Navbar'
+// Navbar Component import
+import Navbar from "./Component/Navbar/Navbar";
+import MobileNavbar from "./Component/Mobile-Navbar/Mobile-Navbar";
 
-// HeaderSlider Component Import 
-import Slider from './Component/Slider/Slider'
+// HeaderSlider Component Import
+import Slider from "./Component/Slider/Slider";
 
-// PrimaryBanner Component Import 
+// PrimaryBanner Component Import
 import PrimaryBanner from "./Component/PrimaryBanner/PrimaryBanner";
 
-// HighCatagorie Component Import 
+// HighCatagorie Component Import
 import HighCata from "./Component/HighCata/HighCata";
 
-// BestProducts Component Import 
+// BestProducts Component Import
 import BestProducts from "./Component/BestProducts/BestProducts";
 
-// BestSeller Component Import 
+// BestSeller Component Import
 import BestSeller from "./Component/BestSeller/BestSeller";
 
-// Banners Component Import 
+// Banners Component Import
 import Banners from "./Component/Banners/Banners";
 
-// Ban Component Import 
+// Ban Component Import
 import Ban from "./Component/Banner/Banner";
 
-// Electronics Component Import 
+// Electronics Component Import
 import Electronics from "./Component/Electronics/Electronics";
 
-// LeastProducts Component Import 
+// LeastProducts Component Import
 import LeastProducts from "./Component/LeastProducts/LeastProducts";
 
-// Footer Component Import 
+// Footer Component Import
 import Footer from "./Component/Footer/Footer";
 
+// // ProductPage Component Import
+import ProductPage from "./Component/ProductPage/ProductPage";
 
-// // ProductPage Component Import 
-// import ProductPage from "./Component/ProductPage/ProductPage";
-
-// // category Component import 
+// // category Component import
 // import Category from './Component/Categories/Categories'
 
-// // Forms Component import 
+// // Forms Component import
 // import Forms from './Component/Forms/Forms'
 
-// // CartPage Component import 
+// // CartPage Component import
 // import CartPage from './Component/CartPage/CartPage'
 
 // import Profile from "./Component/Profile/Profile"
 
-class App extends Component{
-  constructor(props){
+class App extends Component {
+  constructor(props) {
     super(props);
 
     this.state = {
-      language  : 'ar',
+      language: "ar",
       width: window.innerWidth
-    }
+    };
   }
 
-  
-
-  changeLanguage = (e) => {
+  changeLanguage = e => {
     e.preventDefault();
 
     this.setState({
-      language : this.state.language === 'en' ? "ar" : 'en'
-    })
+      language: this.state.language === "en" ? "ar" : "en"
+    });
+  };
 
-  }
+  render() {
+    return (
+      <div className="App" basename="/webay/">
+        <div className="Navbar-container">
+          {this.state.width <= 600 ? (
+            <div className="navbar-mob">
+              <MobileNavbar
+                language={this.state.language}
+                changeLanguage={e => this.changeLanguage(e)}
+              />
+            </div>
+          ) : (
+            <div className="navbar-pc">
+              <Navbar
+                language={this.state.language}
+                changeLanguage={e => this.changeLanguage(e)}
+              />
+            </div>
+          )}
+        </div>
 
-  render(){
-    return(
-    <div className="App" basename="/webay/">
-      <div className="Navbar-container">  
-        {this.state.width <= 600 ? 
-          (
-          <div className="navbar-mob">
-            <MobileNavbar language={this.state.language} changeLanguage={(e) => this.changeLanguage(e)}/>
-          </div>
-          ):
-          <div className="navbar-pc">
-            <Navbar language={this.state.language} changeLanguage={(e) => this.changeLanguage(e)}/>
-          </div>}
-      </div>
+        <Slider language={this.state.language} />
+        <PrimaryBanner language={this.state.language} />
+        <HighCata language={this.state.language} />
+        <BestProducts language={this.state.language} />
+        <Banners />
+        <BestSeller language={this.state.language} />
+        <Ban />
+        <Electronics language={this.state.language} />
+        <LeastProducts language={this.state.language} />
+        <Footer language={this.state.language} />
 
-      <Slider language={this.state.language}/>
-      <PrimaryBanner language={this.state.language}/>
-      <HighCata language={this.state.language}/>
-      <BestProducts language={this.state.language}/>
-      <Banners />
-      <BestSeller language={this.state.language}/>
-      <Ban />
-      <Electronics language={this.state.language}/>
-      <LeastProducts language={this.state.language}/>
-      <Footer language={this.state.language} />
-      
-
-      {/* <ProductPage language={this.state.language} changeLanguage={(e) => this.changeLanguage(e)} width={this.state.width}/> 
-      <Category language={this.state.language} changeLanguage={(e) => this.changeLanguage(e)} width={this.state.width}/> 
+        <ProductPage
+          language={this.state.language}
+          changeLanguage={e => this.changeLanguage(e)}
+          width={this.state.width}
+        />
+        {/* <Category language={this.state.language} changeLanguage={(e) => this.changeLanguage(e)} width={this.state.width}/> 
       <CartPage language={this.state.language} changeLanguage={(e) => this.changeLanguage(e)}/> />
 
 
       <Profile language={this.state.language} changeLanguage={(e) => this.changeLanguage(e)}/>
       <Forms language={this.state.language} changeLanguage={(e) => this.changeLanguage(e)}/>   */}
-    </div>
-    )
+      </div>
+    );
   }
 }
 

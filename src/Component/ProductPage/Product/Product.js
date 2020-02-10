@@ -120,9 +120,7 @@ class ProductItems extends React.Component {
                                             largeImage: {
                                                 src: this.state.imgSrc,
                                                 srcSet: this.state.imgSrc,
-                                                style:{right:'0px !important'},
-                                                width: 500,
-                                                height: 2000,
+                                                style:{left:'0px !important'},
                                                 className:"hello"
                                             }
                                         }} />

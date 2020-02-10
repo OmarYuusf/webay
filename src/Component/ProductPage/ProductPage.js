@@ -5,6 +5,7 @@ import MobileNavbar from '../Mobile-Navbar/Mobile-Navbar'
 import Product from './Product/Product'
 import ProductInformation from './productInformation/ProductInformation'
 import Footer from '../Footer/Footer'
+import ProductsLike from './ProductsLike/ProductsLike';
 
 
 class ProductPage extends React.Component {
@@ -18,6 +19,7 @@ class ProductPage extends React.Component {
                     <Navbar language={this.props.language} changeLanguage={this.props.changeLanguage}/>
                 )}
                 <Product />
+                <ProductsLike />
                 <ProductInformation />
                 <Footer />
             </div>
