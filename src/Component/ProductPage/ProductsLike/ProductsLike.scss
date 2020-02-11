@@ -1,13 +1,13 @@
 .products-like {
   > h3 {
-      padding:15px
+    padding: 15px;
   }
 
   .products-like-container {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    padding:0px 22px;
+    padding: 0px 22px;
 
     > .products-like-item {
       width: 23%;
@@ -17,6 +17,21 @@
       padding: 6px 8px;
       padding-bottom: 12px;
       margin: 10px 6px;
+
+      @media (max-width: 991px) {
+        width: 30%;
+      }
+
+      @media (max-width: 768px) {
+        width: 48%;
+        margin: 10px 0px;
+      }
+
+      @media (max-width: 550px) {
+        width: 100%;
+        margin: 10px 0px;
+      }
+
       > .item-head {
         * {
           margin: 0px;
@@ -38,13 +53,16 @@
         }
 
         > div:nth-child(even) {
-          background: rgba(76, 175, 80, 0.5);
+          background: rgba(5, 255, 5, 0.4);
         }
       }
       > .item-center {
         .slick-slider {
           width: 60%;
           margin: auto;
+          @media (max-width: 991px) {
+            width: 90%;
+          }
           img {
             width: 120px;
             height: 160px;
@@ -53,6 +71,18 @@
           }
           .slick-arrow::before {
             color: #000;
+          }
+
+          .slick-next {
+            @media (max-width: 991px) {
+              right: 0px;
+            }
+          }
+
+          .slick-prev {
+            @media (max-width: 991px) {
+              left: 0px;
+            }
           }
         }
       }
@@ -72,8 +102,10 @@
           }
           span {
             margin-right: 12px;
-            background: #00c57f;
+            background: rgba(5, 255, 5, 0.4196078431372549);
             padding: 4px 8px;
+            border-radius: 3px;
+            font-size: 13px;
           }
         }
         .discount-end {
@@ -91,7 +123,11 @@
           color: #fff;
           font-size: 14px;
           font-weight: 800;
-          box-shadow: 1px .8px 5px rgba(0, 0, 0, 0.22);
+          box-shadow: 1px 0.8px 5px rgba(0, 0, 0, 0.22);
+          transition: all 0.3s;
+          &:hover {
+            background: rgba(0, 197, 127, 0.8);
+          }
         }
       }
     }

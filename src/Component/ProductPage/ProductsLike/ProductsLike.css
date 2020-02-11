@@ -24,6 +24,26 @@
   margin: 10px 6px;
 }
 
+@media (max-width: 991px) {
+  .products-like .products-like-container > .products-like-item {
+    width: 30%;
+  }
+}
+
+@media (max-width: 768px) {
+  .products-like .products-like-container > .products-like-item {
+    width: 48%;
+    margin: 10px 0px;
+  }
+}
+
+@media (max-width: 550px) {
+  .products-like .products-like-container > .products-like-item {
+    width: 100%;
+    margin: 10px 0px;
+  }
+}
+
 .products-like .products-like-container > .products-like-item > .item-head * {
   margin: 0px;
 }
@@ -47,12 +67,18 @@
 }
 
 .products-like .products-like-container > .products-like-item > .item-head > div:nth-child(even) {
-  background: rgba(76, 175, 80, 0.5);
+  background: rgba(5, 255, 5, 0.4);
 }
 
 .products-like .products-like-container > .products-like-item > .item-center .slick-slider {
   width: 60%;
   margin: auto;
+}
+
+@media (max-width: 991px) {
+  .products-like .products-like-container > .products-like-item > .item-center .slick-slider {
+    width: 90%;
+  }
 }
 
 .products-like .products-like-container > .products-like-item > .item-center .slick-slider img {
@@ -65,6 +91,18 @@
 
 .products-like .products-like-container > .products-like-item > .item-center .slick-slider .slick-arrow::before {
   color: #000;
+}
+
+@media (max-width: 991px) {
+  .products-like .products-like-container > .products-like-item > .item-center .slick-slider .slick-next {
+    right: 0px;
+  }
+}
+
+@media (max-width: 991px) {
+  .products-like .products-like-container > .products-like-item > .item-center .slick-slider .slick-prev {
+    left: 0px;
+  }
 }
 
 .products-like .products-like-container > .products-like-item .item-footer {
@@ -92,8 +130,10 @@
 
 .products-like .products-like-container > .products-like-item .item-footer .item-footer-discount span {
   margin-right: 12px;
-  background: #00c57f;
+  background: rgba(5, 255, 5, 0.419608);
   padding: 4px 8px;
+  border-radius: 3px;
+  font-size: 13px;
 }
 
 .products-like .products-like-container > .products-like-item .item-footer .discount-end {
@@ -112,5 +152,11 @@
   font-weight: 800;
   -webkit-box-shadow: 1px 0.8px 5px rgba(0, 0, 0, 0.22);
           box-shadow: 1px 0.8px 5px rgba(0, 0, 0, 0.22);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.products-like .products-like-container > .products-like-item .item-button-select button:hover {
+  background: rgba(0, 197, 127, 0.8);
 }
 /*# sourceMappingURL=ProductsLike.css.map */
