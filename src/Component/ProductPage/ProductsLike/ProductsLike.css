@@ -2,6 +2,11 @@
   padding: 15px;
 }
 
+.products-like img {
+  width: 100%;
+  height: 300px;
+}
+
 .products-like .products-like-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -13,42 +18,25 @@
   padding: 0px 22px;
 }
 
-.products-like .products-like-container > .products-like-item {
-  width: 23%;
+.products-like .products-like-container .slick-slider {
+  width: 100%;
+}
+
+.products-like .products-like-container .products-like-item {
   -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.16);
           box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.16);
-  border: 2px solid #03a9f4;
+  border: 2px solid #bf5af2;
   border-radius: 12px;
   padding: 6px 8px;
   padding-bottom: 12px;
   margin: 10px 6px;
 }
 
-@media (max-width: 991px) {
-  .products-like .products-like-container > .products-like-item {
-    width: 30%;
-  }
-}
-
-@media (max-width: 768px) {
-  .products-like .products-like-container > .products-like-item {
-    width: 48%;
-    margin: 10px 0px;
-  }
-}
-
-@media (max-width: 550px) {
-  .products-like .products-like-container > .products-like-item {
-    width: 100%;
-    margin: 10px 0px;
-  }
-}
-
-.products-like .products-like-container > .products-like-item > .item-head * {
+.products-like .products-like-container .products-like-item > .item-head * {
   margin: 0px;
 }
 
-.products-like .products-like-container > .products-like-item > .item-head > div {
+.products-like .products-like-container .products-like-item > .item-head > div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -56,32 +44,32 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  background: rgba(3, 169, 244, 0.4);
+  background: rgba(48, 209, 88, 0.4);
   border-radius: 4px;
   margin: 8px 0px;
   font-size: 13px;
 }
 
-.products-like .products-like-container > .products-like-item > .item-head > div span:last-of-type {
+.products-like .products-like-container .products-like-item > .item-head > div span:last-of-type {
   color: #686868;
 }
 
-.products-like .products-like-container > .products-like-item > .item-head > div:nth-child(even) {
-  background: rgba(5, 255, 5, 0.4);
+.products-like .products-like-container .products-like-item > .item-head > div:nth-child(even) {
+  background: rgba(191, 90, 242, 0.4);
 }
 
-.products-like .products-like-container > .products-like-item > .item-center .slick-slider {
+.products-like .products-like-container .products-like-item > .item-center .slick-slider {
   width: 60%;
   margin: auto;
 }
 
 @media (max-width: 991px) {
-  .products-like .products-like-container > .products-like-item > .item-center .slick-slider {
+  .products-like .products-like-container .products-like-item > .item-center .slick-slider {
     width: 90%;
   }
 }
 
-.products-like .products-like-container > .products-like-item > .item-center .slick-slider img {
+.products-like .products-like-container .products-like-item > .item-center .slick-slider img {
   width: 120px;
   height: 160px;
   margin: auto;
@@ -89,31 +77,31 @@
      object-fit: contain;
 }
 
-.products-like .products-like-container > .products-like-item > .item-center .slick-slider .slick-arrow::before {
+.products-like .products-like-container .products-like-item > .item-center .slick-slider .slick-arrow::before {
   color: #000;
 }
 
 @media (max-width: 991px) {
-  .products-like .products-like-container > .products-like-item > .item-center .slick-slider .slick-next {
+  .products-like .products-like-container .products-like-item > .item-center .slick-slider .slick-next {
     right: 0px;
   }
 }
 
 @media (max-width: 991px) {
-  .products-like .products-like-container > .products-like-item > .item-center .slick-slider .slick-prev {
+  .products-like .products-like-container .products-like-item > .item-center .slick-slider .slick-prev {
     left: 0px;
   }
 }
 
-.products-like .products-like-container > .products-like-item .item-footer {
+.products-like .products-like-container .products-like-item .item-footer {
   margin-top: 35px;
 }
 
-.products-like .products-like-container > .products-like-item .item-footer h5 {
+.products-like .products-like-container .products-like-item .item-footer h5 {
   font-weight: 800;
 }
 
-.products-like .products-like-container > .products-like-item .item-footer .item-footer-discount {
+.products-like .products-like-container .products-like-item .item-footer .item-footer-discount {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -122,31 +110,32 @@
           align-items: center;
 }
 
-.products-like .products-like-container > .products-like-item .item-footer .item-footer-discount p {
+.products-like .products-like-container .products-like-item .item-footer .item-footer-discount p {
   margin: 0px;
   color: #999;
   font-size: 14px;
 }
 
-.products-like .products-like-container > .products-like-item .item-footer .item-footer-discount span {
+.products-like .products-like-container .products-like-item .item-footer .item-footer-discount span {
   margin-right: 12px;
-  background: rgba(5, 255, 5, 0.419608);
+  background: rgba(48, 209, 88, 0.4);
   padding: 4px 8px;
   border-radius: 3px;
   font-size: 13px;
 }
 
-.products-like .products-like-container > .products-like-item .item-footer .discount-end {
+.products-like .products-like-container .products-like-item .item-footer .discount-end {
   margin: 8px 0px !important;
   font-size: 14px;
+  color: #bf5af2;
 }
 
-.products-like .products-like-container > .products-like-item .item-button-select button {
+.products-like .products-like-container .products-like-item .item-button-select button {
   width: 100%;
   border-radius: 2px;
   padding: 6px;
   border: 0px;
-  background: #00c57f;
+  border: 2px solid rgba(191, 90, 242, 0.6);
   color: #fff;
   font-size: 14px;
   font-weight: 800;
@@ -154,9 +143,11 @@
           box-shadow: 1px 0.8px 5px rgba(0, 0, 0, 0.22);
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+  color: #212121;
 }
 
-.products-like .products-like-container > .products-like-item .item-button-select button:hover {
-  background: rgba(0, 197, 127, 0.8);
+.products-like .products-like-container .products-like-item .item-button-select button:hover {
+  background: rgba(191, 90, 242, 0.8);
+  color: #fff;
 }
 /*# sourceMappingURL=ProductsLike.css.map */
