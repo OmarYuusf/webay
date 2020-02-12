@@ -15,7 +15,8 @@
   color: blue;
 }
 
-.product .header .fa-chevron-right, .product .header .fa-chevron-left {
+.product .header .fa-chevron-right,
+.product .header .fa-chevron-left {
   margin: 0px 10px;
   color: #515151;
 }
@@ -151,7 +152,7 @@
 .product .product .information div .new-price > span p:last-of-type {
   font-size: 32px;
   font-weight: 800;
-  color: #03A9F4;
+  color: #03a9f4;
 }
 
 .product .product .information div .new-price .discount {
@@ -181,15 +182,15 @@
 .product .product .information form > div input {
   width: 100%;
   margin: 0px 5px;
-  background: #03A9F4;
+  background: #03a9f4;
   border: 0px;
   font-size: 13px;
-  color: #FFF;
+  color: #fff;
   padding: 10px 0px;
   -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
           box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
-  -webkit-transition: all .4s;
-  transition: all .4s;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
 }
 
 .product .product .information form > div input:hover {
@@ -250,9 +251,10 @@
 }
 
 .product .product .imgs div:last-of-type img {
-  height: 450px !important;
-  -o-object-fit: contain !important;
-     object-fit: contain !important;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  cursor: pointer;
 }
 
 .product .product .ship {
@@ -285,7 +287,7 @@
 .product .product .ship > div > div svg {
   -webkit-margin-end: 10px;
           margin-inline-end: 10px;
-  color: #03A9F4;
+  color: #03a9f4;
 }
 
 .product .product .ship > div > div p {
