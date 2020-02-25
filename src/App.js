@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
-
+import axios from "axios"
 // Navbar Component import
 import Navbar from "./Component/Navbar/Navbar";
 import MobileNavbar from "./Component/Mobile-Navbar/Mobile-Navbar";
@@ -17,8 +17,8 @@ import HighCata from "./Component/HighCata/HighCata";
 // BestProducts Component Import
 import BestProducts from "./Component/BestProducts/BestProducts";
 
-// BestSeller Component Import
-import BestSeller from "./Component/BestSeller/BestSeller";
+// // BestSeller Component Import
+// import BestSeller from "./Component/BestSeller/BestSeller";
 
 // Banners Component Import
 import Banners from "./Component/Banners/Banners";
@@ -26,11 +26,11 @@ import Banners from "./Component/Banners/Banners";
 // Ban Component Import
 import Ban from "./Component/Banner/Banner";
 
-// Electronics Component Import
-import Electronics from "./Component/Electronics/Electronics";
+// // Electronics Component Import
+// import Electronics from "./Component/Electronics/Electronics";
 
-// LeastProducts Component Import
-import LeastProducts from "./Component/LeastProducts/LeastProducts";
+// // LeastProducts Component Import
+// import LeastProducts from "./Component/LeastProducts/LeastProducts";
 
 // Footer Component Import
 import Footer from "./Component/Footer/Footer";
@@ -66,7 +66,17 @@ class App extends Component {
       language: this.state.language === "en" ? "ar" : "en"
     });
   };
-
+//  async componentDidMount() {
+//     const response = await axios.get(
+//       "http://fastorder.pythonanywhere.com/Products"
+//     );
+//     try {
+//       const data = response;
+//       console.log(data);
+//     } catch (err) {
+//       console.log(err);
+//     }
+//   }
   render() {
     return (
       <div className="App" basename="/webay/">
@@ -93,10 +103,10 @@ class App extends Component {
         <HighCata language={this.state.language} />
         <BestProducts language={this.state.language} />
         <Banners />
-        <BestSeller language={this.state.language} />
+        {/* <BestSeller language={this.state.language} /> */}
         <Ban />
-        <Electronics language={this.state.language} />
-        <LeastProducts language={this.state.language} />
+        {/* <Electronics language={this.state.language} />
+        <LeastProducts language={this.state.language} /> */}
         <Footer language={this.state.language} />
 
         <ProductPage

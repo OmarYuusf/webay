@@ -4,7 +4,7 @@
 
 .seller .header div {
   text-align: right;
-  background: #FFF;
+  background: #fff;
   margin: 0px 15px;
   padding: 0px 8px;
   border-radius: 4px;
@@ -19,5 +19,42 @@
   .seller .header div h2 {
     font-size: 15px;
   }
+}
+.slick-slider > button {
+  position: absolute;
+  top: 45%;
+  transform: translateY(-50%);
+  z-index: 999;
+  outline: none;
+  border:0px;
+  background-color: #212121;
+  box-shadow: 2px 3px 5px rgba(0,0,0,.13);
+  width: 25px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+}
+
+.slick-slider > button:hover{
+  background-color: #333;
+}
+
+.slick-slider > button:active{
+  background: #666;
+}
+
+.newArrowPrev {
+  right: 15px;
+}
+
+.newArrowNext {
+  left:15px
+}
+
+.slick-slider > button svg{
+  font-size: 10px;
+  color: #FFF;
 }
 /*# sourceMappingURL=BestProducts.css.map */

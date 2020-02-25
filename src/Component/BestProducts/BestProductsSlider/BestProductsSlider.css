@@ -13,14 +13,17 @@
 }
 
 .sec-slider .slick-slider .slick-arrow {
-  background: #FFF;
+  background: #000;
   opacity: 1;
   height: 50px;
   color: #212121;
   -webkit-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
           box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
   border-radius: 6px;
-  display: none !important;
+}
+
+.slick-arrow {
+  display: block !important;
 }
 
 .sec-slider .slick-slider .slick-arrow::before {
