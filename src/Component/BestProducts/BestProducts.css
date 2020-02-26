@@ -20,41 +20,38 @@
     font-size: 15px;
   }
 }
-.slick-slider > button {
+.sec-slider .cata .slick-slider > button {
   position: absolute;
   top: 45%;
   transform: translateY(-50%);
   z-index: 999;
   outline: none;
   border:0px;
-  background-color: #212121;
-  box-shadow: 2px 3px 5px rgba(0,0,0,.13);
-  width: 25px;
-  height: 25px;
+  background-color: #fff;
+  box-shadow: 1px 1px 5px rgba(0,0,0,.13);
+  width: 35px;
+  height: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 3px;
 }
 
-.slick-slider > button:hover{
-  background-color: #333;
+.sec-slider .cata .slick-slider > button:hover{
+  background-color: #f1f1f1;
 }
 
-.slick-slider > button:active{
-  background: #666;
+
+.sec-slider .cata .newArrowPrev {
+  right: 10px;
 }
 
-.newArrowPrev {
-  right: 15px;
+.sec-slider .cata .newArrowNext {
+  left:10px
 }
 
-.newArrowNext {
-  left:15px
-}
-
-.slick-slider > button svg{
-  font-size: 10px;
-  color: #FFF;
+.sec-slider .cata .slick-slider > button svg{
+  font-size: 13px;
+  color: #999;
 }
 /*# sourceMappingURL=BestProducts.css.map */

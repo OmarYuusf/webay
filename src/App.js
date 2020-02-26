@@ -41,8 +41,8 @@ import ProductPage from "./Component/ProductPage/ProductPage";
 // // category Component import
 // import Category from './Component/Categories/Categories'
 
-// // Forms Component import
-// import Forms from './Component/Forms/Forms'
+// Forms Component import
+import Forms from './Component/Forms/Forms'
 
 // // CartPage Component import
 // import CartPage from './Component/CartPage/CartPage'
@@ -66,17 +66,6 @@ class App extends Component {
       language: this.state.language === "en" ? "ar" : "en"
     });
   };
-//  async componentDidMount() {
-//     const response = await axios.get(
-//       "http://fastorder.pythonanywhere.com/Products"
-//     );
-//     try {
-//       const data = response;
-//       console.log(data);
-//     } catch (err) {
-//       console.log(err);
-//     }
-//   }
   render() {
     return (
       <div className="App" basename="/webay/">
@@ -118,8 +107,11 @@ class App extends Component {
       <CartPage language={this.state.language} changeLanguage={(e) => this.changeLanguage(e)}/> />
 
 
-      <Profile language={this.state.language} changeLanguage={(e) => this.changeLanguage(e)}/>
-      <Forms language={this.state.language} changeLanguage={(e) => this.changeLanguage(e)}/>   */}
+      <Profile language={this.state.language} changeLanguage={(e) => this.changeLanguage(e)}/> */}
+        <Forms
+          language={this.state.language}
+          changeLanguage={e => this.changeLanguage(e)}
+        />
       </div>
     );
   }
