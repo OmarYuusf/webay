@@ -1,0 +1,78 @@
+.user-profile {
+  .user-profile-header {
+    padding: 8px;
+    background-color: #eee;
+    * {
+      margin: 0px;
+    }
+    h4 {
+      color: #263238;
+      font-weight: 800;
+    }
+    p {
+      color: #63707e;
+      font-size: 13px;
+    }
+  }
+
+  @keyframes toggle {
+    from {
+      border: 1px solid rgba(255, 214, 10, 1);
+    }
+    to {
+      border: 1px solid rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  .profile-card {
+    padding: 15px 8px;
+    border-bottom: 1px solid rgba(0,0,0,.15);
+    .header {
+      margin-bottom: 12px;
+      h5{
+          font-size: 19px;
+          font-weight: 900;
+      }
+    }
+    .content {
+      .new-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-left: 8px;
+
+        > .grid {
+          label {
+            font-size: 14px;
+            margin-left: 10px;
+          }
+
+          input{
+              padding: 6px 0px;
+              text-indent: 8px;
+              outline: none;
+              border: 1px solid rgba(0,0,0,.15);
+              font-size: 13px;
+          }
+
+          .btn-primary {
+            margin: 0px !important;
+          }
+        }
+
+        button {
+          border: 0px;
+          width: auto;
+          padding: 6px 15px;
+          margin-top: 30px;
+        }
+      }
+
+      .new-row:nth-child(2) {
+        
+      }
+      .change-password {
+        width: 100px;
+      }
+    }
+  }
+}

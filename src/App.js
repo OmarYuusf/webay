@@ -41,13 +41,13 @@ import ProductPage from "./Component/ProductPage/ProductPage";
 // // category Component import
 // import Category from './Component/Categories/Categories'
 
-// Forms Component import
-import Forms from './Component/Forms/Forms'
+// // Forms Component import
+// import Forms from './Component/Forms/Forms'
 
 // // CartPage Component import
 // import CartPage from './Component/CartPage/CartPage'
 
-// import Profile from "./Component/Profile/Profile"
+import Profile from "./Component/Profile/Profile"
 
 class App extends Component {
   constructor(props) {
@@ -86,32 +86,35 @@ class App extends Component {
             </div>
           )}
         </div>
-
-        <Slider language={this.state.language} />
+        {/* <Slider language={this.state.language} />
         <PrimaryBanner language={this.state.language} />
         <HighCata language={this.state.language} />
         <BestProducts language={this.state.language} />
         <Banners />
         {/* <BestSeller language={this.state.language} /> */}
-        <Ban />
+        {/* <Ban /> */}
         {/* <Electronics language={this.state.language} />
         <LeastProducts language={this.state.language} /> */}
-        <Footer language={this.state.language} />
-
-        <ProductPage
+        <Profile
+          language={this.state.language}
+          changeLanguage={e => this.changeLanguage(e)}
+        />
+       <Footer language={this.state.language} /> 
+        {/* <ProductPage
           language={this.state.language}
           changeLanguage={e => this.changeLanguage(e)}
           width={this.state.width}
-        />
+        />  */}
+
         {/* <Category language={this.state.language} changeLanguage={(e) => this.changeLanguage(e)} width={this.state.width}/> 
       <CartPage language={this.state.language} changeLanguage={(e) => this.changeLanguage(e)}/> />
 
 
-      <Profile language={this.state.language} changeLanguage={(e) => this.changeLanguage(e)}/> */}
-        <Forms
+      }
+        {/* <Forms
           language={this.state.language}
           changeLanguage={e => this.changeLanguage(e)}
-        />
+        /> */}
       </div>
     );
   }

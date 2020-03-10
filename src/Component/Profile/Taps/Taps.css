@@ -1,0 +1,16 @@
+.name-taps h2 {
+  font-size: 26px;
+}
+
+.name-taps h2 span {
+  font-weight: 900;
+}
+
+.name-taps button {
+  border: 0px;
+  outline: none;
+  background-color: transparent;
+  font-size: 13px;
+  color: red;
+}
+/*# sourceMappingURL=Taps.css.map */

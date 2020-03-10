@@ -1,0 +1,87 @@
+.user-profile .user-profile-header {
+  padding: 8px;
+  background-color: #eee;
+}
+
+.user-profile .user-profile-header * {
+  margin: 0px;
+}
+
+.user-profile .user-profile-header h4 {
+  color: #263238;
+  font-weight: 800;
+}
+
+.user-profile .user-profile-header p {
+  color: #63707e;
+  font-size: 13px;
+}
+
+@-webkit-keyframes toggle {
+  from {
+    border: 1px solid #ffd60a;
+  }
+  to {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+}
+
+@keyframes toggle {
+  from {
+    border: 1px solid #ffd60a;
+  }
+  to {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+}
+
+.user-profile .profile-card {
+  padding: 15px 8px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.user-profile .profile-card .header {
+  margin-bottom: 12px;
+}
+
+.user-profile .profile-card .header h5 {
+  font-size: 19px;
+  font-weight: 900;
+}
+
+.user-profile .profile-card .content .new-row {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  margin-left: 8px;
+}
+
+.user-profile .profile-card .content .new-row > .grid label {
+  font-size: 14px;
+  margin-left: 10px;
+}
+
+.user-profile .profile-card .content .new-row > .grid input {
+  padding: 6px 0px;
+  text-indent: 8px;
+  outline: none;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  font-size: 13px;
+}
+
+.user-profile .profile-card .content .new-row > .grid .btn-primary {
+  margin: 0px !important;
+}
+
+.user-profile .profile-card .content .new-row button {
+  border: 0px;
+  width: auto;
+  padding: 6px 15px;
+  margin-top: 30px;
+}
+
+.user-profile .profile-card .content .change-password {
+  width: 100px;
+}
+/*# sourceMappingURL=User.css.map */

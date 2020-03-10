@@ -8,6 +8,8 @@ import {Container,
         Tab,
         Nav,
 } from 'react-bootstrap'
+import Taps from './Taps/Taps';
+import Content from './Content/Content';
 
 class Profile extends React.Component {
     render () {
@@ -16,48 +18,10 @@ class Profile extends React.Component {
                 	textAlign:this.props.language === 'en' ? "left" : "right"}} className="my-profile">
                 
                 <Container>
-                        <Tab.Container id="left-tabs-example" defaultActiveKey="first">
+                        <Tab.Container id="left-tabs-example" defaultActiveKey="user">
                             <Row>
-                                <Col sm={3}>
-                                <Nav variant="pills" className="flex-column">
-                                    <Nav.Item>
-                                    <Nav.Link eventKey="first">Tab 1</Nav.Link>
-                                    </Nav.Item>
-                                    <Nav.Item>
-                                    <Nav.Link eventKey="second">Tab 2</Nav.Link>
-                                    </Nav.Item>
-                                    <Nav.Item>
-                                    <Nav.Link eventKey="thr">Tab 3</Nav.Link>
-                                    </Nav.Item>
-                                    <Nav.Item>
-                                    <Nav.Link eventKey="fourth">Tab 4</Nav.Link>
-                                    </Nav.Item>
-                                </Nav>
-                                </Col>
-                                <Col sm={9}>
-                                <Tab.Content>
-                                    <Tab.Pane eventKey="first">
-                                    <div>
-                                        asdasdjkl;1111
-                                    </div>
-                                    </Tab.Pane>
-                                    <Tab.Pane eventKey="second">
-                                    <div>
-                                        asdasdjkl;asdsdaskasdas222dk
-                                    </div>
-                                    </Tab.Pane>
-                                    <Tab.Pane eventKey="thr">
-                                    <div>
-                                        asdasdjkl;asdsdaskas33333dasdk
-                                    </div>
-                                    </Tab.Pane>
-                                    <Tab.Pane eventKey="fourth">
-                                    <div>
-                                        asdasdjkl;asdsdaskas4444dasdk
-                                    </div>
-                                    </Tab.Pane>
-                                </Tab.Content>
-                                </Col>
+                               <Taps /> 
+                                <Content />
                             </Row>
                             </Tab.Container>
 
