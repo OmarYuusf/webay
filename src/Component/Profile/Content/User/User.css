@@ -10,6 +10,7 @@
 .user-profile .user-profile-header h4 {
   color: #263238;
   font-weight: 800;
+  font-size: 21px;
 }
 
 .user-profile .user-profile-header p {
@@ -45,7 +46,7 @@
 }
 
 .user-profile .profile-card .header h5 {
-  font-size: 19px;
+  font-size: 17px;
   font-weight: 900;
 }
 
