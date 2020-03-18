@@ -100,6 +100,15 @@
           justify-content: space-between;
 }
 
+@media (max-width: 500px) {
+  .user-profile .profile-card .content .privacy {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .user-profile .profile-card .content .privacy button {
   border: 0px;
   width: 100px;

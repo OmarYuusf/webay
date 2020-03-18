@@ -130,12 +130,14 @@ class Locations extends React.Component {
                 <div className="left">
                   <h6>معلومات شخصية</h6>
                   <div>
+                    <Form.Label>رقم الهاتف</Form.Label>
                     <InputGroup size="sm" className="mb-3">
                       <InputGroup.Prepend>
                         <InputGroup.Text id="inputGroup-sizing-sm">
                           +20
                         </InputGroup.Text>
                       </InputGroup.Prepend>
+
                       <FormControl
                         aria-label="Small"
                         aria-describedby="inputGroup-sizing-sm"

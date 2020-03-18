@@ -66,6 +66,20 @@
   margin-top: 12px;
 }
 
+@media (max-width: 600px) {
+  .my-locations .real-location .one-location .body > div {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 425px) {
+  .my-locations .real-location .one-location .body > div {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
 .my-locations .real-location .one-location .body > div p:first-of-type {
   font-size: 13px;
   color: #7e859b;
@@ -82,5 +96,11 @@
   font-size: 13px;
   width: 100%;
   margin: 4px;
+}
+
+@media (max-width: 600px) {
+  .my-locations .real-location .one-location .body button {
+    width: auto;
+  }
 }
 /*# sourceMappingURL=MyLocations.css.map */

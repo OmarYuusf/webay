@@ -4,7 +4,6 @@
     padding-top: 44px;
     .map {
       position: relative;
-
     }
     .map-search {
       position: absolute;
@@ -93,7 +92,9 @@
         display: grid;
         grid-gap: 12px;
         grid-template-columns: 1fr 1fr;
-
+        @media (max-width: 575px) {
+          grid-template-columns: 1fr;
+        }
         > div {
           padding-top: 23px;
 
@@ -161,6 +162,9 @@
                 outline: none;
                 background-color: #eee;
                 border: 1px solid rgba(0, 0, 0, 0.1);
+                @media (max-width: 500px) {
+                                  font-size: 11px;
+                }
               }
             }
 

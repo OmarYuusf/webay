@@ -56,6 +56,13 @@
           grid-template-columns: 1fr 2fr 2fr 1fr;
           grid-gap: 19px;
           margin-top: 12px;
+
+          @media (max-width: 600px) {
+            grid-template-columns: 1fr 1fr;
+          }
+          @media (max-width: 425px) {
+            grid-template-columns: 1fr ;
+          }
           p:first-of-type {
             font-size: 13px;
             color: rgb(126, 133, 155);
@@ -72,7 +79,10 @@
           padding: 3px 15px;
           font-size: 13px;
           width: 100%;
-          margin:4px
+          margin: 4px;
+          @media (max-width: 600px) {
+            width: auto;
+          }
         }
       }
     }

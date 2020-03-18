@@ -4,7 +4,7 @@ import { Col, Nav } from "react-bootstrap";
 
 const Taps = () => {
     return (
-      <Col sm={3} classNmae="taps">
+      <Col lg={3} classNmae="taps">
         <div className="name-taps">
           <h2>
             أهلاً <span>عمر عاطف!</span>
@@ -23,12 +23,6 @@ const Taps = () => {
           </Nav.Item>
           <Nav.Item>
             <Nav.Link eventKey="pay">الدفع</Nav.Link>
-          </Nav.Item>
-          <Nav.Item>
-            <Nav.Link eventKey="balance">رصيد نون</Nav.Link>
-          </Nav.Item>
-          <Nav.Item>
-            <Nav.Link eventKey="back">الأرجاع</Nav.Link>
           </Nav.Item>
         </Nav>
       </Col>

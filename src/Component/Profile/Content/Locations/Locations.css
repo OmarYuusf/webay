@@ -118,6 +118,13 @@
       grid-template-columns: 1fr 1fr;
 }
 
+@media (max-width: 575px) {
+  .location .about-location .about-location-content .center {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
 .location .about-location .about-location-content .center > div {
   padding-top: 23px;
 }
@@ -192,6 +199,12 @@
   outline: none;
   background-color: #eee;
   border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 500px) {
+  .location .about-location .about-location-content .center .right .more-details .add-more-details input {
+    font-size: 11px;
+  }
 }
 
 .location .about-location .about-location-content .center .right .more-details .add-work {

@@ -9,7 +9,7 @@ import Orders from "./Orders/Orders";
 
 const Content = () => {
   return (
-    <Col sm={9}>
+    <Col lg={9}>
       <Tab.Content>
         <Tab.Pane eventKey="user">
           <User />
