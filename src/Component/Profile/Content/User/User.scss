@@ -27,52 +27,51 @@
 
   .profile-card {
     padding: 15px 8px;
-    border-bottom: 1px solid rgba(0,0,0,.15);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
     .header {
       margin-bottom: 12px;
-      h5{
-          font-size: 17px;
-          font-weight: 900;
+      h5 {
+        font-size: 17px;
+        font-weight: 900;
       }
     }
     .content {
       .new-row {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
         margin-left: 8px;
 
-        > .grid {
-          label {
-            font-size: 14px;
-            margin-left: 10px;
-          }
-
-          input{
-              padding: 6px 0px;
-              text-indent: 8px;
-              outline: none;
-              border: 1px solid rgba(0,0,0,.15);
-              font-size: 13px;
-          }
-
-          .btn-primary {
-            margin: 0px !important;
+        input {
+          &::placeholder {
+            font-size: 13px;
           }
         }
 
+        select {
+          font-size: 13px;
+          padding: 0.2rem 0.75rem;
+          option {
+          }
+        }
+      }
+
+      .group-button {
+        display: flex;
+        justify-content: flex-end;
         button {
           border: 0px;
-          width: auto;
+          width: 100px;
           padding: 6px 15px;
           margin-top: 30px;
         }
       }
+      .privacy {
+        display: flex;
+        justify-content: space-between;
 
-      .new-row:nth-child(2) {
-        
-      }
-      .change-password {
-        width: 100px;
+        button {
+          border: 0px;
+          width: 100px;
+          padding: 6px 15px;
+        }
       }
     }
   }

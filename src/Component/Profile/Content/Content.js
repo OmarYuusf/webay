@@ -4,6 +4,8 @@ import User from "./User/User"
 
 import { Col, Tab } from "react-bootstrap";
 import Locations from "./Locations/Locations";
+import MyLocations from "./MyLocations/MyLocations";
+import Orders from "./Orders/Orders";
 
 const Content = () => {
   return (
@@ -13,9 +15,10 @@ const Content = () => {
           <User />
         </Tab.Pane>
         <Tab.Pane eventKey="orders">
-          <div>asdasdjkl;asdsdaskas4444dasdk</div>
+          <Orders />
         </Tab.Pane>
         <Tab.Pane eventKey="locations">
+          <MyLocations />
           <Locations />
         </Tab.Pane>
         <Tab.Pane eventKey="pay">

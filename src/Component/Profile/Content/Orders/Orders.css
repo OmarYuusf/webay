@@ -1,0 +1,55 @@
+.orders {
+  padding: 8px;
+}
+
+.orders .head {
+  background-color: #f1f1f1;
+  margin: -8px;
+  padding: 8px;
+}
+
+.orders .head h3 {
+  font-size: 21px;
+}
+
+.orders .head p {
+  font-size: 13px;
+  color: #7e859b;
+  margin-bottom: 0px;
+}
+
+.orders .body .one-order {
+  margin-top: 19px;
+}
+
+.orders .body .one-order .header {
+  background-color: #ddfdff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 8px;
+}
+
+.orders .body .one-order .header h6, .orders .body .one-order .header p {
+  margin: 0px;
+}
+
+.orders .body .one-order .header h6 {
+  font-weight: 900;
+  font-size: 15px;
+}
+
+.orders .body .one-order .header p {
+  color: #7e859b;
+  font-size: 12px;
+  -webkit-margin-start: 8px;
+          margin-inline-start: 8px;
+}
+
+.orders .body .one-order .more-details {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+}
+/*# sourceMappingURL=Orders.css.map */

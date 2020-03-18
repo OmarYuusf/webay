@@ -51,38 +51,58 @@
 }
 
 .user-profile .profile-card .content .new-row {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
   margin-left: 8px;
 }
 
-.user-profile .profile-card .content .new-row > .grid label {
-  font-size: 14px;
-  margin-left: 10px;
-}
-
-.user-profile .profile-card .content .new-row > .grid input {
-  padding: 6px 0px;
-  text-indent: 8px;
-  outline: none;
-  border: 1px solid rgba(0, 0, 0, 0.15);
+.user-profile .profile-card .content .new-row input::-webkit-input-placeholder {
   font-size: 13px;
 }
 
-.user-profile .profile-card .content .new-row > .grid .btn-primary {
-  margin: 0px !important;
+.user-profile .profile-card .content .new-row input:-ms-input-placeholder {
+  font-size: 13px;
 }
 
-.user-profile .profile-card .content .new-row button {
+.user-profile .profile-card .content .new-row input::-ms-input-placeholder {
+  font-size: 13px;
+}
+
+.user-profile .profile-card .content .new-row input::placeholder {
+  font-size: 13px;
+}
+
+.user-profile .profile-card .content .new-row select {
+  font-size: 13px;
+  padding: 0.2rem 0.75rem;
+}
+
+.user-profile .profile-card .content .group-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.user-profile .profile-card .content .group-button button {
   border: 0px;
-  width: auto;
+  width: 100px;
   padding: 6px 15px;
   margin-top: 30px;
 }
 
-.user-profile .profile-card .content .change-password {
+.user-profile .profile-card .content .privacy {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.user-profile .profile-card .content .privacy button {
+  border: 0px;
   width: 100px;
+  padding: 6px 15px;
 }
 /*# sourceMappingURL=User.css.map */

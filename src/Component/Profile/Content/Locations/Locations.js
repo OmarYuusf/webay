@@ -16,7 +16,6 @@ class Locations extends React.Component {
     this.setState({
       mapLocation: !this.state.mapLocation
     });
-    console.log("asd");
   };
 
   static defaultProps = {
