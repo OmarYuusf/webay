@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
-import axios from "axios"
+import axios from "axios";
 // Navbar Component import
 import Navbar from "./Component/Navbar/Navbar";
 import MobileNavbar from "./Component/Mobile-Navbar/Mobile-Navbar";
@@ -39,7 +39,7 @@ import Footer from "./Component/Footer/Footer";
 import ProductPage from "./Component/ProductPage/ProductPage";
 
 // // category Component import
-// import Category from './Component/Categories/Categories'
+import Category from './Component/Categories/Categories'
 
 // // Forms Component import
 // import Forms from './Component/Forms/Forms'
@@ -47,7 +47,8 @@ import ProductPage from "./Component/ProductPage/ProductPage";
 // // CartPage Component import
 // import CartPage from './Component/CartPage/CartPage'
 
-import Profile from "./Component/Profile/Profile"
+import Profile from "./Component/Profile/Profile";
+import Favorite from "./Component/Favorite/Favorite";
 
 class App extends Component {
   constructor(props) {
@@ -55,15 +56,15 @@ class App extends Component {
 
     this.state = {
       language: "ar",
-      width: window.innerWidth
+      width: window.innerWidth,
     };
   }
 
-  changeLanguage = e => {
+  changeLanguage = (e) => {
     e.preventDefault();
 
     this.setState({
-      language: this.state.language === "en" ? "ar" : "en"
+      language: this.state.language === "en" ? "ar" : "en",
     });
   };
   render() {
@@ -74,14 +75,14 @@ class App extends Component {
             <div className="navbar-mob">
               <MobileNavbar
                 language={this.state.language}
-                changeLanguage={e => this.changeLanguage(e)}
+                changeLanguage={(e) => this.changeLanguage(e)}
               />
             </div>
           ) : (
             <div className="navbar-pc">
               <Navbar
                 language={this.state.language}
-                changeLanguage={e => this.changeLanguage(e)}
+                changeLanguage={(e) => this.changeLanguage(e)}
               />
             </div>
           )}
@@ -99,14 +100,20 @@ class App extends Component {
           language={this.state.language}
           changeLanguage={e => this.changeLanguage(e)}
         />
-       <Footer language={this.state.language} /> 
+        <Favorite language={this.state.language} />
+        <Footer language={this.state.language} />
+        {/* <Category
+          language={this.state.language}
+          changeLanguage={(e) => this.changeLanguage(e)}
+          width={this.state.width}
+        /> */}
         {/* <ProductPage
           language={this.state.language}
           changeLanguage={e => this.changeLanguage(e)}
           width={this.state.width}
         />  */}
 
-        {/* <Category language={this.state.language} changeLanguage={(e) => this.changeLanguage(e)} width={this.state.width}/> 
+        {/* 
       <CartPage language={this.state.language} changeLanguage={(e) => this.changeLanguage(e)}/> />
 
 

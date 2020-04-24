@@ -6,6 +6,7 @@ import { Col, Tab } from "react-bootstrap";
 import Locations from "./Locations/Locations";
 import MyLocations from "./MyLocations/MyLocations";
 import Orders from "./Orders/Orders";
+import Wallet from "./Wallet/Wallet"
 
 const Content = () => {
   return (
@@ -24,8 +25,8 @@ const Content = () => {
         <Tab.Pane eventKey="pay">
           <div>asdasdjkl;asdsdaskas4444dasdk</div>
         </Tab.Pane>
-        <Tab.Pane eventKey="balance">
-          <div>asdasdjkl;asdsdaskas4444dasdk</div>
+        <Tab.Pane eventKey="wallet">
+          <Wallet />
         </Tab.Pane>
         <Tab.Pane eventKey="back">
           <div>asdasdjkl;asdsdaskas4444dasdk</div>
