@@ -22,9 +22,6 @@ const Taps = () => {
           <Nav.Link eventKey="locations">العناوين</Nav.Link>
         </Nav.Item>
         <Nav.Item>
-          <Nav.Link eventKey="pay">الدفع</Nav.Link>
-        </Nav.Item>
-        <Nav.Item>
           <Nav.Link eventKey="wallet">رصيدي</Nav.Link>
         </Nav.Item>
         <Nav.Item>

@@ -25,9 +25,6 @@ const Content = () => {
           <MyLocations />
           <Locations />
         </Tab.Pane>
-        <Tab.Pane eventKey="pay">
-          <div>Way Pay</div>
-        </Tab.Pane>
         <Tab.Pane eventKey="wallet">
           <Wallet />
         </Tab.Pane>

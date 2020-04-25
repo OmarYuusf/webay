@@ -4,17 +4,21 @@
 
 .my-locations .head {
   background-color: #f1f1f1;
-  margin: -8px;
+  margin: 0px;
   padding: 8px;
 }
 
 .my-locations .head h3 {
   font-size: 21px;
+  margin: 0px;
 }
 
 .my-locations .head p {
   font-size: 13px;
   color: #7e859b;
+  margin-bottom: 0px;
+  -webkit-margin-start: 8px;
+          margin-inline-start: 8px;
 }
 
 .my-locations .no-locations {
