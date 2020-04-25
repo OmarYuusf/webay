@@ -1,12 +1,15 @@
 import React from "react";
 import "./Content.css";
-import User from "./User/User"
+import User from "./User/User";
 
 import { Col, Tab } from "react-bootstrap";
 import Locations from "./Locations/Locations";
 import MyLocations from "./MyLocations/MyLocations";
 import Orders from "./Orders/Orders";
-import Wallet from "./Wallet/Wallet"
+import Wallet from "./Wallet/Wallet";
+import Points from "./Points/Points";
+import Returns from "./Returns/Returns";
+import Delayed from "./Delayed/Delayed";
 
 const Content = () => {
   return (
@@ -23,13 +26,19 @@ const Content = () => {
           <Locations />
         </Tab.Pane>
         <Tab.Pane eventKey="pay">
-          <div>asdasdjkl;asdsdaskas4444dasdk</div>
+          <div>Way Pay</div>
         </Tab.Pane>
         <Tab.Pane eventKey="wallet">
           <Wallet />
         </Tab.Pane>
-        <Tab.Pane eventKey="back">
-          <div>asdasdjkl;asdsdaskas4444dasdk</div>
+        <Tab.Pane eventKey="points">
+          <Points />
+        </Tab.Pane>
+        <Tab.Pane eventKey="returns">
+          <Returns />
+        </Tab.Pane>
+        <Tab.Pane eventKey="delayed">
+          <Delayed />
         </Tab.Pane>
       </Tab.Content>
     </Col>
